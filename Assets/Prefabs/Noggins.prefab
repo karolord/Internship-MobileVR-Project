@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 663926126461008630}
   - component: {fileID: 3072468849200807103}
   - component: {fileID: -5497395848797970269}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Noggins
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ public class Teleporter : MonoBehaviour
     [SerializeField] private Color _gazedAtColor;
     private Renderer _meshRenderer;
     private bool _Gazing;
-    private float _timer = 0f;
+    public float _timer = 0f;
     void Start()
     {
         _meshRenderer = GetComponent<Renderer>();
@@ -27,7 +27,12 @@ public class Teleporter : MonoBehaviour
             if (_timer >= 2f)
             {
                 Player.transform.position = new Vector3(transform.position.x, Player.transform.position.y, transform.position.z);
+                this.gameObject.transform.parent.gameObject.GetComponent<TeleportManager>().Activate();
                 _timer = 0f;
+                _meshRenderer.material.color = _inactiveColor;
+                _Gazing = false;
+                this.gameObject.SetActive(false);
+
             }
 
         }

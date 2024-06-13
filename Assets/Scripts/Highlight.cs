@@ -6,6 +6,7 @@ using UnityEngine;
 public class Highlight : MonoBehaviour
 {
 
+    public string _name;
 
     public float _timer = 0f;
     private bool _Gazing;
@@ -25,9 +26,10 @@ public class Highlight : MonoBehaviour
         if (_Gazing)
         {
             _timer += Time.deltaTime;
-            if (_timer >= 2f)
+            if (_timer >= 1f)
             {
                 AddHighlight();
+                this.transform.parent.GetComponent<HouseBuilder>().UpdateMetadata(_name);
                 _timer = 0f;
             }
 
@@ -47,6 +49,7 @@ public class Highlight : MonoBehaviour
 
     void  AddHighlight()
     {
+        Debug.Log("Highlighting");
         float red = originalColor.r * redGreenMultiply;
         float blue = originalColor.b * blueMultiply;
         float green = originalColor.g * redGreenMultiply;
@@ -68,5 +71,6 @@ public class Highlight : MonoBehaviour
         }
        
     }
+
  
 }

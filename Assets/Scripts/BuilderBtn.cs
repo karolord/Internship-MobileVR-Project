@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class BuilderBtn : MonoBehaviour
 {
-    public HouseBuilder houseBuilder;
+    public HouseBuilderAnimated houseBuilder;
     public ValueCollector[] valueCollector;
     private bool _Gazing;
     private float _timer = 0f;
+    public TMPro.TextMeshProUGUI _textValue;
 
     void Update()
         {
@@ -16,7 +17,12 @@ public class BuilderBtn : MonoBehaviour
                 _timer += Time.deltaTime;
                 if (_timer >= 2f)
                 {
+                    if(valueCollector[2].value > valueCollector[0].value || valueCollector[3].value > valueCollector[1].value){
+                        _textValue.text = "Stud Spacing or NogginsSpacing is greater than PlateLength or WallHeight";
+                        return;
+                    }
                     BuildWall();
+                    _textValue.text = "Wall Built"; 
                     _timer = 0f;
                 }
 
