@@ -18,6 +18,17 @@ public class BuildingSpawner : MonoBehaviour
 
     public void SpawnBuilding(GameObject prefab)
     {
-        Instantiate(prefab, transform.position, Quaternion.identity);
+        if(prefab == null)
+        {
+            Debug.LogError("Prefab is null");
+            return;
+        }
+        if (transform.childCount > 0)
+        {
+            Destroy(transform.GetChild(0).gameObject);
+        }
+        GameObject Building = Instantiate(prefab, transform.position, Quaternion.identity);
+        Building.transform.SetParent(transform);
+
     }
 }
