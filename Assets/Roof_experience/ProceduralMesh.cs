@@ -7,7 +7,6 @@ using UnityEngine.UIElements;
 using VSCodeEditor;
 
 [RequireComponent(typeof(MeshFilter))]
-[RequireComponent(typeof(LineRenderer))]
 
 public class ProceduralMesh : MonoBehaviour
 {
