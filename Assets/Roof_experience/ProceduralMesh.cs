@@ -30,9 +30,12 @@ public class ProceduralMesh : MonoBehaviour
     Vector3[] Label_inside_1_h;
     Vector3[] Label_inside_1_w;
 
+    bool populated = false;
+
 
     public GameObject labelObject;
-    private GameObject[] labels;
+    private List<GameObject> labels = new List<GameObject>();
+
     void Start()
     {
         mesh = GetComponent<MeshFilter>().mesh;
@@ -42,10 +45,7 @@ public class ProceduralMesh : MonoBehaviour
         ln = GetComponent<LineRenderer>();
 
         //TODO: Continue here, instantiate
-        for (int i = 0; i <4; i++)
-        {
-            labels[i] = Instantiate(labelObject);
-        }
+        settingUpLabelsChildren();
     }
 
     // Update is called once per frame
@@ -134,6 +134,12 @@ public class ProceduralMesh : MonoBehaviour
         Label_inside_1_h = new Vector3[] { vert_4 + ln_offset, vert_11 + ln_offset };
         Label_inside_1_w = new Vector3[] { vert_7 + ln_offset, vert_1 + ln_offset };
 
+        //if (!populated)
+        //{
+        //    settingUpLabelsChildren();
+        //    populated = true;
+        //}
+
         ////Amount of Submesh
         //mesh.subMeshCount = 2;
 
@@ -203,7 +209,7 @@ public class ProceduralMesh : MonoBehaviour
                 if (showTriangle_1 == true)
                 {
                     showTriangle_1 = false;
-                    // TODO: UI here
+                    // TODO: UI here                    
                 }
             }
 
@@ -211,8 +217,10 @@ public class ProceduralMesh : MonoBehaviour
             {
                 
                 triangles = tri_1;
-                ln.SetPositions(Label_inside_1_h);
-                ln.SetPositions(Label_inside_1_w);
+                LineRenderer ln1 = labels[0].GetComponent<LineRenderer>();
+                LineRenderer ln2 = labels[1].GetComponent<LineRenderer>();
+                ln1.SetPositions(Label_inside_1_h);
+                ln2.SetPositions(Label_inside_1_w);
 
                 if (showTriangle_2 == true)
                 {
@@ -229,4 +237,13 @@ public class ProceduralMesh : MonoBehaviour
         mesh.triangles = triangles;
         mesh.RecalculateNormals();
     }
+
+    private void settingUpLabelsChildren()
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            labels.Add(Instantiate(labelObject));
+        }
+    }
+
 }
