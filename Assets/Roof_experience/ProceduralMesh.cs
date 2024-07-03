@@ -22,6 +22,10 @@ public class ProceduralMesh : MonoBehaviour
     public float width; 
     public float height;
 
+    private float h;
+    private float H;
+    private float R1; 
+
     float x_0 = 0;
     float y_0 = 0;
     float z_0 = 0;
@@ -33,9 +37,9 @@ public class ProceduralMesh : MonoBehaviour
 
     public bool changeState;
 
-    public bool showTriangle_1;
-    public bool showTriangle_2;
+    public bool showTriangle_R1;
     public bool showTriangle_T3;
+    public bool showTriangle_T2; 
 
     Vector3[] vertices;
     Vector3[] Label_inside_1_h;
@@ -51,8 +55,8 @@ public class ProceduralMesh : MonoBehaviour
 
     public GameObject formula_UI;
     public Camera camera;
-    
 
+    public Sprite[] formula_illus; 
     void Start()
     {
         mesh = GetComponent<MeshFilter>().mesh;
@@ -61,10 +65,8 @@ public class ProceduralMesh : MonoBehaviour
 
         //ln = GetComponent<LineRenderer>();
 
-        //TODO: Continue here, instantiate
         settingUpLabelsChildren();
-        Debug.Log(labels[0].transform.childCount);
-        Debug.Log(labels[0].transform.GetChild(0).GetChild(0).name);
+
     }
 
     // Update is called once per frame
@@ -81,8 +83,7 @@ public class ProceduralMesh : MonoBehaviour
         }
         else
         {
-            showTriangle_1 = false;
-            showTriangle_2 = false;
+            showTriangle_R1 = false;
             RoofGenerate(0);
         }
         //StartCoroutine(Switchingbetween_FullAndPartial_Mesh());
@@ -149,8 +150,6 @@ public class ProceduralMesh : MonoBehaviour
         Label_inside_1_h = new Vector3[] { vert_4 + ln_offset, vert_11 + ln_offset };
         Label_inside_1_w = new Vector3[] { vert_1 + ln_offset, vert_11 + ln_offset };
 
-        Label_inside_2_h = new Vector3[] {  };
-
 
         //Vector3[] R1 = new Vector3[] { vert_1, vert_4 };
 
@@ -189,17 +188,21 @@ public class ProceduralMesh : MonoBehaviour
             9, 3, 5,
             };
 
-            showTriangle_1 = false;
-            showTriangle_2 = false;
+            showTriangle_R1 = false;
             showTriangle_T3 = false;
+            showTriangle_T2 = false;
+
+            formula_UI.SetActive(false);
 
             for ( int i = 0; i < labels.Count; i++)
             {
                 labels[i].SetActive(false);
             }
+
         }
         else
         {
+            formula_UI.SetActive(true);
             for ( int i = 0; i < labels.Count; i++ )
             {
                 labels[i].SetActive(true);
@@ -240,32 +243,18 @@ public class ProceduralMesh : MonoBehaviour
                 0,4,1
             };
 
+            int[] tri_4 = new int[]
+            {
+                0, 10, 4,
+                4, 10, 6
+            };
+
             // TODO: fix not being able to toggle on triangle 2 after triangle 1 toggled 
             // Issue arrive due to order of and constant update (try fixUpdate?)
-            if (showTriangle_2)
+
+            if (showTriangle_R1)
             {
-                
-                triangles = tri_2;
 
-                //makeLabel(labels[0], Label_inside_2_h, height.ToString());
-                //makeLabel(labels[1], Label_inside_2_w, width.ToString());
-
-                //labels[0].transform.position = label_tri1_h;
-                //labels[1].transform.position = label_tri1_w;
-
-                //labels[0].transform.rotation = new Quaternion(0, 0, 0, 0);
-                //labels[1].transform.rotation = new Quaternion(0, 0, 0, 0);
-
-                //if (showTriangle_1 == true)
-                //{
-                //    showTriangle_1 = false;
-                //    // TODO: UI here                    
-                //}
-            }
-
-            if (showTriangle_1)
-            {
-                
                 triangles = tri_1;
 
                 float R1 = Mathf.Sqrt(Mathf.Pow(width / 2, 2) + Mathf.Pow(height, 2));
@@ -285,43 +274,62 @@ public class ProceduralMesh : MonoBehaviour
                 labels[0].transform.position = label_tri1_h;
                 labels[1].transform.position = label_tri1_w;
                 labels[2].transform.position = label_R1;
-                
+
 
                 labels[0].transform.rotation = new Quaternion(0, 0, 0, 0);
                 labels[1].transform.rotation = new Quaternion(0, 0, 0, 0);
                 labels[2].transform.rotation = new Quaternion(0, 0, 0, 0);
 
 
-                //TODO: Implement UI like T3
+                formula_UI.transform.position = new Vector3(-5f, 8.9f, 12.7f);
+                formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
 
-                if (showTriangle_2 == true)
-                {
-                    showTriangle_2 = false;
-                }
+                string R1_formula = "R1<sup>2</sup> = height<sup>2</sup> + (width/2)<sup>2</sup>";
+                string R1_title = "Calculating R1";
+                showUI(R1_formula, R1_title, formula_illus[0]);
 
-                
+                camera.transform.position = new Vector3(-5, 3.5f, -3);
+                camera.transform.rotation = new Quaternion(0, 0, 0, 0);
             }
-
+            
             if (showTriangle_T3)
-            {
-
+            { 
                 triangles = tri_3;
                 float R1 = Mathf.Sqrt(Mathf.Pow(width / 2, 2) + Mathf.Pow(height, 2));
-                showT3(R1, vertices);
+                H = showT3(R1, vertices);
 
                 formula_UI.transform.position = new Vector3(-6.4f, 6, 3);
                 formula_UI.transform.rotation = new Quaternion(0, 1, 0, -1);
 
                 string formula_text = "H<sup>2</sup> = R1<sup>2</sup> + Width<sup>2</sup>";
                 string title_text = "Calculating T3";
-                showUI(formula_text, title_text);
+                showUI(formula_text, title_text, formula_illus[1]);
 
                 //TODO: Make UI look great for all scale
                 camera.transform.position = new Vector3(7.5f, 3.5f, 3);
                 camera.transform.rotation = new Quaternion(0, 1, 0, -1);
             }
-        }    
-   }
+
+            if (showTriangle_T2)
+            {
+
+                triangles = tri_4;
+
+                showT2(H);
+
+                formula_UI.transform.position = new Vector3(-5, 8.9f, 7.2f);
+                formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
+
+                string T2_formula = "h<sup>2</sup> = H<sup>2</sup> - (width/2)height<sup>2</sup>";
+                string T2_title = "Calculating T2";
+                showUI(T2_formula, T2_title, formula_illus[2]);
+
+                camera.transform.position = new Vector3(-5, 2.8f, -8);
+                camera.transform.rotation = new Quaternion(0, 0, 0, 0);
+            }
+
+        }
+    }
     private void MakeMeshData()
     {
         mesh.Clear();
@@ -348,7 +356,7 @@ public class ProceduralMesh : MonoBehaviour
         label_height.text = label_text;
     }
 
-    void showT3(float R1_leng, Vector3[] Complete_vertices)
+    float showT3(float R1_leng, Vector3[] Complete_vertices)
     {
         Vector3[] verts  = Complete_vertices;
         int[] T3_verts = new int[]
@@ -356,10 +364,12 @@ public class ProceduralMesh : MonoBehaviour
             0, 4, 1
         };
 
+        float T3_H = 0; 
+
         if (verts[0] != null && verts[1] != null)
         {
             float T3_leng = verts[1].z - verts[0].z;
-            float T3_H = Mathf.Sqrt(Mathf.Pow(R1_leng, 2) + Mathf.Pow(T3_leng, 2));
+            T3_H = Mathf.Sqrt(Mathf.Pow(R1_leng, 2) + Mathf.Pow(T3_leng, 2));
 
             Vector3[] T3_length_verts = new Vector3[] { verts[0], verts[1] };
             Vector3[] T3_height_verts = new Vector3[] { verts[1], verts[4] };
@@ -386,21 +396,55 @@ public class ProceduralMesh : MonoBehaviour
             labels[1].transform.rotation = new Quaternion(0, 1, 0, -1);
             labels[2].transform.rotation = new Quaternion(0, 1, 0, -1);
 
-            
-
         }
         else
         {
             Debug.Log("vert[0], vert[1] doesn't exist");
         }
+
+        return T3_H;
     }
 
-    void showUI(string formula_text, string title_text)
+    void showT2(float T3_H)
+    {
+        float T2_h_length = Mathf.Sqrt(Mathf.Pow(T3_H, 2) - Mathf.Pow(width/2, 2));
+
+        Vector3[] T2_H_verts = new Vector3[] { vertices[0], vertices[4] };
+        Vector3[] T2_width_verts = new Vector3[] { vertices[0], vertices[10] };
+        Vector3[] T3_height_verts = new Vector3[] { vertices[10], vertices[4] };
+
+        Vector3 label_T2_H = new Vector3((vertices[0].x + vertices[4].x) / 2 + 1.25f, (vertices[4].y) / 2 , vertices[0].z - 1.25f);
+        Vector3 label_T2_w = new Vector3((vertices[0].x + vertices[10].x) / 2 - 0.5f, vertices[0].y, vertices[0].z - 1.25f);
+        Vector3 label_T2_h = new Vector3((vertices[0].x + vertices[10].x) / 2 - 4.25f, (vertices[4].y) / 2, vertices[0].z - 1.25f);
+
+        string T2_H_leng_text = "H = " + T3_H.ToString();
+        string T2_width_text = "width = " + (width/2).ToString();
+        string T2_h_text = "h = " + T2_h_length.ToString();
+
+        makeLabel(labels[0], T2_H_verts, T2_H_leng_text);
+        makeLabel(labels[1], T2_width_verts, T2_width_text);
+        makeLabel(labels[2], T3_height_verts, T2_h_text);
+
+        labels[0].transform.position = label_T2_H;
+        labels[1].transform.position = label_T2_w;
+        labels[2].transform.position = label_T2_h;
+
+        labels[0].transform.rotation = new Quaternion(0, 0, 0, 0);
+        labels[1].transform.rotation = new Quaternion(0, 0, 0, 0);
+        labels[2].transform.rotation = new Quaternion(0, 0, 0, 0);
+    }
+
+    void showUI(string formula_text, string title_text, Sprite illus)
     {
         TextMeshProUGUI formula = formula_UI.transform.GetChild(0).GetComponent<TextMeshProUGUI>(); 
-        TextMeshProUGUI title = formula_UI.transform.GetChild(1).GetComponent<TextMeshProUGUI>(); 
+        TextMeshProUGUI title = formula_UI.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
+        UnityEngine.UI.Image Illus = formula_UI.transform.GetChild(2).GetComponent<UnityEngine.UI.Image>();
 
+        
         formula.text = formula_text;
         title.text = title_text;
+        Illus.sprite = illus;
     }
+
+    //TODO: implement next button
 }
