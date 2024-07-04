@@ -476,7 +476,7 @@ public class ProceduralMesh : MonoBehaviour
 
         if (state == 2)
         {
-
+            // TODO: fixed T2 not showing h and H if R1 and T3 is not employed
             triangles = tri_4;
 
             showT2(H);
