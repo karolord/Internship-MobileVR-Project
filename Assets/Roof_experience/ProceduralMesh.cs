@@ -110,7 +110,7 @@ public class ProceduralMesh : MonoBehaviour
         triangles = new int[] { 0, 1, 2 , 2 ,1, 3} ;
     }
 
-    private void RoofGenerate(int state) 
+    void RoofGenerate(int state) 
     {
         /**
          * Procedurally generate roof base on the state
