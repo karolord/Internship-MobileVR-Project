@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Json;
 using TMPro;
 using UnityEditor.Search;
 using UnityEngine;
@@ -50,13 +51,19 @@ public class ProceduralMesh : MonoBehaviour
     bool populated = false;
 
 
+
+
     public GameObject labelObject;
     private List<GameObject> labels = new List<GameObject>();
 
     public GameObject formula_UI;
     public Camera camera;
 
-    public Sprite[] formula_illus; 
+    public Sprite[] formula_illus;
+
+    public UnityEngine.UI.Button m_nextButton, m_prevButton;
+    public int state = 0;
+
     void Start()
     {
         mesh = GetComponent<MeshFilter>().mesh;
@@ -72,22 +79,25 @@ public class ProceduralMesh : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MakeMeshData();
+        //MakeMeshData();
         //RoofGenerate();
 
         // State, full model = 0; inside model = 1
-        if (changeState)
-        {
+        //if (changeState)
+        //{
             
-            RoofGenerate(1);
-        }
-        else
-        {
-            showTriangle_R1 = false;
-            RoofGenerate(0);
-        }
+        //    RoofGenerate(1);
+        //}
+        //else
+        //{
+        //    showTriangle_R1 = false;
+        //    RoofGenerate(0);
+        //}
         //StartCoroutine(Switchingbetween_FullAndPartial_Mesh());
-        
+
+        //m_prevButton.onClick.AddListener(delegate { showInsideTriangle(0); });
+        //m_nextButton.onClick.AddListener(delegate { showInsideTriangle(1); });
+
     }
 
     IEnumerator Switchingbetween_FullAndPartial_Mesh()
@@ -330,9 +340,163 @@ public class ProceduralMesh : MonoBehaviour
 
         }
     }
-    private void MakeMeshData()
+
+    public void showInsideTriangle(int buttonType)
     {
         mesh.Clear();
+
+        float R1 = Mathf.Sqrt(Mathf.Pow(width / 2, 2) + Mathf.Pow(height, 2));
+
+        Vector3 vert_0 = new Vector3(x_0, y_0, z_0);
+        Vector3 vert_1 = new Vector3(x_0, y_0, z_0 + 1.0f / 3.0f * length);
+        Vector3 vert_2 = new Vector3(x_0, y_0, z_0 + 2.0f / 3.0f * length);
+        Vector3 vert_3 = new Vector3(x_0, y_0, z_0 + length);
+
+        // mid
+        Vector3 vert_4 = new Vector3(x_0 - (width) / 2, y_0 + height, z_0 + 1.0f / 3.0f * length);
+        Vector3 vert_5 = new Vector3(x_0 - (width) / 2, y_0 + height, z_0 + 2.0f / 3.0f * length);
+
+        // top 
+        Vector3 vert_6 = new Vector3(x_0 - width, y_0, z_0);
+        Vector3 vert_7 = new Vector3(x_0 - width, y_0, z_0 + 1.0f / 3.0f * length);
+        Vector3 vert_8 = new Vector3(x_0 - width, y_0, z_0 + 2.0f / 3.0f * length);
+        Vector3 vert_9 = new Vector3(x_0 - width, y_0, z_0 + length);
+
+        // inside
+        Vector3 vert_10 = new Vector3(x_0 - width / 2, y_0, z_0);
+        Vector3 vert_11 = new Vector3(x_0 - width / 2, y_0, z_0 + 1.0f / 3.0f * length);
+        Vector3 vert_12 = new Vector3(x_0 - width / 2, y_0, z_0 + 2.0f / 3.0f * length);
+        Vector3 vert_13 = new Vector3(x_0 - width / 2, y_0, z_0 + length);
+
+
+        vertices = new Vector3[] { vert_0, vert_1, vert_2, vert_3, vert_4, vert_5, vert_6, vert_7, vert_8, vert_9, vert_10, vert_11, vert_12, vert_13 };
+
+        Vector3 ln_offset = new Vector3(0, 0, -0.05f);
+        Label_inside_1_h = new Vector3[] { vert_4 + ln_offset, vert_11 + ln_offset };
+        Label_inside_1_w = new Vector3[] { vert_1 + ln_offset, vert_11 + ln_offset };
+
+        int[] tri_1 = new int[]
+        {
+            // Width Plane
+            1, 7, 4,
+        };
+
+
+        int[] tri_2 = new int[]
+        {
+            // Length Plane
+            10, 4, 11,
+            11, 4, 12,
+            12, 4, 5,
+                5, 13, 12
+        };
+
+        int[] tri_3 = new int[]
+        {
+                0,4,1
+        };
+
+        int[] tri_4 = new int[]
+        {
+            0, 10, 4,
+            4, 10, 6
+        };
+
+        if (buttonType == 0)
+        {
+            state += 1;
+        }
+        if (buttonType == 1)
+        {
+            state -= 1;
+        }
+        
+        if (state > 2)
+        {
+            state = 0;
+        }
+        if (state < 0)
+        {
+            state = 2; 
+        }
+
+        if (state == 0)
+        {
+            triangles = tri_1;
+
+            Vector3[] R1_length_verts = new Vector3[] { vertices[4], vertices[1] };
+
+            Vector3 label_tri1_h = new Vector3((x_0 - width) / 2 - 0.75f, (y_0 + height) / 2, z_0 + 1.0f / 3.0f * length);
+            Vector3 label_tri1_w = new Vector3((vertices[1].x + vertices[11].x) / 2, y_0 - 0.5f, (vertices[1].z + vertices[11].z) / 2 + 0.5f);
+            Vector3 label_R1 = new Vector3((vertices[1].x + vertices[4].x) / 2 + 2.25f, (vertices[4].y) / 2, vertices[4].z - 0.5f);
+
+            string R1_text = "R1 = " + R1.ToString();
+
+            makeLabel(labels[0], Label_inside_1_h, height.ToString());
+            makeLabel(labels[1], Label_inside_1_w, width.ToString());
+            makeLabel(labels[2], R1_length_verts, R1_text);
+
+            labels[0].transform.position = label_tri1_h;
+            labels[1].transform.position = label_tri1_w;
+            labels[2].transform.position = label_R1;
+
+
+            labels[0].transform.rotation = new Quaternion(0, 0, 0, 0);
+            labels[1].transform.rotation = new Quaternion(0, 0, 0, 0);
+            labels[2].transform.rotation = new Quaternion(0, 0, 0, 0);
+
+
+            formula_UI.transform.position = new Vector3(-5f, 8.9f, 12.7f);
+            formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
+
+            string R1_formula = "R1<sup>2</sup> = height<sup>2</sup> + (width/2)<sup>2</sup>";
+            string R1_title = "Calculating R1";
+            showUI(R1_formula, R1_title, formula_illus[0]);
+
+            camera.transform.position = new Vector3(-5, 3.5f, -3);
+            camera.transform.rotation = new Quaternion(0, 0, 0, 0);
+        }
+
+        if (state == 1)
+        {
+            triangles = tri_3;
+            H = showT3(R1, vertices);
+
+            formula_UI.transform.position = new Vector3(-6.4f, 6, 3);
+            formula_UI.transform.rotation = new Quaternion(0, 1, 0, -1);
+
+            string formula_text = "H<sup>2</sup> = R1<sup>2</sup> + Width<sup>2</sup>";
+            string title_text = "Calculating T3";
+            showUI(formula_text, title_text, formula_illus[1]);
+
+            //TODO: Make UI look great for all scale
+            camera.transform.position = new Vector3(7.5f, 3.5f, 3);
+            camera.transform.rotation = new Quaternion(0, 1, 0, -1);
+        }
+
+        if (state == 2)
+        {
+
+            triangles = tri_4;
+
+            showT2(H);
+
+            formula_UI.transform.position = new Vector3(-5, 8.9f, 7.2f);
+            formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
+
+            string T2_formula = "h<sup>2</sup> = H<sup>2</sup> - (width/2)height<sup>2</sup>";
+            string T2_title = "Calculating T2";
+            showUI(T2_formula, T2_title, formula_illus[2]);
+
+            camera.transform.position = new Vector3(-5, 2.8f, -8);
+            camera.transform.rotation = new Quaternion(0, 0, 0, 0);
+        }
+
+        MakeMeshData();
+    }
+    private void MakeMeshData()
+    {
+        //mesh.Clear();
         mesh.vertices = vertices;   
         mesh.triangles = triangles;
         mesh.RecalculateNormals();
@@ -436,6 +600,8 @@ public class ProceduralMesh : MonoBehaviour
 
     void showUI(string formula_text, string title_text, Sprite illus)
     {
+
+        Debug.Log("UI Showing");
         TextMeshProUGUI formula = formula_UI.transform.GetChild(0).GetComponent<TextMeshProUGUI>(); 
         TextMeshProUGUI title = formula_UI.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
         UnityEngine.UI.Image Illus = formula_UI.transform.GetChild(2).GetComponent<UnityEngine.UI.Image>();
