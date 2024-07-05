@@ -57,7 +57,10 @@ public class ProceduralMesh : MonoBehaviour
     private List<GameObject> labels = new List<GameObject>();
 
     public GameObject formula_UI;
-    public Camera camera;
+    public GameObject homeScreen; 
+    public GameObject _player;
+
+    public bool firstTime = true;
 
     public Sprite[] formula_illus;
 
@@ -66,14 +69,42 @@ public class ProceduralMesh : MonoBehaviour
 
     void Start()
     {
+        Vector3 vert_0 = new Vector3(x_0, y_0, z_0);
+        Vector3 vert_1 = new Vector3(x_0, y_0, z_0 + 1.0f / 3.0f * length);
+        Vector3 vert_2 = new Vector3(x_0, y_0, z_0 + 2.0f / 3.0f * length);
+        Vector3 vert_3 = new Vector3(x_0, y_0, z_0 + length);
+
+        // mid
+        Vector3 vert_4 = new Vector3(x_0 - (width) / 2, y_0 + height, z_0 + 1.0f / 3.0f * length);
+        Vector3 vert_5 = new Vector3(x_0 - (width) / 2, y_0 + height, z_0 + 2.0f / 3.0f * length);
+
+        // top 
+        Vector3 vert_6 = new Vector3(x_0 - width, y_0, z_0);
+        Vector3 vert_7 = new Vector3(x_0 - width, y_0, z_0 + 1.0f / 3.0f * length);
+        Vector3 vert_8 = new Vector3(x_0 - width, y_0, z_0 + 2.0f / 3.0f * length);
+        Vector3 vert_9 = new Vector3(x_0 - width, y_0, z_0 + length);
+
+        // inside
+        Vector3 vert_10 = new Vector3(x_0 - width / 2, y_0, z_0);
+        Vector3 vert_11 = new Vector3(x_0 - width / 2, y_0, z_0 + 1.0f / 3.0f * length);
+        Vector3 vert_12 = new Vector3(x_0 - width / 2, y_0, z_0 + 2.0f / 3.0f * length);
+        Vector3 vert_13 = new Vector3(x_0 - width / 2, y_0, z_0 + length);
+
+        vertices = new Vector3[] { vert_0, vert_1, vert_2, vert_3, vert_4, vert_5, vert_6, vert_7, vert_8, vert_9, vert_10, vert_11, vert_12, vert_13 };
+
         mesh = GetComponent<MeshFilter>().mesh;
         //mesh.subMeshCount = 2;
         //Debug.Log("Amount of submesh is :" + mesh.subMeshCount);
 
         //ln = GetComponent<LineRenderer>();
-
+        
         settingUpLabelsChildren();
 
+        x_0 = _player.transform.position.x;
+        y_0 = _player.transform.position.y;
+        z_0 = _player.transform.position.z+5;
+
+        
     }
 
     // Update is called once per frame
@@ -100,249 +131,247 @@ public class ProceduralMesh : MonoBehaviour
 
     }
 
-    IEnumerator Switchingbetween_FullAndPartial_Mesh()
-    {
-        MakeMeshData();
-        RoofGenerate(0);
+    //IEnumerator Switchingbetween_FullAndPartial_Mesh()
+    //{
+    //    MakeMeshData();
+    //    RoofGenerate(0);
 
-        yield return new WaitForSeconds(3);
+    //    yield return new WaitForSeconds(3);
 
-        Debug.Log("Switch to inside roof");
-        MakeMeshData();
-        RoofGenerate(1);
+    //    Debug.Log("Switch to inside roof");
+    //    MakeMeshData();
+    //    RoofGenerate(1);
         
 
-    }
+    //}
 
-    private void CreateMesh()
-    {
-        vertices = new Vector3[] { new Vector3(0, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 0) , new Vector3(1,0,1)};
-        triangles = new int[] { 0, 1, 2 , 2 ,1, 3} ;
-    }
+    //private void CreateMesh()
+    //{
+    //    vertices = new Vector3[] { new Vector3(0, 0, 0), new Vector3(0, 0, 1), new Vector3(1, 0, 0) , new Vector3(1,0,1)};
+    //    triangles = new int[] { 0, 1, 2 , 2 ,1, 3} ;
+    //}
 
-    void RoofGenerate(int state) 
-    {
-        /**
-         * Procedurally generate roof base on the state
-         * 
-         * @param state, is the state of the roof
-         *      0 - full roof 
-         *      1 - inside roof 
-         */
+    //void RoofGenerate(int state) 
+    //{
+    //    /**
+    //     * Procedurally generate roof base on the state
+    //     * 
+    //     * @param state, is the state of the roof
+    //     *      0 - full roof 
+    //     *      1 - inside roof 
+    //     */
         
 
-        Vector3 vert_0 = new Vector3(x_0, y_0, z_0);
-        Vector3 vert_1 = new Vector3(x_0, y_0, z_0 + 1.0f / 3.0f * length);
-        Vector3 vert_2 = new Vector3(x_0, y_0, z_0 + 2.0f / 3.0f * length);
-        Vector3 vert_3 = new Vector3(x_0, y_0, z_0 + length);
+    //    Vector3 vert_0 = new Vector3(x_0, y_0, z_0);
+    //    Vector3 vert_1 = new Vector3(x_0, y_0, z_0 + 1.0f / 3.0f * length);
+    //    Vector3 vert_2 = new Vector3(x_0, y_0, z_0 + 2.0f / 3.0f * length);
+    //    Vector3 vert_3 = new Vector3(x_0, y_0, z_0 + length);
 
-        // mid
-        Vector3 vert_4 = new Vector3(x_0 - (width) / 2, y_0 + height, z_0 + 1.0f / 3.0f * length);
-        Vector3 vert_5 = new Vector3(x_0 - (width) / 2, y_0 + height, z_0 + 2.0f / 3.0f * length);
+    //    // mid
+    //    Vector3 vert_4 = new Vector3(x_0 - (width) / 2, y_0 + height, z_0 + 1.0f / 3.0f * length);
+    //    Vector3 vert_5 = new Vector3(x_0 - (width) / 2, y_0 + height, z_0 + 2.0f / 3.0f * length);
 
-        // top 
-        Vector3 vert_6 = new Vector3(x_0 - width, y_0, z_0);
-        Vector3 vert_7 = new Vector3(x_0 - width, y_0, z_0 + 1.0f / 3.0f * length);
-        Vector3 vert_8 = new Vector3(x_0 - width, y_0, z_0 + 2.0f / 3.0f * length);
-        Vector3 vert_9 = new Vector3(x_0 - width, y_0, z_0 + length);
+    //    // top 
+    //    Vector3 vert_6 = new Vector3(x_0 - width, y_0, z_0);
+    //    Vector3 vert_7 = new Vector3(x_0 - width, y_0, z_0 + 1.0f / 3.0f * length);
+    //    Vector3 vert_8 = new Vector3(x_0 - width, y_0, z_0 + 2.0f / 3.0f * length);
+    //    Vector3 vert_9 = new Vector3(x_0 - width, y_0, z_0 + length);
 
-        // inside
-        Vector3 vert_10 = new Vector3(x_0 - width / 2, y_0, z_0);
-        Vector3 vert_11 = new Vector3(x_0 - width / 2, y_0, z_0 + 1.0f / 3.0f * length);
-        Vector3 vert_12 = new Vector3(x_0 - width / 2, y_0, z_0 + 2.0f / 3.0f * length);
-        Vector3 vert_13 = new Vector3(x_0 - width / 2, y_0, z_0 + length);
+    //    // inside
+    //    Vector3 vert_10 = new Vector3(x_0 - width / 2, y_0, z_0);
+    //    Vector3 vert_11 = new Vector3(x_0 - width / 2, y_0, z_0 + 1.0f / 3.0f * length);
+    //    Vector3 vert_12 = new Vector3(x_0 - width / 2, y_0, z_0 + 2.0f / 3.0f * length);
+    //    Vector3 vert_13 = new Vector3(x_0 - width / 2, y_0, z_0 + length);
         
 
 
-        vertices = new Vector3[] { vert_0, vert_1, vert_2, vert_3, vert_4, vert_5, vert_6, vert_7, vert_8, vert_9, vert_10, vert_11, vert_12, vert_13 };
+    //    vertices = new Vector3[] { vert_0, vert_1, vert_2, vert_3, vert_4, vert_5, vert_6, vert_7, vert_8, vert_9, vert_10, vert_11, vert_12, vert_13 };
 
-        Vector3 ln_offset = new Vector3(0, 0, -0.05f);
-        Label_inside_1_h = new Vector3[] { vert_4 + ln_offset, vert_11 + ln_offset };
-        Label_inside_1_w = new Vector3[] { vert_1 + ln_offset, vert_11 + ln_offset };
+    //    Vector3 ln_offset = new Vector3(0, 0, -0.05f);
+    //    Label_inside_1_h = new Vector3[] { vert_4 + ln_offset, vert_11 + ln_offset };
+    //    Label_inside_1_w = new Vector3[] { vert_1 + ln_offset, vert_11 + ln_offset };
 
 
-        //Vector3[] R1 = new Vector3[] { vert_1, vert_4 };
+    //    //Vector3[] R1 = new Vector3[] { vert_1, vert_4 };
 
-        //Vector3[] T3 = new Vector3[] { vert_0, vert_4, vert_1 };
+    //    //Vector3[] T3 = new Vector3[] { vert_0, vert_4, vert_1 };
         
 
-        //if (!populated)
-        //{
-        //    settingUpLabelsChildren();
-        //    populated = true;
-        //}
+    //    //if (!populated)
+    //    //{
+    //    //    settingUpLabelsChildren();
+    //    //    populated = true;
+    //    //}
 
-        ////Amount of Submesh
-        //mesh.subMeshCount = 2;
+    //    ////Amount of Submesh
+    //    //mesh.subMeshCount = 2;
 
-        if ( state == 0 )
-        {
-            // whole roof triangle
-            triangles = new int[] {
-            // bot
-            0, 4, 1,
-            1, 4, 2,
-            2, 4, 5,
-            5, 3, 2, 
+    //    if ( state == 0 )
+    //    {
+    //        // whole roof triangle
+    //        triangles = new int[] {
+    //        // bot
+    //        0, 4, 1,
+    //        1, 4, 2,
+    //        2, 4, 5,
+    //        5, 3, 2, 
 
-            // left
-            0, 6, 4, 
+    //        // left
+    //        0, 6, 4, 
 
-            // top 
-            6, 7, 4,
-            4, 7, 5,
-            5, 7, 8,
-            8, 9, 5, 
+    //        // top 
+    //        6, 7, 4,
+    //        4, 7, 5,
+    //        5, 7, 8,
+    //        8, 9, 5, 
 
-            // right
-            9, 3, 5,
-            };
+    //        // right
+    //        9, 3, 5,
+    //        };
 
-            showTriangle_R1 = false;
-            showTriangle_T3 = false;
-            showTriangle_T2 = false;
+    //        showTriangle_R1 = false;
+    //        showTriangle_T3 = false;
+    //        showTriangle_T2 = false;
 
-            formula_UI.SetActive(false);
+    //        formula_UI.SetActive(false);
 
-            for ( int i = 0; i < labels.Count; i++)
-            {
-                labels[i].SetActive(false);
-            }
+    //        for ( int i = 0; i < labels.Count; i++)
+    //        {
+    //            labels[i].SetActive(false);
+    //        }
 
-        }
-        else
-        {
-            formula_UI.SetActive(true);
-            for ( int i = 0; i < labels.Count; i++ )
-            {
-                labels[i].SetActive(true);
-            }
-            // inside roof triangle 
-            //triangles = new int[]
-            //{
-            //    // Width Plane
-            //    1, 7, 4,
+    //    }
+    //    else
+    //    {
+    //        formula_UI.SetActive(true);
+    //        for ( int i = 0; i < labels.Count; i++ )
+    //        {
+    //            labels[i].SetActive(true);
+    //        }
+    //        // inside roof triangle 
+    //        //triangles = new int[]
+    //        //{
+    //        //    // Width Plane
+    //        //    1, 7, 4,
 
-            //    // Length Plane
-            //    10, 4, 11,
-            //    11, 4, 12,
-            //    12, 4, 5,
-            //    5, 13, 12
-            //};
-            //mesh.Clear();
+    //        //    // Length Plane
+    //        //    10, 4, 11,
+    //        //    11, 4, 12,
+    //        //    12, 4, 5,
+    //        //    5, 13, 12
+    //        //};
+    //        //mesh.Clear();
 
             
-            int[] tri_1 = new int[]
-            {
-                // Width Plane
-                1, 7, 4,
-            };            
+    //        int[] tri_1 = new int[]
+    //        {
+    //            // Width Plane
+    //            1, 7, 4,
+    //        };            
 
             
-            int[] tri_2 = new int[]
-            {
-                // Length Plane
-                10, 4, 11,
-                11, 4, 12,
-                12, 4, 5,
-                5, 13, 12
-            };
+    //        int[] tri_2 = new int[]
+    //        {
+    //            // Length Plane
+    //            10, 4, 11,
+    //            11, 4, 12,
+    //            12, 4, 5,
+    //            5, 13, 12
+    //        };
 
-            int[] tri_3 = new int[]
-            {
-                0,4,1
-            };
+    //        int[] tri_3 = new int[]
+    //        {
+    //            0,4,1
+    //        };
 
-            int[] tri_4 = new int[]
-            {
-                0, 10, 4,
-                4, 10, 6
-            };
+    //        int[] tri_4 = new int[]
+    //        {
+    //            0, 10, 4,
+    //            4, 10, 6
+    //        };
 
-            // TODO: fix not being able to toggle on triangle 2 after triangle 1 toggled 
-            // Issue arrive due to order of and constant update (try fixUpdate?)
+    //        if (showTriangle_R1)
+    //        {
 
-            if (showTriangle_R1)
-            {
+    //            triangles = tri_1;
 
-                triangles = tri_1;
+    //            float R1 = Mathf.Sqrt(Mathf.Pow(width / 2, 2) + Mathf.Pow(height, 2));
 
-                float R1 = Mathf.Sqrt(Mathf.Pow(width / 2, 2) + Mathf.Pow(height, 2));
+    //            Vector3[] R1_length_verts = new Vector3[] { vertices[4], vertices[1] };
 
-                Vector3[] R1_length_verts = new Vector3[] { vertices[4], vertices[1] };
+    //            Vector3 label_tri1_h = new Vector3((x_0 - width) / 2 - 0.75f, (y_0 + height) / 2, z_0 + 1.0f / 3.0f * length);
+    //            Vector3 label_tri1_w = new Vector3((vertices[1].x + vertices[11].x) / 2, y_0 - 0.5f, (vertices[1].z + vertices[11].z) / 2 + 0.5f);
+    //            Vector3 label_R1 = new Vector3((vertices[1].x + vertices[4].x) / 2 + 2.25f, (vertices[4].y) / 2, vertices[4].z - 0.5f);
 
-                Vector3 label_tri1_h = new Vector3((x_0 - width) / 2 - 0.75f, (y_0 + height) / 2, z_0 + 1.0f / 3.0f * length);
-                Vector3 label_tri1_w = new Vector3((vertices[1].x + vertices[11].x) / 2, y_0 - 0.5f, (vertices[1].z + vertices[11].z) / 2 + 0.5f);
-                Vector3 label_R1 = new Vector3((vertices[1].x + vertices[4].x) / 2 + 2.25f, (vertices[4].y) / 2, vertices[4].z - 0.5f);
+    //            string R1_text = "R1 = " + R1.ToString();
 
-                string R1_text = "R1 = " + R1.ToString();
+    //            makeLabel(labels[0], Label_inside_1_h, height.ToString());
+    //            makeLabel(labels[1], Label_inside_1_w, width.ToString());
+    //            makeLabel(labels[2], R1_length_verts, R1_text);
 
-                makeLabel(labels[0], Label_inside_1_h, height.ToString());
-                makeLabel(labels[1], Label_inside_1_w, width.ToString());
-                makeLabel(labels[2], R1_length_verts, R1_text);
-
-                labels[0].transform.position = label_tri1_h;
-                labels[1].transform.position = label_tri1_w;
-                labels[2].transform.position = label_R1;
+    //            labels[0].transform.position = label_tri1_h;
+    //            labels[1].transform.position = label_tri1_w;
+    //            labels[2].transform.position = label_R1;
 
 
-                labels[0].transform.rotation = new Quaternion(0, 0, 0, 0);
-                labels[1].transform.rotation = new Quaternion(0, 0, 0, 0);
-                labels[2].transform.rotation = new Quaternion(0, 0, 0, 0);
+    //            labels[0].transform.rotation = new Quaternion(0, 0, 0, 0);
+    //            labels[1].transform.rotation = new Quaternion(0, 0, 0, 0);
+    //            labels[2].transform.rotation = new Quaternion(0, 0, 0, 0);
 
 
-                formula_UI.transform.position = new Vector3(-5f, 8.9f, 12.7f);
-                formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
+    //            formula_UI.transform.position = new Vector3(-5f, 8.9f, 12.7f);
+    //            formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
 
-                string R1_formula = "R1<sup>2</sup> = height<sup>2</sup> + (width/2)<sup>2</sup>";
-                string R1_title = "Calculating R1";
-                showUI(R1_formula, R1_title, formula_illus[0]);
+    //            string R1_formula = "R1<sup>2</sup> = height<sup>2</sup> + (width/2)<sup>2</sup>";
+    //            string R1_title = "Calculating R1";
+    //            showUI(R1_formula, R1_title, formula_illus[0]);
 
-                camera.transform.position = new Vector3(-5, 3.5f, -3);
-                camera.transform.rotation = new Quaternion(0, 0, 0, 0);
-            }
+    //            _player.transform.position = new Vector3(-5, 3.5f, -3);
+    //            _player.transform.rotation = new Quaternion(0, 0, 0, 0);
+    //        }
             
-            if (showTriangle_T3)
-            { 
-                triangles = tri_3;
-                float R1 = Mathf.Sqrt(Mathf.Pow(width / 2, 2) + Mathf.Pow(height, 2));
-                H = showT3(R1, vertices);
+    //        if (showTriangle_T3)
+    //        { 
+    //            triangles = tri_3;
+    //            float R1 = Mathf.Sqrt(Mathf.Pow(width / 2, 2) + Mathf.Pow(height, 2));
+    //            H = showT3(R1, vertices);
 
-                formula_UI.transform.position = new Vector3(-6.4f, 6, 3);
-                formula_UI.transform.rotation = new Quaternion(0, 1, 0, -1);
+    //            formula_UI.transform.position = new Vector3(-6.4f, 6, 3);
+    //            formula_UI.transform.rotation = new Quaternion(0, 1, 0, -1);
 
-                string formula_text = "H<sup>2</sup> = R1<sup>2</sup> + Width<sup>2</sup>";
-                string title_text = "Calculating T3";
-                showUI(formula_text, title_text, formula_illus[1]);
+    //            string formula_text = "H<sup>2</sup> = R1<sup>2</sup> + Width<sup>2</sup>";
+    //            string title_text = "Calculating T3";
+    //            showUI(formula_text, title_text, formula_illus[1]);
 
-                //TODO: Make UI look great for all scale
-                camera.transform.position = new Vector3(7.5f, 3.5f, 3);
-                camera.transform.rotation = new Quaternion(0, 1, 0, -1);
-            }
+    //            //TODO: Make UI look great for all scale
+    //            _player.transform.position = new Vector3(7.5f, 3.5f, 3);
+    //            _player.transform.rotation = new Quaternion(0, 1, 0, -1);
+    //        }
 
-            if (showTriangle_T2)
-            {
+    //        if (showTriangle_T2)
+    //        {
 
-                triangles = tri_4;
+    //            triangles = tri_4;
 
-                showT2(H);
+    //            showT2(H);
 
-                formula_UI.transform.position = new Vector3(-5, 8.9f, 7.2f);
-                formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
+    //            formula_UI.transform.position = new Vector3(-5, 8.9f, 7.2f);
+    //            formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
 
-                string T2_formula = "h<sup>2</sup> = H<sup>2</sup> - (width/2)height<sup>2</sup>";
-                string T2_title = "Calculating T2";
-                showUI(T2_formula, T2_title, formula_illus[2]);
+    //            string T2_formula = "h<sup>2</sup> = H<sup>2</sup> - (width/2)height<sup>2</sup>";
+    //            string T2_title = "Calculating T2";
+    //            showUI(T2_formula, T2_title, formula_illus[2]);
 
-                camera.transform.position = new Vector3(-5, 2.8f, -8);
-                camera.transform.rotation = new Quaternion(0, 0, 0, 0);
-            }
+    //            _player.transform.position = new Vector3(-5, 2.8f, -8);
+    //            _player.transform.rotation = new Quaternion(0, 0, 0, 0);
+    //        }
 
-        }
-    }
+    //    }
+    //}
 
-    public void showInsideTriangle(int buttonType)
+    public void showCalculation(int buttonType)
     {
+        
         mesh.Clear();
 
         float R1 = Mathf.Sqrt(Mathf.Pow(width / 2, 2) + Mathf.Pow(height, 2));
@@ -388,7 +417,7 @@ public class ProceduralMesh : MonoBehaviour
             10, 4, 11,
             11, 4, 12,
             12, 4, 5,
-                5, 13, 12
+            5, 13, 12
         };
 
         int[] tri_3 = new int[]
@@ -402,11 +431,11 @@ public class ProceduralMesh : MonoBehaviour
             4, 10, 6
         };
 
-        if (buttonType == 0)
+        if (buttonType == 1)
         {
             state += 1;
         }
-        if (buttonType == 1)
+        if (buttonType == 0)
         {
             state -= 1;
         }
@@ -420,77 +449,116 @@ public class ProceduralMesh : MonoBehaviour
             state = 2; 
         }
 
-        if (state == 0)
+        if (firstTime == true)
         {
-            triangles = tri_1;
-
-            Vector3[] R1_length_verts = new Vector3[] { vertices[4], vertices[1] };
-
-            Vector3 label_tri1_h = new Vector3((x_0 - width) / 2 - 0.75f, (y_0 + height) / 2, z_0 + 1.0f / 3.0f * length);
-            Vector3 label_tri1_w = new Vector3((vertices[1].x + vertices[11].x) / 2, y_0 - 0.5f, (vertices[1].z + vertices[11].z) / 2 + 0.5f);
-            Vector3 label_R1 = new Vector3((vertices[1].x + vertices[4].x) / 2 + 2.25f, (vertices[4].y) / 2, vertices[4].z - 0.5f);
-
-            string R1_text = "R1 = " + R1.ToString();
-
-            makeLabel(labels[0], Label_inside_1_h, height.ToString());
-            makeLabel(labels[1], Label_inside_1_w, width.ToString());
-            makeLabel(labels[2], R1_length_verts, R1_text);
-
-            labels[0].transform.position = label_tri1_h;
-            labels[1].transform.position = label_tri1_w;
-            labels[2].transform.position = label_R1;
-
-
-            labels[0].transform.rotation = new Quaternion(0, 0, 0, 0);
-            labels[1].transform.rotation = new Quaternion(0, 0, 0, 0);
-            labels[2].transform.rotation = new Quaternion(0, 0, 0, 0);
-
-
-            formula_UI.transform.position = new Vector3(-5f, 8.9f, 12.7f);
-            formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
-
-            string R1_formula = "R1<sup>2</sup> = height<sup>2</sup> + (width/2)<sup>2</sup>";
-            string R1_title = "Calculating R1";
-            showUI(R1_formula, R1_title, formula_illus[0]);
-
-            camera.transform.position = new Vector3(-5, 3.5f, -3);
-            camera.transform.rotation = new Quaternion(0, 0, 0, 0);
+            showR1(tri_1);
+            firstTime = false;
+            state = 0;
         }
-
-        if (state == 1)
+        else
         {
-            triangles = tri_3;
-            H = showT3(R1, vertices);
+            homeScreen.SetActive(false);
+            if (state == 0)
+            {
+                //triangles = tri_1;
 
-            formula_UI.transform.position = new Vector3(-6.4f, 6, 3);
-            formula_UI.transform.rotation = new Quaternion(0, 1, 0, -1);
+                //Vector3[] R1_length_verts = new Vector3[] { vertices[4], vertices[1] };
 
-            string formula_text = "H<sup>2</sup> = R1<sup>2</sup> + Width<sup>2</sup>";
-            string title_text = "Calculating T3";
-            showUI(formula_text, title_text, formula_illus[1]);
+                //Vector3 label_tri1_h = new Vector3((x_0 - width) / 2 - 0.75f, (y_0 + height) / 2, z_0 + 1.0f / 3.0f * length);
+                //Vector3 label_tri1_w = new Vector3((vertices[1].x + vertices[11].x) / 2, y_0 - 0.5f, (vertices[1].z + vertices[11].z) / 2 + 0.5f);
+                //Vector3 label_R1 = new Vector3((vertices[1].x + vertices[4].x) / 2 + 2.25f, (vertices[4].y) / 2, vertices[4].z - 0.5f);
 
-            //TODO: Make UI look great for all scale
-            camera.transform.position = new Vector3(7.5f, 3.5f, 3);
-            camera.transform.rotation = new Quaternion(0, 1, 0, -1);
+                //string R1_text = "R1 = " + R1.ToString();
+
+                //makeLabel(labels[0], Label_inside_1_h, height.ToString());
+                //makeLabel(labels[1], Label_inside_1_w, width.ToString());
+                //makeLabel(labels[2], R1_length_verts, R1_text);
+
+                //labels[0].transform.position = label_tri1_h;
+                //labels[1].transform.position = label_tri1_w;
+                //labels[2].transform.position = label_R1;
+
+
+                //labels[0].transform.rotation = new Quaternion(0, 0, 0, 0);
+                //labels[1].transform.rotation = new Quaternion(0, 0, 0, 0);
+                //labels[2].transform.rotation = new Quaternion(0, 0, 0, 0);
+
+
+                //formula_UI.transform.position = new Vector3(-5f, 8.9f, 12.7f);
+                //formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
+
+                //string R1_formula = "R1<sup>2</sup> = height<sup>2</sup> + (width/2)<sup>2</sup>";
+                //string R1_title = "Calculating R1";
+                //showUI(R1_formula, R1_title, formula_illus[0]);
+
+                //_player.transform.position = new Vector3(-5, 3.5f, -3);
+                //_player.transform.rotation = new Quaternion(0, 0, 0, 0);
+
+                showR1(tri_1);
+            }
+
+            if (state == 1)
+            {
+                triangles = tri_3;
+                H = showT3(R1, vertices);
+
+                formula_UI.transform.position = new Vector3(-6.4f, 6, 3);
+                formula_UI.transform.rotation = new Quaternion(0, 1, 0, -1);
+
+                string formula_text = "H<sup>2</sup> = R1<sup>2</sup> + Width<sup>2</sup>";
+                string title_text = "Calculating T3";
+                showUI(formula_text, title_text, formula_illus[1]);
+
+                //TODO: Make UI look great for all scale
+                _player.transform.position = new Vector3(7.5f, 3.5f, 3);
+                _player.transform.rotation = new Quaternion(0, 1, 0, -1);
+            }
+
+            if (state == 2)
+            {
+                // TODO: fixed T2 not showing h and H if R1 and T3 is not employed
+                triangles = tri_4;
+
+                showT2(H);
+
+                formula_UI.transform.position = new Vector3(-5, 8.9f, 7.2f);
+                formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
+
+                string T2_formula = "h<sup>2</sup> = H<sup>2</sup> - (width/2)height<sup>2</sup>";
+                string T2_title = "Calculating T2";
+                showUI(T2_formula, T2_title, formula_illus[2]);
+
+                _player.transform.position = new Vector3(-5, 2.8f, -8);
+                _player.transform.rotation = new Quaternion(0, 0, 0, 0);
+            }
+
         }
+        MakeMeshData();
+    }
 
-        if (state == 2)
-        {
-            // TODO: fixed T2 not showing h and H if R1 and T3 is not employed
-            triangles = tri_4;
+    public void showEntireRoof()
+    {
+        _player.transform.position = new Vector3(vertices[0].x, vertices[0].y + 5, vertices[0].z);
+        homeScreen.transform.position = new Vector3(vertices[3].x, _player.transform.position.y, vertices[3].z + 5);
+        triangles = new int[] {
+            // bot
+            0, 4, 1,
+            1, 4, 2,
+            2, 4, 5,
+            5, 3, 2, 
 
-            showT2(H);
+            // left
+            0, 6, 4, 
 
-            formula_UI.transform.position = new Vector3(-5, 8.9f, 7.2f);
-            formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
+            // top 
+            6, 7, 4,
+            4, 7, 5,
+            5, 7, 8,
+            8, 9, 5, 
 
-            string T2_formula = "h<sup>2</sup> = H<sup>2</sup> - (width/2)height<sup>2</sup>";
-            string T2_title = "Calculating T2";
-            showUI(T2_formula, T2_title, formula_illus[2]);
-
-            camera.transform.position = new Vector3(-5, 2.8f, -8);
-            camera.transform.rotation = new Quaternion(0, 0, 0, 0);
-        }
+            // right
+            9, 3, 5,
+            };
 
         MakeMeshData();
     }
@@ -596,6 +664,45 @@ public class ProceduralMesh : MonoBehaviour
         labels[0].transform.rotation = new Quaternion(0, 0, 0, 0);
         labels[1].transform.rotation = new Quaternion(0, 0, 0, 0);
         labels[2].transform.rotation = new Quaternion(0, 0, 0, 0);
+    }
+
+    void showR1(int[] tri_1)
+    {
+        triangles = tri_1;
+
+        float R1 = Mathf.Sqrt(Mathf.Pow(width / 2, 2) + Mathf.Pow(height, 2));
+
+        Vector3[] R1_length_verts = new Vector3[] { vertices[4], vertices[1] };
+
+        Vector3 label_tri1_h = new Vector3((x_0 - width) / 2 - 0.75f, (y_0 + height) / 2, z_0 + 1.0f / 3.0f * length);
+        Vector3 label_tri1_w = new Vector3((vertices[1].x + vertices[11].x) / 2, y_0 - 0.5f, (vertices[1].z + vertices[11].z) / 2 + 0.5f);
+        Vector3 label_R1 = new Vector3((vertices[1].x + vertices[4].x) / 2 + 2.25f, (vertices[4].y) / 2, vertices[4].z - 0.5f);
+
+        string R1_text = "R1 = " + R1.ToString();
+
+        makeLabel(labels[0], Label_inside_1_h, height.ToString());
+        makeLabel(labels[1], Label_inside_1_w, width.ToString());
+        makeLabel(labels[2], R1_length_verts, R1_text);
+
+        labels[0].transform.position = label_tri1_h;
+        labels[1].transform.position = label_tri1_w;
+        labels[2].transform.position = label_R1;
+
+
+        labels[0].transform.rotation = new Quaternion(0, 0, 0, 0);
+        labels[1].transform.rotation = new Quaternion(0, 0, 0, 0);
+        labels[2].transform.rotation = new Quaternion(0, 0, 0, 0);
+
+
+        formula_UI.transform.position = new Vector3(-5f, 8.9f, 12.7f);
+        formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
+
+        string R1_formula = "R1<sup>2</sup> = height<sup>2</sup> + (width/2)<sup>2</sup>";
+        string R1_title = "Calculating R1";
+        showUI(R1_formula, R1_title, formula_illus[0]);
+
+        _player.transform.position = new Vector3(-5, 3.5f, -3);
+        _player.transform.rotation = new Quaternion(0, 0, 0, 0);
     }
 
     void showUI(string formula_text, string title_text, Sprite illus)
