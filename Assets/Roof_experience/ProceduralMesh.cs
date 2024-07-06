@@ -539,7 +539,7 @@ public class ProceduralMesh : MonoBehaviour
     public void showEntireRoof()
     {
         _player.transform.position = new Vector3(vertices[0].x, vertices[0].y + 5, vertices[0].z);
-        homeScreen.transform.position = new Vector3(vertices[3].x, _player.transform.position.y, vertices[3].z + 5);
+        homeScreen.transform.position = new Vector3(vertices[0].x, _player.transform.position.y, vertices[0].z + 5);
         triangles = new int[] {
             // bot
             0, 4, 1,
@@ -560,6 +560,7 @@ public class ProceduralMesh : MonoBehaviour
             9, 3, 5,
             };
 
+        
         MakeMeshData();
     }
     private void MakeMeshData()
