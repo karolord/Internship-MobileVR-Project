@@ -98,13 +98,13 @@ public class ProceduralMesh : MonoBehaviour
 
         //ln = GetComponent<LineRenderer>();
         
-        settingUpLabelsChildren();
+        settingUpLabelsChildren(9);
 
         x_0 = _player.transform.position.x;
         y_0 = _player.transform.position.y;
         z_0 = _player.transform.position.z+5;
 
-        
+        formula_UI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -372,6 +372,8 @@ public class ProceduralMesh : MonoBehaviour
     public void showCalculation(int buttonType)
     {
         
+        homeScreen.SetActive(false);
+        formula_UI.SetActive(true);
         mesh.Clear();
 
         float R1 = Mathf.Sqrt(Mathf.Pow(width / 2, 2) + Mathf.Pow(height, 2));
@@ -451,6 +453,7 @@ public class ProceduralMesh : MonoBehaviour
 
         if (firstTime == true)
         {
+            clearlabel();
             showR1(tri_1);
             firstTime = false;
             state = 0;
@@ -493,12 +496,14 @@ public class ProceduralMesh : MonoBehaviour
 
                 //_player.transform.position = new Vector3(-5, 3.5f, -3);
                 //_player.transform.rotation = new Quaternion(0, 0, 0, 0);
-
+                clearlabel();
                 showR1(tri_1);
             }
 
             if (state == 1)
             {
+                clearlabel();
+
                 triangles = tri_3;
                 H = showT3(R1, vertices);
 
@@ -516,6 +521,8 @@ public class ProceduralMesh : MonoBehaviour
 
             if (state == 2)
             {
+                clearlabel();
+
                 // TODO: fixed T2 not showing h and H if R1 and T3 is not employed
                 triangles = tri_4;
 
@@ -538,7 +545,13 @@ public class ProceduralMesh : MonoBehaviour
 
     public void showEntireRoof()
     {
+        homeScreen.SetActive(true);
+        formula_UI.SetActive(false);
+        clearlabel();
+
         _player.transform.position = new Vector3(vertices[0].x, vertices[0].y + 5, vertices[0].z);
+        _player.transform.rotation = new Quaternion(0, 0, 0, 0);
+
         homeScreen.transform.position = new Vector3(vertices[0].x, _player.transform.position.y, vertices[0].z + 5);
         triangles = new int[] {
             // bot
@@ -560,7 +573,25 @@ public class ProceduralMesh : MonoBehaviour
             9, 3, 5,
             };
 
-        
+        Vector3[] leng_top = new Vector3[] {vertices[0], vertices[3]};
+        Vector3[] leng_bot = new Vector3[] {vertices[6], vertices[9]};
+        Vector3[] wid_left = new Vector3[] {vertices[0], vertices[6]};
+        Vector3[] wid_right = new Vector3[] {vertices[3], vertices[9]};
+        Vector3[] dia_leftTop = new Vector3[] {vertices[4], vertices[6]};
+        Vector3[] dia_leftBot = new Vector3[] {vertices[0], vertices[4]};
+        Vector3[] dia_rightTop = new Vector3[] {vertices[5], vertices[9]};
+        Vector3[] dia_rightBot = new Vector3[] {vertices[5], vertices[3]};
+        Vector3[] middle = new Vector3[] { vertices[4], vertices[5] };
+
+        makeLabel(labels[0], leng_top, "");
+        makeLabel(labels[1], leng_bot, "");
+        makeLabel(labels[2], wid_left, "");
+        makeLabel(labels[3], wid_right, "");
+        makeLabel(labels[4], dia_leftTop, "");
+        makeLabel(labels[5], dia_leftBot, "");
+        makeLabel(labels[6], dia_rightTop, "");
+        makeLabel(labels[7], dia_rightBot, "");
+        makeLabel(labels[8], middle, "");
         MakeMeshData();
     }
     private void MakeMeshData()
@@ -571,9 +602,9 @@ public class ProceduralMesh : MonoBehaviour
         mesh.RecalculateNormals();
     }
 
-    private void settingUpLabelsChildren()
+    private void settingUpLabelsChildren(int amount)
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < amount; i++)
         {
             labels.Add(Instantiate(labelObject));
         }
@@ -581,6 +612,7 @@ public class ProceduralMesh : MonoBehaviour
 
     void makeLabel(GameObject label, Vector3[] label_verts, string label_text)
     {
+        label.SetActive(true);
         LineRenderer ln = label.GetComponent<LineRenderer>();
 
         ln.SetPositions(label_verts);
@@ -720,5 +752,16 @@ public class ProceduralMesh : MonoBehaviour
         Illus.sprite = illus;
     }
 
-    //TODO: implement next button
+    void clearlabel()
+    {
+        for (int i = 0; i < labels.Count; i++)
+        {
+            labels[i].SetActive(false);
+        }
+    }
+
+    //TODO: Implement navigation back to select mode 
+
+    //TODO: Impletement start experience 
+        // with correct prompt
 }
