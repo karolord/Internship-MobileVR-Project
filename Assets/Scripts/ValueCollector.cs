@@ -13,7 +13,7 @@ public class ValueCollector : MonoBehaviour
     //    Add();
     // }
    public void Add(){
-         value += 1.0f;
+         value += 0.03f;
          Debug.Log(value);
          _textValue.text = value.ToString();
    }

@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -10,6 +12,7 @@ public class Highlight : MonoBehaviour
 
     public float _timer = 0f;
     private bool _Gazing;
+    public float Measurement;
 
     private float blueMultiply = 3.50f;
     private float redGreenMultiply = 0.50f;
@@ -25,12 +28,24 @@ public class Highlight : MonoBehaviour
     {
         if (_Gazing)
         {
+            if(Measurement == 0){
+                Measurement = MathF.Max(MathF.Max(gameObject.transform.localScale.x, gameObject.transform.localScale.y), gameObject.transform.localScale.z);
+                _name = "Name:  "+_name + "\n  Length: " + Measurement.ToString() + " Meters";
+            }
+
             _timer += Time.deltaTime;
             if (_timer >= 1f)
             {
                 AddHighlight();
-                this.transform.parent.GetComponent<HouseBuilder>().UpdateMetadata(_name);
                 _timer = 0f;
+                TextMeshPro text = GameObject.Find("HighlightText").GetComponent<TextMeshPro>();
+                if (_name.Length > 50){
+                    text.fontSize = 15;
+                }else{
+                    text.fontSize = 24;
+                }
+                if(text != null)
+                    text.text = _name;
             }
 
         }

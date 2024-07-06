@@ -11,4 +11,11 @@ public class TeleportManager : MonoBehaviour
             point.SetActive(true);
         }
     }
+    void Start()
+    {
+
+        GameObject MainTeleport = GameObject.Find("MainTeleport");
+        if(Points[7] == null)
+        Points[7] = MainTeleport;
+    }
 }

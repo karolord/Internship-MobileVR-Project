@@ -16,8 +16,7 @@ public class HouseBuilderAnimated : MonoBehaviour
     public GameObject PlatePrefab;
     public GameObject StudPrefab;
     public GameObject NogginsPrefab;
-    public TMPro.TextMeshProUGUI _Name;
-    public TMPro.TextMeshProUGUI _value;
+
 
     void Start()
     {
@@ -26,7 +25,7 @@ public class HouseBuilderAnimated : MonoBehaviour
         // WallHeight = 5f;
         // Spacing = 4f;
         // NogginsSpacing = 2f;
-        WallBuilder();
+        // WallBuilder();
     }
     void AnimationBuilder(GameObject piece, Vector3 start, Vector3 end, Vector3 StartRotation, Vector3 EndRotation, float duration)
     {
@@ -140,13 +139,21 @@ public class HouseBuilderAnimated : MonoBehaviour
             AnimationBuilder(Stud, new Vector3(20, 0, 13), Stud.transform.position, new Vector3(0, -90, 0), new Vector3(0, 0, 0), 5);
         }
         GameObject LastStud = Instantiate(StudPrefab);
+        GameObject LastStud2 = Instantiate(StudPrefab);
         LastStud.transform.parent = this.transform;
+        LastStud2.transform.parent = this.transform;
         LastStud.transform.localScale = new Vector3(0.1f, WallHeight, 0.1f);
-        if(Yrot==0)
-        LastStud.transform.position = new Vector3(PlateLength / 2, WallHeight / 2, z*MainPlateLength / 2);
-        else
+        LastStud2.transform.localScale = new Vector3(0.1f, WallHeight, 0.1f);
+        if(Yrot==0){
+        LastStud.transform.position = new Vector3(PlateLength / 2 , WallHeight / 2, z*MainPlateLength / 2);
+        LastStud2.transform.position = new Vector3(PlateLength / 2- 0.1f, WallHeight / 2, z*MainPlateLength / 2);}
+        else{
         LastStud.transform.position = new Vector3(z*PlateLength / 2, WallHeight / 2, MainPlateLength / 2);
+        LastStud2.transform.position = new Vector3(z*PlateLength / 2, WallHeight / 2, MainPlateLength / 2 - 0.1f);
+        }
         LastStud.transform.rotation = Quaternion.Euler(0, Yrot, 0);
+        LastStud2.transform.rotation = Quaternion.Euler(0, Yrot, 0);
+
         LastStud.GetComponent<Highlight>()._name = "Stud";
         AnimationBuilder(LastStud, new Vector3(20, 0, 13), LastStud.transform.position, new Vector3(0, -90, 0), new Vector3(0, 0, 0), 5);
     }
@@ -189,23 +196,7 @@ public class HouseBuilderAnimated : MonoBehaviour
         PlateLength = value;
     }
 
-    public void UpdateMetadata(string name)
-    {
-        _Name.text = name;
-        if (name == "TopPlate" || name == "BottomPlate")
-        {
-            _value.text = PlateLength.ToString() + "Mm";
-        }
-        else if (name == "Stud")
-        {
-            _value.text = WallHeight.ToString() + "Mm";
-        }
-        else if (name == "Noggins")
-        {
-            _value.text = PlateLength.ToString() + "Mm";
-        }
 
-    }
     IEnumerator transitionTime()
     {
         yield return new WaitForSeconds(5);
