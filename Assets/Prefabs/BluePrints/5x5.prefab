@@ -292,6 +292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: BottomPlate
   _timer: 0
+  Measurement: 0
 --- !u!111 &1553590540554267870
 Animation:
   m_ObjectHideFlags: 0
@@ -429,6 +430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &6579521934053649774
 Animation:
   m_ObjectHideFlags: 0
@@ -566,6 +568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &1611584436229663026
 Animation:
   m_ObjectHideFlags: 0
@@ -703,6 +706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &5280541759210040244
 Animation:
   m_ObjectHideFlags: 0
@@ -840,6 +844,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &3379110353990248896
 Animation:
   m_ObjectHideFlags: 0
@@ -977,6 +982,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &1636128822097763695
 Animation:
   m_ObjectHideFlags: 0
@@ -1114,6 +1120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &4658050562017848626
 Animation:
   m_ObjectHideFlags: 0
@@ -1251,6 +1258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &603397980763732876
 Animation:
   m_ObjectHideFlags: 0
@@ -1388,6 +1396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &284618702792295027
 Animation:
   m_ObjectHideFlags: 0
@@ -1525,6 +1534,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &4327290225803435663
 Animation:
   m_ObjectHideFlags: 0
@@ -1662,6 +1672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &3359199171474632123
 Animation:
   m_ObjectHideFlags: 0
@@ -1905,6 +1916,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &2153038606877121304
 Animation:
   m_ObjectHideFlags: 0
@@ -2042,6 +2054,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &5348663285157544476
 Animation:
   m_ObjectHideFlags: 0
@@ -2179,6 +2192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &7817238820244627676
 Animation:
   m_ObjectHideFlags: 0
@@ -2422,6 +2436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &7318346857502861918
 Animation:
   m_ObjectHideFlags: 0
@@ -2559,6 +2574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &8140956370836229058
 Animation:
   m_ObjectHideFlags: 0
@@ -2802,6 +2818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &5746236400633124190
 Animation:
   m_ObjectHideFlags: 0
@@ -2939,6 +2956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &5956086704324567984
 Animation:
   m_ObjectHideFlags: 0
@@ -3076,6 +3094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &276477024982120004
 Animation:
   m_ObjectHideFlags: 0
@@ -3213,6 +3232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &58052779951958995
 Animation:
   m_ObjectHideFlags: 0
@@ -3350,6 +3370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &2980298916547811544
 Animation:
   m_ObjectHideFlags: 0
@@ -3487,6 +3508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &1871601319507971797
 Animation:
   m_ObjectHideFlags: 0
@@ -3624,6 +3646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &1977545350417286974
 Animation:
   m_ObjectHideFlags: 0
@@ -3761,6 +3784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: TopPlate
   _timer: 0
+  Measurement: 0
 --- !u!111 &5261228092618271548
 Animation:
   m_ObjectHideFlags: 0
@@ -3898,6 +3922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &2513550934435665134
 Animation:
   m_ObjectHideFlags: 0
@@ -4035,6 +4060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &4670846239240325189
 Animation:
   m_ObjectHideFlags: 0
@@ -4172,6 +4198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: BottomPlate
   _timer: 0
+  Measurement: 0
 --- !u!111 &3511814211022699731
 Animation:
   m_ObjectHideFlags: 0
@@ -4309,6 +4336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: TopPlate
   _timer: 0
+  Measurement: 0
 --- !u!111 &3478956207518535366
 Animation:
   m_ObjectHideFlags: 0
@@ -4446,6 +4474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &2490227144908117956
 Animation:
   m_ObjectHideFlags: 0
@@ -4504,6 +4533,7 @@ Transform:
   - {fileID: 8190257274782278197}
   - {fileID: 6416030105721789806}
   - {fileID: 4532694636465743783}
+  - {fileID: 5055596922755922598}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4666993490338411159
@@ -4627,6 +4657,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &2001047591742239168
 Animation:
   m_ObjectHideFlags: 0
@@ -4764,6 +4795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: BottomPlate
   _timer: 0
+  Measurement: 0
 --- !u!111 &4267222854984283967
 Animation:
   m_ObjectHideFlags: 0
@@ -4901,6 +4933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &2303488251862758546
 Animation:
   m_ObjectHideFlags: 0
@@ -5038,6 +5071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &377700836920703013
 Animation:
   m_ObjectHideFlags: 0
@@ -5175,6 +5209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &521804155391949154
 Animation:
   m_ObjectHideFlags: 0
@@ -5312,6 +5347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &8884716389149892707
 Animation:
   m_ObjectHideFlags: 0
@@ -5449,6 +5485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &5308713733259230898
 Animation:
   m_ObjectHideFlags: 0
@@ -5586,6 +5623,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &4809488720269409566
 Animation:
   m_ObjectHideFlags: 0
@@ -5723,6 +5761,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &1473245054967047017
 Animation:
   m_ObjectHideFlags: 0
@@ -5861,6 +5900,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: TopPlate
   _timer: 0
+  Measurement: 0
 --- !u!111 &8462651000386534518
 Animation:
   m_ObjectHideFlags: 0
@@ -6072,6 +6112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: BottomPlate
   _timer: 0
+  Measurement: 0
 --- !u!111 &1353186222742517545
 Animation:
   m_ObjectHideFlags: 0
@@ -6209,6 +6250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &7375264675150415421
 Animation:
   m_ObjectHideFlags: 0
@@ -6347,6 +6389,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: TopPlate
   _timer: 0
+  Measurement: 0
 --- !u!111 &3814184543076703163
 Animation:
   m_ObjectHideFlags: 0
@@ -6484,6 +6527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &736880991121886416
 Animation:
   m_ObjectHideFlags: 0
@@ -6621,6 +6665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &4606995812860531646
 Animation:
   m_ObjectHideFlags: 0
@@ -6792,6 +6837,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &5610784477824098477
 Animation:
   m_ObjectHideFlags: 0
@@ -6929,6 +6975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &2845531781437130716
 Animation:
   m_ObjectHideFlags: 0
@@ -7100,6 +7147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &6080762687206891380
 Animation:
   m_ObjectHideFlags: 0
@@ -7408,6 +7456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &8090167986927213548
 Animation:
   m_ObjectHideFlags: 0
@@ -7545,6 +7594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &1349107118686697353
 Animation:
   m_ObjectHideFlags: 0
@@ -7682,6 +7732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &5327412296245964233
 Animation:
   m_ObjectHideFlags: 0
@@ -7925,6 +7976,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Stud
   _timer: 0
+  Measurement: 0
 --- !u!111 &7233495505276124977
 Animation:
   m_ObjectHideFlags: 0
@@ -7941,6 +7993,73 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!1001 &1177995215810230542
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3256424689785552771}
+    m_Modifications:
+    - target: {fileID: 3019498717464046163, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_Name
+      value: TeleportManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.549622
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283558170266662362, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: Points.Array.data[7]
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 6526290363104667334, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+--- !u!4 &5055596922755922598 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+  m_PrefabInstance: {fileID: 1177995215810230542}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2898487513842216677
 PrefabInstance:
   m_ObjectHideFlags: 0

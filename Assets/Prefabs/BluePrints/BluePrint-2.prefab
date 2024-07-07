@@ -119,8 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: TopPlate
+  _name: 'Name: TopPlate \n Length: 5 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &1678241311844396283
 Animation:
   m_ObjectHideFlags: 0
@@ -256,8 +257,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &6107447609578186727
 Animation:
   m_ObjectHideFlags: 0
@@ -393,8 +395,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Noggins
+  _name: 'Name: Noggins \n Length: 5 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &1075505866960611604
 Animation:
   m_ObjectHideFlags: 0
@@ -530,8 +533,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &126403589313376403
 Animation:
   m_ObjectHideFlags: 0
@@ -667,8 +671,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &3763663471803058031
 Animation:
   m_ObjectHideFlags: 0
@@ -720,17 +725,23 @@ Transform:
   - {fileID: 1835496473790614377}
   - {fileID: 6813029613194817582}
   - {fileID: 5029832213415522563}
+  - {fileID: 6396390500256681031}
+  - {fileID: 261592371232011074}
   - {fileID: 7390548813719582893}
   - {fileID: 5600646148461462515}
   - {fileID: 1591980142054448379}
   - {fileID: 5214161457713447257}
   - {fileID: 3609866222374688009}
+  - {fileID: 5380467431479928872}
+  - {fileID: 7900453691507468816}
   - {fileID: 3360022060894405369}
   - {fileID: 3656086553977169421}
   - {fileID: 2464813621847043945}
   - {fileID: 2819020074909184641}
   - {fileID: 6709427321330554335}
   - {fileID: 5588600615348758923}
+  - {fileID: 8863615448558380624}
+  - {fileID: 1862393737947833184}
   - {fileID: 4290707770112660232}
   - {fileID: 7388785678064470764}
   - {fileID: 438643657746343064}
@@ -738,6 +749,7 @@ Transform:
   - {fileID: 7633878653653756578}
   - {fileID: 6599302731227840084}
   - {fileID: 2478801565681511640}
+  - {fileID: 7843276846177647332}
   - {fileID: 8002894673093467861}
   - {fileID: 1447612825827168393}
   - {fileID: 2071723421918491337}
@@ -751,6 +763,7 @@ Transform:
   - {fileID: 61989602827024099}
   - {fileID: 5454347750775790846}
   - {fileID: 4055376608657620790}
+  - {fileID: 6592876931950689396}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2135412424798021507
@@ -872,8 +885,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: BottomPlate
+  _name: 'Name: BottomPlate \n Length: 5 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &7589676455740804173
 Animation:
   m_ObjectHideFlags: 0
@@ -1009,8 +1023,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: BottomPlate
+  _name: 'Name: BottomPlate \n Length: 5 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &9179450776748241418
 Animation:
   m_ObjectHideFlags: 0
@@ -1146,8 +1161,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Noggins
+  _name: 'Name: Noggins \n Length: 5 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &766352755134583344
 Animation:
   m_ObjectHideFlags: 0
@@ -1283,8 +1299,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &2760760667148808332
 Animation:
   m_ObjectHideFlags: 0
@@ -1331,7 +1348,7 @@ Transform:
   m_GameObject: {fileID: 2755912547079445755}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -5, y: 2, z: -5}
+  m_LocalPosition: {x: -4.9, y: 2, z: -5}
   m_LocalScale: {x: 0.1, y: 4, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1420,8 +1437,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &5477929713734456250
 Animation:
   m_ObjectHideFlags: 0
@@ -1557,8 +1575,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: TopPlate
+  _name: 'Name: TopPlate \n Length: 5 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &2446497494101740174
 Animation:
   m_ObjectHideFlags: 0
@@ -1694,8 +1713,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &1447879098914050951
 Animation:
   m_ObjectHideFlags: 0
@@ -1831,8 +1851,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: TopPlate
+  _name: 'Name: TopPlate \n Length: 5 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &8297737566343510600
 Animation:
   m_ObjectHideFlags: 0
@@ -1968,8 +1989,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &5160625847777925216
 Animation:
   m_ObjectHideFlags: 0
@@ -2105,8 +2127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &7307031147205291566
 Animation:
   m_ObjectHideFlags: 0
@@ -2114,6 +2137,282 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3414967990498308797}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!1 &3835195667531092518
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7900453691507468816}
+  - component: {fileID: 6462177996702245463}
+  - component: {fileID: 3262735561114719846}
+  - component: {fileID: 8027650102097017949}
+  - component: {fileID: 6723037835848703651}
+  - component: {fileID: 8213217333766538192}
+  m_Layer: 3
+  m_Name: Stud(Clone) (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7900453691507468816
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3835195667531092518}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 4.9, y: 2, z: 5}
+  m_LocalScale: {x: 0.1, y: 4, z: 0.1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6926099575828309399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &6462177996702245463
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3835195667531092518}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &3262735561114719846
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3835195667531092518}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 08b16667afab19e45aae234e99e9a4fa, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8027650102097017949
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3835195667531092518}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6723037835848703651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3835195667531092518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: 'Name: Stud \n Length: 2 Meters'
+  _timer: 0
+  Measurement: 0
+--- !u!111 &8213217333766538192
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3835195667531092518}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!1 &4394994306148138928
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7843276846177647332}
+  - component: {fileID: 4469025359926029804}
+  - component: {fileID: 2683278455429764112}
+  - component: {fileID: 8546962287443058392}
+  - component: {fileID: 7572460293884881058}
+  - component: {fileID: 6163250207749424607}
+  m_Layer: 3
+  m_Name: Stud(Clone) (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7843276846177647332
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4394994306148138928}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -5, y: 2, z: -4.9}
+  m_LocalScale: {x: 0.1, y: 4, z: 0.1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6926099575828309399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4469025359926029804
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4394994306148138928}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2683278455429764112
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4394994306148138928}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 08b16667afab19e45aae234e99e9a4fa, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8546962287443058392
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4394994306148138928}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7572460293884881058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4394994306148138928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: 'Name: Stud \n Length: 2 Meters'
+  _timer: 0
+  Measurement: 0
+--- !u!111 &6163250207749424607
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4394994306148138928}
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 0}
@@ -2242,8 +2541,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &7741508786822741003
 Animation:
   m_ObjectHideFlags: 0
@@ -2251,6 +2551,144 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4477825111818148076}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!1 &4511252478382987115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5380467431479928872}
+  - component: {fileID: 6743742073401980025}
+  - component: {fileID: 420000124796641625}
+  - component: {fileID: 994586988736269988}
+  - component: {fileID: 7329087534208276161}
+  - component: {fileID: 1931449838502584950}
+  m_Layer: 3
+  m_Name: Stud(Clone) (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5380467431479928872
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4511252478382987115}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 5, y: 2, z: 4.9}
+  m_LocalScale: {x: 0.1, y: 4, z: 0.1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6926099575828309399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &6743742073401980025
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4511252478382987115}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &420000124796641625
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4511252478382987115}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 08b16667afab19e45aae234e99e9a4fa, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &994586988736269988
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4511252478382987115}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7329087534208276161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4511252478382987115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: 'Name: Stud \n Length: 2 Meters'
+  _timer: 0
+  Measurement: 0
+--- !u!111 &1931449838502584950
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4511252478382987115}
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 0}
@@ -2379,8 +2817,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &2098397342108242242
 Animation:
   m_ObjectHideFlags: 0
@@ -2516,8 +2955,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &4349209994815143881
 Animation:
   m_ObjectHideFlags: 0
@@ -2653,8 +3093,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Noggins
+  _name: 'Name: Noggins \n Length: 5 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &3917000421391352982
 Animation:
   m_ObjectHideFlags: 0
@@ -2790,8 +3231,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &565121879988299727
 Animation:
   m_ObjectHideFlags: 0
@@ -2927,8 +3369,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &4577250318634445699
 Animation:
   m_ObjectHideFlags: 0
@@ -3064,8 +3507,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &1826000566148884645
 Animation:
   m_ObjectHideFlags: 0
@@ -3201,8 +3645,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &7656941371017052571
 Animation:
   m_ObjectHideFlags: 0
@@ -3338,8 +3783,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: BottomPlate
+  _name: 'Name: BottomPlate \n Length: 5 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &8707319682510340271
 Animation:
   m_ObjectHideFlags: 0
@@ -3477,6 +3923,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: BottomPlate
   _timer: 0
+  Measurement: 0
 --- !u!111 &7393207107586331821
 Animation:
   m_ObjectHideFlags: 0
@@ -3484,6 +3931,282 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6771902270841132017}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!1 &6778625501775929595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6396390500256681031}
+  - component: {fileID: 8555948005990266549}
+  - component: {fileID: 3576072420070095148}
+  - component: {fileID: 4710406473546700923}
+  - component: {fileID: 3203104301517449951}
+  - component: {fileID: 170818795142201018}
+  m_Layer: 3
+  m_Name: Stud(Clone) (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6396390500256681031
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6778625501775929595}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -4.9, y: 2, z: 5}
+  m_LocalScale: {x: 0.1, y: 4, z: 0.1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6926099575828309399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &8555948005990266549
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6778625501775929595}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &3576072420070095148
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6778625501775929595}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 08b16667afab19e45aae234e99e9a4fa, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4710406473546700923
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6778625501775929595}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3203104301517449951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6778625501775929595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: 'Name: Stud \n Length: 2 Meters'
+  _timer: 0
+  Measurement: 0
+--- !u!111 &170818795142201018
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6778625501775929595}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!1 &6983279304327261918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 261592371232011074}
+  - component: {fileID: 560007718846773173}
+  - component: {fileID: 2889544197528316161}
+  - component: {fileID: 5438418599037815075}
+  - component: {fileID: 4193875247941282423}
+  - component: {fileID: 7173016770183020092}
+  m_Layer: 3
+  m_Name: Stud(Clone) (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &261592371232011074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6983279304327261918}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -5, y: 2, z: 4.9}
+  m_LocalScale: {x: 0.1, y: 4, z: 0.1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6926099575828309399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &560007718846773173
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6983279304327261918}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &2889544197528316161
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6983279304327261918}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 08b16667afab19e45aae234e99e9a4fa, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5438418599037815075
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6983279304327261918}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4193875247941282423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6983279304327261918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: 'Name: Stud \n Length: 2 Meters'
+  _timer: 0
+  Measurement: 0
+--- !u!111 &7173016770183020092
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6983279304327261918}
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 0}
@@ -3612,8 +4335,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &7885140831237431904
 Animation:
   m_ObjectHideFlags: 0
@@ -3749,8 +4473,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &3920332285962919287
 Animation:
   m_ObjectHideFlags: 0
@@ -3758,6 +4483,144 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7269115039750569249}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!1 &7288738309424497424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1862393737947833184}
+  - component: {fileID: 7915209958684076269}
+  - component: {fileID: 617976126860156306}
+  - component: {fileID: 5733526955278595516}
+  - component: {fileID: 8426793632069679208}
+  - component: {fileID: 610466337872738112}
+  m_Layer: 3
+  m_Name: Stud(Clone) (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1862393737947833184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288738309424497424}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 5, y: 2, z: -4.9}
+  m_LocalScale: {x: 0.1, y: 4, z: 0.1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6926099575828309399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &7915209958684076269
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288738309424497424}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &617976126860156306
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288738309424497424}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 08b16667afab19e45aae234e99e9a4fa, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5733526955278595516
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288738309424497424}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8426793632069679208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288738309424497424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: 'Name: Stud \n Length: 2 Meters'
+  _timer: 0
+  Measurement: 0
+--- !u!111 &610466337872738112
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7288738309424497424}
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 0}
@@ -3886,8 +4749,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &7053051071201120409
 Animation:
   m_ObjectHideFlags: 0
@@ -4023,8 +4887,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &7266011873098969937
 Animation:
   m_ObjectHideFlags: 0
@@ -4032,6 +4897,144 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7607456894521244429}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 0}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!1 &7876881170814488604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8863615448558380624}
+  - component: {fileID: 1418151963893970795}
+  - component: {fileID: 8719978388654416242}
+  - component: {fileID: 132371321256279869}
+  - component: {fileID: 629068064216238470}
+  - component: {fileID: 8681657769606868379}
+  m_Layer: 3
+  m_Name: Stud(Clone) (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8863615448558380624
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876881170814488604}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 4.9, y: 2, z: -5}
+  m_LocalScale: {x: 0.1, y: 4, z: 0.1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6926099575828309399}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1418151963893970795
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876881170814488604}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &8719978388654416242
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876881170814488604}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 08b16667afab19e45aae234e99e9a4fa, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &132371321256279869
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876881170814488604}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &629068064216238470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876881170814488604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: 'Name: Stud \n Length: 2 Meters'
+  _timer: 0
+  Measurement: 0
+--- !u!111 &8681657769606868379
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876881170814488604}
   m_Enabled: 1
   serializedVersion: 3
   m_Animation: {fileID: 0}
@@ -4160,8 +5163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &8634215703253694939
 Animation:
   m_ObjectHideFlags: 0
@@ -4297,8 +5301,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: TopPlate
+  _name: 'Name: TopPlate \n Length: 5 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &6523784167169182797
 Animation:
   m_ObjectHideFlags: 0
@@ -4434,8 +5439,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: BottomPlate
+  _name: 'Name: BottomPlate \n Length: 5 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &2017929763787095715
 Animation:
   m_ObjectHideFlags: 0
@@ -4571,8 +5577,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &8713762264237594019
 Animation:
   m_ObjectHideFlags: 0
@@ -4708,8 +5715,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Noggins
+  _name: 'Name: Noggins \n Length: 5 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &5457079367743042145
 Animation:
   m_ObjectHideFlags: 0
@@ -4845,8 +5853,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &4005661496717296314
 Animation:
   m_ObjectHideFlags: 0
@@ -4982,8 +5991,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &1674403114161816723
 Animation:
   m_ObjectHideFlags: 0
@@ -5119,8 +6129,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: Stud
+  _name: 'Name: Stud \n Length: 2 Meters'
   _timer: 0
+  Measurement: 0
 --- !u!111 &4366079887018919165
 Animation:
   m_ObjectHideFlags: 0
@@ -5137,3 +6148,94 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!1001 &940856868876550108
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6926099575828309399}
+    m_Modifications:
+    - target: {fileID: 1004253722262275500, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3019498717464046163, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_Name
+      value: TeleportManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4262335623704697562, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4956267950355912942, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5954363662774426878, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6283558170266662362, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: Points.Array.data[7]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6339162121953809629, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6738294907569266143, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -15
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects:
+    - {fileID: 6526290363104667334, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+--- !u!4 &6592876931950689396 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6228481539250242472, guid: d31108470d2ff664897f12c1fa65c52e, type: 3}
+  m_PrefabInstance: {fileID: 940856868876550108}
+  m_PrefabAsset: {fileID: 0}
