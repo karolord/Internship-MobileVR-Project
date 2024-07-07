@@ -20,10 +20,11 @@ public class ButtonScriptForRoofExperience : MonoBehaviour
     {
         if (_Gazing)
         {
-            Debug.Log("Currently Glazing");
             _timer += Time.deltaTime;
-            //if(_button != null)
-            //_button.GetComponent<Image>().fillAmount = _timer;
+            Debug.Log(_timer);
+
+            if (_button != null)
+                _button.GetComponent<Image>().fillAmount = _timer;
 
             if (_timer >= 1f)
             {
@@ -32,8 +33,15 @@ public class ButtonScriptForRoofExperience : MonoBehaviour
             }
 
         }
-        //if(_button != null)
-            //_button.GetComponent<Image>().fillAmount = _timer;
+        
+        if (!_Gazing) 
+        {
+            Debug.Log("Stopped Glazing");
+            _timer = 0f;
+        }
+
+        if (_button != null)
+            _button.GetComponent<Image>().fillAmount = _timer;
     }
 
     public void OnPointerEnter()
@@ -54,6 +62,6 @@ public class ButtonScriptForRoofExperience : MonoBehaviour
         {
             _timer = 0f;
         }
-
+            
     }
 }

@@ -5,6 +5,7 @@ using System.Runtime.Serialization.Json;
 using TMPro;
 using UnityEditor.Search;
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using VSCodeEditor;
@@ -56,9 +57,11 @@ public class ProceduralMesh : MonoBehaviour
     public GameObject labelObject;
     private List<GameObject> labels = new List<GameObject>();
 
-    public GameObject formula_UI;
-    public GameObject homeScreen; 
     public GameObject _player;
+    public GameObject formula_UI;
+    public GameObject homeScreen;
+    public GameObject tutorialScreen;
+    
 
     public bool firstTime = true;
 
@@ -98,13 +101,14 @@ public class ProceduralMesh : MonoBehaviour
 
         //ln = GetComponent<LineRenderer>();
         
-        settingUpLabelsChildren();
+        settingUpLabelsChildren(9);
 
         x_0 = _player.transform.position.x;
         y_0 = _player.transform.position.y;
         z_0 = _player.transform.position.z+5;
 
-        
+        //formula_UI.SetActive(false);
+        showTutorialScreen();
     }
 
     // Update is called once per frame
@@ -371,7 +375,16 @@ public class ProceduralMesh : MonoBehaviour
 
     public void showCalculation(int buttonType)
     {
-        
+
+        //homeScreen.SetActive(false);
+        //formula_UI.SetActive(true);
+        //tutorialScreen.SetActive(false);
+
+        targetScreen(formula_UI);
+
+        //_player.transform.position = new Vector3(0,0,-1);
+        //_player.transform.rotation = new Quaternion(0, 0, 0, 0);
+
         mesh.Clear();
 
         float R1 = Mathf.Sqrt(Mathf.Pow(width / 2, 2) + Mathf.Pow(height, 2));
@@ -451,13 +464,14 @@ public class ProceduralMesh : MonoBehaviour
 
         if (firstTime == true)
         {
+            clearlabel();
             showR1(tri_1);
             firstTime = false;
             state = 0;
         }
         else
         {
-            homeScreen.SetActive(false);
+            //homeScreen.SetActive(false);
             if (state == 0)
             {
                 //triangles = tri_1;
@@ -493,12 +507,14 @@ public class ProceduralMesh : MonoBehaviour
 
                 //_player.transform.position = new Vector3(-5, 3.5f, -3);
                 //_player.transform.rotation = new Quaternion(0, 0, 0, 0);
-
+                clearlabel();
                 showR1(tri_1);
             }
 
             if (state == 1)
             {
+                clearlabel();
+
                 triangles = tri_3;
                 H = showT3(R1, vertices);
 
@@ -516,6 +532,8 @@ public class ProceduralMesh : MonoBehaviour
 
             if (state == 2)
             {
+                clearlabel();
+
                 // TODO: fixed T2 not showing h and H if R1 and T3 is not employed
                 triangles = tri_4;
 
@@ -524,7 +542,7 @@ public class ProceduralMesh : MonoBehaviour
                 formula_UI.transform.position = new Vector3(-5, 8.9f, 7.2f);
                 formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
 
-                string T2_formula = "h<sup>2</sup> = H<sup>2</sup> - (width/2)height<sup>2</sup>";
+                string T2_formula = "h<sup>2</sup> = H<sup>2</sup> - (width/2)<sup>2</sup>";
                 string T2_title = "Calculating T2";
                 showUI(T2_formula, T2_title, formula_illus[2]);
 
@@ -538,8 +556,20 @@ public class ProceduralMesh : MonoBehaviour
 
     public void showEntireRoof()
     {
-        _player.transform.position = new Vector3(vertices[0].x, vertices[0].y + 5, vertices[0].z);
-        homeScreen.transform.position = new Vector3(vertices[3].x, _player.transform.position.y, vertices[3].z + 5);
+        //homeScreen.SetActive(true);
+        //formula_UI.SetActive(false);
+        //tutorialScreen.SetActive(false);
+
+        targetScreen(homeScreen);
+
+        clearlabel();
+
+        _player.transform.position = new Vector3(vertices[4].x, vertices[4].y + 5f, vertices[4].z - 15f);
+        _player.transform.rotation = new Quaternion(0, 0, 0, 0);
+
+        homeScreen.transform.position = new Vector3(_player.transform.position.x, _player.transform.position.y, _player.transform.position.z + 5);
+        
+
         triangles = new int[] {
             // bot
             0, 4, 1,
@@ -560,6 +590,36 @@ public class ProceduralMesh : MonoBehaviour
             9, 3, 5,
             };
 
+        Vector3[] leng_top = new Vector3[] {vertices[0], vertices[3]};
+        Vector3[] leng_bot = new Vector3[] {vertices[6], vertices[9]};
+        Vector3[] wid_left = new Vector3[] {vertices[0], vertices[6]};
+        Vector3[] wid_right = new Vector3[] {vertices[3], vertices[9]};
+        Vector3[] dia_leftTop = new Vector3[] {vertices[4], vertices[6]};
+        Vector3[] dia_leftBot = new Vector3[] {vertices[0], vertices[4]};
+        Vector3[] dia_rightTop = new Vector3[] {vertices[5], vertices[9]};
+        Vector3[] dia_rightBot = new Vector3[] {vertices[5], vertices[3]};
+        Vector3[] middle = new Vector3[] { vertices[4], vertices[5] };
+
+
+        makeLabel(labels[0], leng_top, length.ToString());
+        makeLabel(labels[1], leng_bot, length.ToString());
+        makeLabel(labels[2], wid_left, width.ToString());
+        makeLabel(labels[3], wid_right, width.ToString());
+        makeLabel(labels[4], dia_leftTop, "");
+        makeLabel(labels[5], dia_leftBot, "");
+        makeLabel(labels[6], dia_rightTop, "");
+        makeLabel(labels[7], dia_rightBot, "");
+        makeLabel(labels[8], middle, "");
+
+        float offset = 1f;
+        labels[0].transform.position = new Vector3(vertices[0].x + offset, vertices[0].y, (vertices[0].z + vertices[3].z) / 2);
+        labels[1].transform.position = new Vector3(vertices[6].x - offset, vertices[6].y, (vertices[6].z + vertices[9].z) / 2);
+        labels[2].transform.position = new Vector3((vertices[0].x + vertices[6].x) / 2, vertices[0].y, vertices[0].z - offset);
+        labels[3].transform.position = new Vector3((vertices[3].x + vertices[9].x) / 2, vertices[3].y, vertices[3].z + offset);
+
+
+        Quaternion rotation = Quaternion.Euler(0, -180, 0);
+        labels[3].transform.rotation = rotation;
         MakeMeshData();
     }
     private void MakeMeshData()
@@ -570,9 +630,9 @@ public class ProceduralMesh : MonoBehaviour
         mesh.RecalculateNormals();
     }
 
-    private void settingUpLabelsChildren()
+    private void settingUpLabelsChildren(int amount)
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < amount; i++)
         {
             labels.Add(Instantiate(labelObject));
         }
@@ -580,6 +640,7 @@ public class ProceduralMesh : MonoBehaviour
 
     void makeLabel(GameObject label, Vector3[] label_verts, string label_text)
     {
+        label.SetActive(true);
         LineRenderer ln = label.GetComponent<LineRenderer>();
 
         ln.SetPositions(label_verts);
@@ -707,17 +768,64 @@ public class ProceduralMesh : MonoBehaviour
 
     void showUI(string formula_text, string title_text, Sprite illus)
     {
-
-        Debug.Log("UI Showing");
         TextMeshProUGUI formula = formula_UI.transform.GetChild(0).GetComponent<TextMeshProUGUI>(); 
         TextMeshProUGUI title = formula_UI.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
         UnityEngine.UI.Image Illus = formula_UI.transform.GetChild(2).GetComponent<UnityEngine.UI.Image>();
 
-        
         formula.text = formula_text;
         title.text = title_text;
         Illus.sprite = illus;
     }
 
-    //TODO: implement next button
+    void clearlabel()
+    {
+        for (int i = 0; i < labels.Count; i++)
+        {
+            labels[i].SetActive(false);
+        }
+    }
+
+
+    public void showSelectMode()
+    {
+        firstTime = true;
+        mesh.Clear();
+        clearlabel();
+
+        targetScreen(homeScreen);
+
+        _player.transform.position = Vector3.zero;  
+        _player.transform.rotation = new Quaternion(0,0,0,0);
+        homeScreen.transform.position = new Vector3(0, 0, 4);   
+    }
+
+    void showTutorialScreen()
+    {
+        targetScreen(tutorialScreen);
+
+        _player.transform.position = Vector3.zero;
+        tutorialScreen.transform.position = new Vector3(0, 0, 4); 
+    }
+
+    void targetScreen(GameObject target)
+    {
+        Vector3 away = new Vector3(0, -100, 0);
+        if (target == formula_UI)
+        {
+            homeScreen.transform.position = away;
+            tutorialScreen.transform.position = away;
+        }
+
+        if (target == tutorialScreen)
+        {
+            formula_UI.transform.position = away;
+            homeScreen.transform.position = away;
+        }
+
+        if(target == homeScreen)
+        {
+            formula_UI.transform.position = away;
+            homeScreen.transform.position = away;
+        }
+    }
 }
