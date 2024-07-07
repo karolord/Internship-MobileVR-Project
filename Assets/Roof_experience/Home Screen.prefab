@@ -602,6 +602,7 @@ GameObject:
   - component: {fileID: 7835738287178626419}
   - component: {fileID: 1784567919922748937}
   - component: {fileID: 7907687552480841991}
+  - component: {fileID: 7435239600653428009}
   m_Layer: 3
   m_Name: Show_Entire_Roof_Button
   m_TagString: Untagged
@@ -675,7 +676,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4730644670098799452}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db660f8e5d9853548b3367da1aa8ff3a, type: 3}
   m_Name: 
@@ -717,6 +718,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 275, y: 275, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7435239600653428009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4730644670098799452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a56737bc1a78d941bdfe1571a2e98d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  _button: {fileID: 1216604795243300446}
 --- !u!1 &4756913948631043574
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,6 +881,7 @@ GameObject:
   - component: {fileID: 6653303774376632155}
   - component: {fileID: 5604679984896459543}
   - component: {fileID: 3285888268302386647}
+  - component: {fileID: 7741989009402791973}
   m_Layer: 3
   m_Name: Return_button
   m_TagString: Untagged
@@ -937,7 +955,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6686285076971770855}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db660f8e5d9853548b3367da1aa8ff3a, type: 3}
   m_Name: 
@@ -979,6 +997,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 100, y: 100, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7741989009402791973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6686285076971770855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a56737bc1a78d941bdfe1571a2e98d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  _button: {fileID: 642618077659272653}
 --- !u!1 &7368681399974961210
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,6 +1026,7 @@ GameObject:
   - component: {fileID: 6633558504437922599}
   - component: {fileID: 1177777690779683992}
   - component: {fileID: 8571802560291354361}
+  - component: {fileID: 6136790750008273950}
   m_Layer: 3
   m_Name: Show_Calculation_Button
   m_TagString: Untagged
@@ -1065,7 +1100,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7368681399974961210}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db660f8e5d9853548b3367da1aa8ff3a, type: 3}
   m_Name: 
@@ -1107,6 +1142,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 275, y: 275, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6136790750008273950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7368681399974961210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a56737bc1a78d941bdfe1571a2e98d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  _button: {fileID: 3498682217148429109}
 --- !u!1 &8336149202011885282
 GameObject:
   m_ObjectHideFlags: 0

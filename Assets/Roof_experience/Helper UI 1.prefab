@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 417824013127823698}
   - component: {fileID: 5395279087582452624}
   - component: {fileID: 4691948611914144055}
+  - component: {fileID: 5365551280423779870}
   m_Layer: 3
   m_Name: Return To Select Mode
   m_TagString: Untagged
@@ -86,7 +87,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 600674273113974594}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db660f8e5d9853548b3367da1aa8ff3a, type: 3}
   m_Name: 
@@ -126,8 +127,24 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 157.24907, y: 27.373726, z: 1}
+  m_Size: {x: 200, y: 200, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5365551280423779870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600674273113974594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a56737bc1a78d941bdfe1571a2e98d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls: []
+  _button: {fileID: 8674024314921117999}
 --- !u!1 &819068607960714305
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +552,7 @@ GameObject:
   - component: {fileID: 1644143295871267767}
   - component: {fileID: 2623409430242764}
   - component: {fileID: 334085457773052252}
+  - component: {fileID: 6363486230328825602}
   m_Layer: 3
   m_Name: Previous Page
   m_TagString: Untagged
@@ -607,7 +625,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2895632751984194173}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db660f8e5d9853548b3367da1aa8ff3a, type: 3}
   m_Name: 
@@ -649,6 +667,34 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 157.24907, y: 27.373726, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6363486230328825602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2895632751984194173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a56737bc1a78d941bdfe1571a2e98d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _button: {fileID: 7017667334754206823}
 --- !u!1 &3062698478958638158
 GameObject:
   m_ObjectHideFlags: 0
@@ -662,6 +708,7 @@ GameObject:
   - component: {fileID: 5028182672301413591}
   - component: {fileID: 65723071350814228}
   - component: {fileID: 8780414023428920712}
+  - component: {fileID: 4933742956898356773}
   m_Layer: 3
   m_Name: Next Page
   m_TagString: Untagged
@@ -734,7 +781,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3062698478958638158}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db660f8e5d9853548b3367da1aa8ff3a, type: 3}
   m_Name: 
@@ -776,6 +823,34 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 157.24907, y: 27.373726, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4933742956898356773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3062698478958638158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a56737bc1a78d941bdfe1571a2e98d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _button: {fileID: 6053664309288319519}
 --- !u!1 &3808583348385970105
 GameObject:
   m_ObjectHideFlags: 0
@@ -1229,7 +1304,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000022888, y: -0.5}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7837349271441991429
 CanvasRenderer:
