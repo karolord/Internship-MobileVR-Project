@@ -825,7 +825,7 @@ public class ProceduralMesh : MonoBehaviour
         if(target == homeScreen)
         {
             formula_UI.transform.position = away;
-            homeScreen.transform.position = away;
+            tutorialScreen.transform.position = away;
         }
     }
 }
