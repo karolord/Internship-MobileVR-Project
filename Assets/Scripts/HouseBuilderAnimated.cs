@@ -6,13 +6,13 @@ using UnityEngine;
 public class HouseBuilderAnimated : MonoBehaviour
 {
     public float PlateLength;
-    public float MainPlateLength = 100f;
+    public float MainPlateLength;
     public float WallHeight;
     public float Spacing;
     public float NogginsSpacing;
-    private int _StudCount;
-    private int _MainStudCount;
-    private int _NogginCount;
+    protected int _StudCount;
+    protected int _MainStudCount;
+    protected int _NogginCount;
     public GameObject PlatePrefab;
     public GameObject StudPrefab;
     public GameObject NogginsPrefab;
@@ -27,7 +27,7 @@ public class HouseBuilderAnimated : MonoBehaviour
         // NogginsSpacing = 2f;
         // WallBuilder();
     }
-    void AnimationBuilder(GameObject piece, Vector3 start, Vector3 end, Vector3 StartRotation, Vector3 EndRotation, float duration)
+    protected void AnimationBuilder(GameObject piece, Vector3 start, Vector3 end, Vector3 StartRotation, Vector3 EndRotation, float duration)
     {
         Animation animation = piece.AddComponent<Animation>();
         AnimationClip clip = new AnimationClip();
@@ -61,13 +61,13 @@ public class HouseBuilderAnimated : MonoBehaviour
         TopPlates();
         // StartCoroutine(PlaceTopPlates(15, 0, 0, 0));
     }
-    void BottomPlates(){
+    protected void BottomPlates(){
         StartCoroutine(PlaceBottomPlates(0, 0, 0, 1,0));
         StartCoroutine(PlaceBottomPlates(0, 0, 0, -1,0));
         StartCoroutine(PlaceBottomPlates(0, 0, 0, 1,90));
         StartCoroutine(PlaceBottomPlates(0, 0, 0, -1,90));
     }
-    void TopPlates(){
+    protected void TopPlates(){
         StartCoroutine(PlaceTopPlates(15, 0, 0, 1,0));
         StartCoroutine(PlaceTopPlates(15, 0, 0, -1,0));
         StartCoroutine(PlaceTopPlates(15, 0, 0, 1,90));
@@ -106,7 +106,7 @@ public class HouseBuilderAnimated : MonoBehaviour
         AnimationBuilder(TopPlate, new Vector3(20, 0, 13), TopPlate.transform.position, new Vector3(0, 0, 0), new Vector3(0, 0, 0), 5);
     }
 
-    void Studs()
+    protected void Studs()
     {
         StartCoroutine(PlaceStuds(5, 0, 0, 1,0));
         StartCoroutine(PlaceStuds(5, 0, 0, -1,0));
@@ -159,7 +159,7 @@ public class HouseBuilderAnimated : MonoBehaviour
     }
 
     
-    void Noggins()
+    protected void Noggins()
     {
         StartCoroutine(PlaceNoggins(10, 0, 0, -1,0));
         StartCoroutine(PlaceNoggins(10, 0, 0, 1,0));

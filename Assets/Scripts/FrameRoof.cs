@@ -24,6 +24,11 @@ public class FrameRoof : MonoBehaviour
     void Start()
     {
         // transform.position = new Vector3(x_0, y_0, z_0);
+        if(this.transform.parent != null)
+        {
+            length = this.transform.parent.GetComponent<HBAnimated>().PlateLength;
+            width = this.transform.parent.GetComponent<HBAnimated>().MainPlateLength;
+        }
 
         Vector3 vert_0 = new Vector3(x_0, y_0, z_0);
         Vector3 vert_1 = new Vector3(x_0, y_0, z_0 + 1.0f / 3.0f * length);

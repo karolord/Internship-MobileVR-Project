@@ -6,6 +6,7 @@ using UnityEngine.Events;
 public class ValueCollector : MonoBehaviour
 {
     public float value = 0.0f;
+    public float Increment;
     [SerializeField]
     private TMPro.TextMeshProUGUI _textValue;
 
@@ -13,13 +14,17 @@ public class ValueCollector : MonoBehaviour
     //    Add();
     // }
    public void Add(){
-         value += 0.03f;
+         value += Increment;
          Debug.Log(value);
          _textValue.text = value.ToString();
    }
    public void Subtract(){
     if(value > 0){
-         value -= 1.0f;
+         value -= Increment;
+        _textValue.text = value.ToString();
+    }
+    if(value <= 0){
+        value = 0;
         _textValue.text = value.ToString();
     }
    }

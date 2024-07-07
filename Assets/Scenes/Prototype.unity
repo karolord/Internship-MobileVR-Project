@@ -290,6 +290,7 @@ RectTransform:
   - {fileID: 983065973}
   - {fileID: 1285517121}
   - {fileID: 147643855}
+  - {fileID: 1079012114}
   - {fileID: 1139456585}
   - {fileID: 877762632}
   - {fileID: 370271853}
@@ -594,6 +595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 10
+  Increment: 1
   _textValue: {fileID: 820502572}
 --- !u!114 &147643853
 MonoBehaviour:
@@ -711,7 +713,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -496, y: 220}
+  m_AnchoredPosition: {x: -496, y: 287}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &149628928
@@ -841,6 +843,81 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149628928}
+  m_CullTransparentMesh: 1
+--- !u!1 &152593303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 152593304}
+  - component: {fileID: 152593306}
+  - component: {fileID: 152593305}
+  m_Layer: 3
+  m_Name: Image (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &152593304
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152593303}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.00007783213}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 336535540}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.000024795532}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &152593305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152593303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0.972549, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bb5910dab986d654f862725f32d18987, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 0
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &152593306
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152593303}
   m_CullTransparentMesh: 1
 --- !u!1 &153381345
 GameObject:
@@ -1405,6 +1482,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214694707}
   m_CullTransparentMesh: 1
+--- !u!1 &239542091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 239542092}
+  - component: {fileID: 239542094}
+  - component: {fileID: 239542093}
+  m_Layer: 3
+  m_Name: Image (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &239542092
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239542091}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1435490063}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &239542093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239542091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0.972549, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bb5910dab986d654f862725f32d18987, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 0
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &239542094
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239542091}
+  m_CullTransparentMesh: 1
 --- !u!1 &249781066
 GameObject:
   m_ObjectHideFlags: 0
@@ -1933,6 +2085,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312224265}
   m_CullTransparentMesh: 1
+--- !u!1 &336535539
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 336535540}
+  - component: {fileID: 336535544}
+  - component: {fileID: 336535543}
+  - component: {fileID: 336535542}
+  - component: {fileID: 336535541}
+  m_Layer: 3
+  m_Name: Add
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &336535540
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336535539}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.2707434, y: 2.5998, z: 2.5998}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1058248889}
+  - {fileID: 152593304}
+  m_Father: {fileID: 1079012114}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1186, y: -16}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &336535541
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336535539}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 157.24907, y: 27.373726, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &336535542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336535539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db660f8e5d9853548b3367da1aa8ff3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1079012115}
+        m_TargetAssemblyTypeName: ValueCollector, Assembly-CSharp
+        m_MethodName: Add
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _button: {fileID: 152593303}
+--- !u!114 &336535543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336535539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bb5910dab986d654f862725f32d18987, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &336535544
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336535539}
+  m_CullTransparentMesh: 1
 --- !u!1 &343245256
 GameObject:
   m_ObjectHideFlags: 0
@@ -2227,6 +2507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 2
+  Increment: 0.5
   _textValue: {fileID: 1246008668}
 --- !u!114 &370271851
 MonoBehaviour:
@@ -2990,6 +3271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 0
+  Increment: 0
   _textValue: {fileID: 0}
 --- !u!222 &543665681
 CanvasRenderer:
@@ -3522,6 +3804,7 @@ RectTransform:
   - {fileID: 1741208673}
   - {fileID: 1700191350}
   - {fileID: 169932145}
+  - {fileID: 2144710558}
   m_Father: {fileID: 250002055}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3646,7 +3929,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 370271850}
         m_TargetAssemblyTypeName: ValueCollector, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: Add
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4113,6 +4396,171 @@ RectTransform:
   m_AnchoredPosition: {x: 1005, y: 0.000061035156}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &827371472
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 827371473}
+  - component: {fileID: 827371478}
+  - component: {fileID: 827371477}
+  - component: {fileID: 827371476}
+  - component: {fileID: 827371475}
+  - component: {fileID: 827371474}
+  m_Layer: 3
+  m_Name: BuildBtn (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &827371473
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827371472}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.000011875716}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1159683394}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &827371474
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827371472}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 157.85, y: 31.43, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &827371475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827371472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5728c2b2d70e94a4f89c54189d513d07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  houseBuilder: {fileID: 1531429179}
+  wallmaker: {fileID: 0}
+  valueCollector:
+  - {fileID: 147643852}
+  - {fileID: 1079012115}
+  - {fileID: 1139456582}
+  - {fileID: 877762629}
+  - {fileID: 370271850}
+  _textValue: {fileID: 543665679}
+  Roof: 0
+--- !u!114 &827371476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827371472}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 827371477}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &827371477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827371472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0.972549, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bb5910dab986d654f862725f32d18987, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 0
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &827371478
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 827371472}
+  m_CullTransparentMesh: 1
 --- !u!1 &850568028
 GameObject:
   m_ObjectHideFlags: 0
@@ -4322,6 +4770,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860092328}
   m_CullTransparentMesh: 1
+--- !u!1 &870689014
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 870689015}
+  - component: {fileID: 870689017}
+  - component: {fileID: 870689016}
+  m_Layer: 3
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &870689015
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870689014}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2144710558}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 912, y: 912}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &870689016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870689014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 1, b: 0.9725938, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 668c7d33145864640848e32fc3fb1e98, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 0
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &870689017
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870689014}
+  m_CullTransparentMesh: 1
 --- !u!1 &877762628
 GameObject:
   m_ObjectHideFlags: 0
@@ -4354,6 +4877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 2
+  Increment: 0.5
   _textValue: {fileID: 693851328}
 --- !u!114 &877762630
 MonoBehaviour:
@@ -4498,14 +5022,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907292807}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.9997235, z: -0, w: -0.023514945}
-  m_LocalPosition: {x: -0.853, y: 7.41, z: 13.456}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -0.85299724, y: 7.891, z: 13.456}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 959308593}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 182.695, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &910898516
 GameObject:
   m_ObjectHideFlags: 0
@@ -5937,6 +6461,429 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1026105065}
   m_CullTransparentMesh: 1
+--- !u!1 &1058248888
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1058248889}
+  - component: {fileID: 1058248891}
+  - component: {fileID: 1058248890}
+  m_Layer: 3
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1058248889
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058248888}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 336535540}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1058248890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058248888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: +
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 44
+  m_fontSizeBase: 44
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1058248891
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058248888}
+  m_CullTransparentMesh: 1
+--- !u!1 &1079012113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1079012114}
+  - component: {fileID: 1079012117}
+  - component: {fileID: 1079012116}
+  - component: {fileID: 1079012115}
+  m_Layer: 5
+  m_Name: Side
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1079012114
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079012113}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1289952529}
+  - {fileID: 336535540}
+  - {fileID: 1435490063}
+  m_Father: {fileID: 33062832}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -496, y: 177}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1079012115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079012113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4daf53652bb7979429bfc11a062c6a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value: 10
+  Increment: 1
+  _textValue: {fileID: 1289952527}
+--- !u!114 &1079012116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079012113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Side Plate length: '
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 64
+  m_fontSizeBase: 64
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -54.5356, y: 0, z: -306.91113, w: -46.533943}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1079012117
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079012113}
+  m_CullTransparentMesh: 1
+--- !u!1 &1089513932
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1089513933}
+  - component: {fileID: 1089513935}
+  - component: {fileID: 1089513934}
+  m_Layer: 3
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1089513933
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089513932}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1435490063}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1089513934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089513932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: '-
+
+'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4281479730
+  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 44
+  m_fontSizeBase: 44
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1089513935
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089513932}
+  m_CullTransparentMesh: 1
 --- !u!1 &1114105974
 GameObject:
   m_ObjectHideFlags: 0
@@ -6244,6 +7191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 8
+  Increment: 1
   _textValue: {fileID: 1523662297}
 --- !u!114 &1139456583
 MonoBehaviour:
@@ -6443,7 +7391,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 877762629}
         m_TargetAssemblyTypeName: ValueCollector, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: Add
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6525,6 +7473,7 @@ RectTransform:
   m_LocalScale: {x: 2.2286, y: 2.2286, z: 2.2286}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 827371473}
   - {fileID: 1901443978}
   m_Father: {fileID: 33062832}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6567,12 +7516,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   houseBuilder: {fileID: 1531429179}
+  wallmaker: {fileID: 0}
   valueCollector:
   - {fileID: 147643852}
+  - {fileID: 1079012115}
   - {fileID: 1139456582}
   - {fileID: 877762629}
   - {fileID: 370271850}
   _textValue: {fileID: 543665679}
+  Roof: 0
 --- !u!114 &1159683397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6637,8 +7589,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: bb5910dab986d654f862725f32d18987, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -6730,6 +7682,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1204311262}
   m_CullTransparentMesh: 1
+--- !u!1 &1224647395 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4488426499014485605, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+  m_PrefabInstance: {fileID: 1850833808}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1237389173
 GameObject:
   m_ObjectHideFlags: 0
@@ -6842,6 +7799,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1224647395}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
   _button: {fileID: 1756638284}
 --- !u!114 &1237389177
@@ -7230,6 +8199,140 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1285517120}
   m_CullTransparentMesh: 1
+--- !u!1 &1289952526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1289952529}
+  - component: {fileID: 1289952528}
+  - component: {fileID: 1289952527}
+  m_Layer: 5
+  m_Name: Value
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1289952527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289952526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 0
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 75.75
+  m_fontSizeBase: 75.75
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -162.84601, y: 0, z: 125.32207, w: -46.533943}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1289952528
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289952526}
+  m_CullTransparentMesh: 1
+--- !u!224 &1289952529
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289952526}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1079012114}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1005, y: 0.000061035156}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1292808004
 GameObject:
   m_ObjectHideFlags: 0
@@ -7309,7 +8412,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 370271850}
         m_TargetAssemblyTypeName: ValueCollector, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: Subtract
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7635,7 +8738,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 877762629}
         m_TargetAssemblyTypeName: ValueCollector, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: Subtract
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7895,6 +8998,134 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395419594}
+  m_CullTransparentMesh: 1
+--- !u!1 &1435490062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1435490063}
+  - component: {fileID: 1435490067}
+  - component: {fileID: 1435490066}
+  - component: {fileID: 1435490065}
+  - component: {fileID: 1435490064}
+  m_Layer: 3
+  m_Name: Subtract
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1435490063
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435490062}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalScale: {x: 2.2707434, y: 2.5998, z: 2.5998}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 239542092}
+  - {fileID: 1089513933}
+  m_Father: {fileID: 1079012114}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 562, y: -16}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &1435490064
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435490062}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 157.24907, y: 27.373726, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1435490065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435490062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db660f8e5d9853548b3367da1aa8ff3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1079012115}
+        m_TargetAssemblyTypeName: ValueCollector, Assembly-CSharp
+        m_MethodName: Subtract
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _button: {fileID: 239542091}
+--- !u!114 &1435490066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435490062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: bb5910dab986d654f862725f32d18987, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1435490067
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435490062}
   m_CullTransparentMesh: 1
 --- !u!1 &1459053203
 GameObject:
@@ -8685,9 +9916,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1531429177}
-  - component: {fileID: 1531429178}
   - component: {fileID: 1531429179}
-  - component: {fileID: 1531429180}
   m_Layer: 0
   m_Name: HouseFrame
   m_TagString: Untagged
@@ -8710,27 +9939,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1799306723}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1531429178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531429176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a742f9cb1fc494488670e4f2a0e6a39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlateLength: 12
-  WallHeight: 5
-  Spacing: 2
-  NogginsSpacing: 1
-  PlatePrefab: {fileID: 5751101129133427423, guid: 673dd22cc84fcb643b22d2758aae9631, type: 3}
-  StudPrefab: {fileID: 317671497135506813, guid: 644afbd12d088c947bc9a7a2cc0d507d, type: 3}
-  NogginsPrefab: {fileID: 317671497135506813, guid: 9be965443c43c394786dc5eb0bed7cd3, type: 3}
-  _Name: {fileID: 0}
-  _value: {fileID: 0}
 --- !u!114 &1531429179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8751,20 +9959,6 @@ MonoBehaviour:
   PlatePrefab: {fileID: 5751101129133427423, guid: 673dd22cc84fcb643b22d2758aae9631, type: 3}
   StudPrefab: {fileID: 317671497135506813, guid: 644afbd12d088c947bc9a7a2cc0d507d, type: 3}
   NogginsPrefab: {fileID: 317671497135506813, guid: 9be965443c43c394786dc5eb0bed7cd3, type: 3}
---- !u!114 &1531429180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531429176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4b8f05c44598684cbe8a770d2d90000, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SidePlatesWidth: 0
-  MainPlatesWidth: 0
 --- !u!1 &1545212668
 GameObject:
   m_ObjectHideFlags: 0
@@ -9999,7 +11193,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799306721}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dd68f027e715c44aa8d097000d4cccfb, type: 3}
   m_Name: 
@@ -10213,6 +11407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   value: 10
+  Increment: 0
   _textValue: {fileID: 0}
 --- !u!114 &1839610554
 MonoBehaviour:
@@ -10330,6 +11525,339 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000030518, y: 313}
   m_SizeDelta: {x: 622.3, y: 113.7}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &1850833808
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 487425965422485505, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Noggins: Think of these as tiny reinforcement beams. They are short
+        horizontal pieces placed between studs to add stability and prevent the wall
+        from bowing or flexing under pressure.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110518614313273961, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.76135
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110518614313273961, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.76135
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110518614313273961, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.76135
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110518614313273961, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110518614313273961, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110518614313273961, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110518614313273961, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110518614313273961, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110518614313273961, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110518614313273961, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110518614313273961, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110518614313273961, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1110518614313273961, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1146492649484341290, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1170386905165230317, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1267024579998900310, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Bottom Plate: Imagine this as the foundation of your wall. It''s a
+        horizontal board secured to the floor, providing a base for the vertical
+        studs to stand upon.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1813312468442460613, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Noggins: Think of these as tiny reinforcement beams. They are short
+        horizontal pieces placed between studs to add stability and prevent the wall
+        from bowing or flexing under pressure.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1944619092323172734, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2137534066408829213, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2562565325401790934, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Top Plate: This acts like the crown of your wall. It sits horizontally
+        on the studs, forming the connection point for the ceiling or roof structure.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2634805702424941513, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731972431559919716, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Noggins: Think of these as tiny reinforcement beams. They are short
+        horizontal pieces placed between studs to add stability and prevent the wall
+        from bowing or flexing under pressure.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3174559616499329034, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Top Plate: This acts like the crown of your wall. It sits horizontally
+        on the studs, forming the connection point for the ceiling or roof structure.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3334204921350135299, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3395423825979546563, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3898514549216340704, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 3898851301286174751, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4151757875367971276, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Noggins: Think of these as tiny reinforcement beams. They are short
+        horizontal pieces placed between studs to add stability and prevent the wall
+        from bowing or flexing under pressure.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4310362712358982288, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Noggins: Think of these as tiny reinforcement beams. They are short
+        horizontal pieces placed between studs to add stability and prevent the wall
+        from bowing or flexing under pressure.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488426499014485605, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: m_Name
+      value: Tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 4488426499014485605, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4495110967517303226, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499878708970111287, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Top Plate: This acts like the crown of your wall. It sits horizontally
+        on the studs, forming the connection point for the ceiling or roof structure.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4710481307597813554, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091076773772971076, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5735224452262303454, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Bottom Plate: Imagine this as the foundation of your wall. It''s a
+        horizontal board secured to the floor, providing a base for the vertical
+        studs to stand upon.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5738325255610309053, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Top Plate: This acts like the crown of your wall. It sits horizontally
+        on the studs, forming the connection point for the ceiling or roof structure.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5996540342555759959, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Noggins: Think of these as tiny reinforcement beams. They are short
+        horizontal pieces placed between studs to add stability and prevent the wall
+        from bowing or flexing under pressure.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190107525796249465, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Bottom Plate: Imagine this as the foundation of your wall. It''s a
+        horizontal board secured to the floor, providing a base for the vertical
+        studs to stand upon.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301121878030853197, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6380122028450183225, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Bottom Plate: Imagine this as the foundation of your wall. It''s a
+        horizontal board secured to the floor, providing a base for the vertical
+        studs to stand upon.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6390511080254819241, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6449986170797941467, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493172874453054822, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Noggins: Think of these as tiny reinforcement beams. They are short
+        horizontal pieces placed between studs to add stability and prevent the wall
+        from bowing or flexing under pressure.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6614164227042029687, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7326144281058218387, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7507642239626684230, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Noggins: Think of these as tiny reinforcement beams. They are short
+        horizontal pieces placed between studs to add stability and prevent the wall
+        from bowing or flexing under pressure.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7596288861143912286, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Noggins: Think of these as tiny reinforcement beams. They are short
+        horizontal pieces placed between studs to add stability and prevent the wall
+        from bowing or flexing under pressure.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672162485789006071, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Noggins: Think of these as tiny reinforcement beams. They are short
+        horizontal pieces placed between studs to add stability and prevent the wall
+        from bowing or flexing under pressure.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7769635504281623758, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7786102795518984013, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8242116424340389696, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8582552008665848501, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8965757357623594555, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8970972079982042574, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Noggins: Think of these as tiny reinforcement beams. They are short
+        horizontal pieces placed between studs to add stability and prevent the wall
+        from bowing or flexing under pressure.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8990681016590926206, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076037241965450461, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Studs: These are the numerous vertical supports that make up the bulk
+        of your wall. They run from the bottom plate to the top plate, providing
+        the main structural strength and framework for the wall.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9134924945355640934, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
+      propertyPath: _name
+      value: 'Noggins: Think of these as tiny reinforcement beams. They are short
+        horizontal pieces placed between studs to add stability and prevent the wall
+        from bowing or flexing under pressure.'
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f90ecee79636ebf48b588d9dc3c712c1, type: 3}
 --- !u!1 &1859884602
 GameObject:
   m_ObjectHideFlags: 0
@@ -10715,7 +12243,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1224647395}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -10975,6 +12503,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965778042}
   m_CullTransparentMesh: 1
+--- !u!1 &1985183926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1985183928}
+  - component: {fileID: 1985183927}
+  m_Layer: 0
+  m_Name: SceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1985183927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985183926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b077c655a045a4ea33ac0550a32744, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1985183928
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985183926}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.467611, y: 8.475532, z: 34.905647}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1999057824
 GameObject:
   m_ObjectHideFlags: 0
@@ -11521,6 +13093,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2301146, guid: 15fcd94adb15b48f7bb4a80622ae7046, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f34214cacdca2a646a8b9cc8ffb117c9, type: 2}
     - target: {fileID: 723926960, guid: 15fcd94adb15b48f7bb4a80622ae7046, type: 3}
       propertyPath: ReticleInteractionLayerMask.m_Bits
       value: 8
@@ -11617,6 +13193,133 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111387046}
+  m_CullTransparentMesh: 1
+--- !u!1 &2144710557
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2144710558}
+  - component: {fileID: 2144710562}
+  - component: {fileID: 2144710561}
+  - component: {fileID: 2144710560}
+  - component: {fileID: 2144710559}
+  m_Layer: 3
+  m_Name: Back (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2144710558
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144710557}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -14.994}
+  m_LocalScale: {x: 0.10967048, y: 0.1096705, z: 0.10967048}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 870689015}
+  m_Father: {fileID: 727947425}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -834, y: 476}
+  m_SizeDelta: {x: 912, y: 912}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!65 &2144710559
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144710557}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 884.4086, y: 865.46497, z: 1}
+  m_Center: {x: -12.124486, y: 19.696127, z: 0.000057891582}
+--- !u!114 &2144710560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144710557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db660f8e5d9853548b3367da1aa8ff3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1985183927}
+        m_TargetAssemblyTypeName: SceneController, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _button: {fileID: 870689014}
+--- !u!114 &2144710561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144710557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 668c7d33145864640848e32fc3fb1e98, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2144710562
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2144710557}
   m_CullTransparentMesh: 1
 --- !u!33 &71880870122201288
 MeshFilter:
@@ -12387,7 +14090,7 @@ Transform:
   m_GameObject: {fileID: 6556967488829353070}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.987, y: 1.5, z: 4}
+  m_LocalPosition: {x: 6.23, y: 1.5, z: 6.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13581,3 +15284,5 @@ SceneRoots:
   - {fileID: 1731753098}
   - {fileID: 1493491139}
   - {fileID: 717986224205182453}
+  - {fileID: 1850833808}
+  - {fileID: 1985183928}

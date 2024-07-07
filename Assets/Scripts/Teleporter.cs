@@ -26,7 +26,7 @@ public class Teleporter : MonoBehaviour
             _timer += Time.deltaTime;
             if (_timer >= 2f)
             {
-                Player.transform.position = new Vector3(transform.position.x, Player.transform.position.y, transform.position.z);
+                Player.transform.position = new Vector3(transform.position.x, transform.position.y+1f, transform.position.z);
                 this.gameObject.transform.parent.gameObject.GetComponent<TeleportManager>().Activate();
                 _timer = 0f;
                 _meshRenderer.material.color = _inactiveColor;

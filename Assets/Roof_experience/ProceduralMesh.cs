@@ -3,12 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Json;
 using TMPro;
-using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
-using VSCodeEditor;
+
 
 [RequireComponent(typeof(MeshFilter))]
 

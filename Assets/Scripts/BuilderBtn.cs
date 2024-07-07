@@ -5,10 +5,12 @@ using UnityEngine;
 public class BuilderBtn : MonoBehaviour
 {
     public HouseBuilderAnimated houseBuilder;
+    public GameObject wallmaker;
     public ValueCollector[] valueCollector;
     private bool _Gazing;
     private float _timer = 0f;
     public TMPro.TextMeshProUGUI _textValue;
+    public bool Roof;
 
     void Update()
         {
@@ -17,12 +19,22 @@ public class BuilderBtn : MonoBehaviour
                 _timer += Time.deltaTime;
                 if (_timer >= 2f)
                 {
-                    if(valueCollector[2].value > valueCollector[0].value || valueCollector[3].value > valueCollector[1].value){
+                    Debug.Log("Timer: " + _timer);
+                    if(valueCollector.Length > 4)
+                    {
+                    if(valueCollector[3].value > valueCollector[0].value || valueCollector[4].value > valueCollector[2].value){
                         _textValue.text = "Stud Spacing or NogginsSpacing is greater than PlateLength or WallHeight";
                         return;
                     }
+                        
+                    }else{
+                        if(valueCollector[2].value > valueCollector[0].value || valueCollector[3].value > valueCollector[1].value){
+                        _textValue.text = "Stud Spacing or NogginsSpacing is greater than PlateLength or WallHeight";
+                        return;
+                    }
+                    }
                     BuildWall();
-                    _textValue.text = "Wall Built"; 
+                    _textValue.text = "Frame Built"; 
                     _timer = 0f;
                 }
 
@@ -51,10 +63,17 @@ public class BuilderBtn : MonoBehaviour
     }
     public void BuildWall()
     {
+        if(valueCollector.Length > 4)
+        {
         houseBuilder.PlateLength = valueCollector[0].value;
-        houseBuilder.WallHeight = valueCollector[1].value;
-        houseBuilder.Spacing = valueCollector[2].value;
-        houseBuilder.NogginsSpacing = valueCollector[3].value;
+        houseBuilder.MainPlateLength = valueCollector[1].value;
+        houseBuilder.WallHeight = valueCollector[2].value;
+        houseBuilder.Spacing = valueCollector[3].value;
+        houseBuilder.NogginsSpacing = valueCollector[4].value;
+        }
+        if(Roof){
+            wallmaker.GetComponent<HBAnimated>().WallBuilders();
+        }else
         houseBuilder.WallBuilder();
     }
    

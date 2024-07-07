@@ -15,6 +15,10 @@ public class ButtonScript : MonoBehaviour
     {
         onClick.Invoke();
     }
+    void OnDisable()
+    {
+        _Gazing = false;
+    }
 
     void Update()
     {
