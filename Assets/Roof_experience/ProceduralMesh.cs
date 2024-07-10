@@ -618,6 +618,30 @@ public class ProceduralMesh : MonoBehaviour
             }
         }
 
+        string generateQuestion(string param)
+        {
+            string q = "What is the size of <b> " + param + "</b> when";
 
+            //TODO: fix measurement so it doesn't have to be cycled through before the number appear
+            float T3 = 0f;
+
+            if (param == "R1")
+            {
+                q = "What is the size of <b> sloping length <i>" + param + "</i></b> when" + "<b> width / 2 is " + (width / 2).ToString() + "</b> and " + "<b> height is " + height.ToString() + "</b>";
+            }
+
+            if (param == "T3")
+            {
+                q = "What is the size of <b> sloping length <i>" + param + "</i></b> when" + "<b> given base is " + (length/3).ToString() + " (1/3 of length)</b> and " + "<b> sloping length R1 is " + R1.ToString() + "</b>";
+            }
+
+            if (param == "T3")
+            {
+                q = "What is the size of <b> sloping height <i>" + param + "</i></b> when" + "<b> sloping length of T3 is " + T3.ToString() + "</b> and " + "<b> width / 2 is " + (width / 2).ToString() + "</b>";
+
+            }
+
+            return q;
+        }
     }
 }
