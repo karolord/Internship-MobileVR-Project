@@ -52,6 +52,7 @@ public class ProceduralMesh : MonoBehaviour
     public GameObject homeScreen;
     public GameObject tutorialScreen;
     public GameObject Cust_UI;
+    public GameObject questionScreen;
 
     bool firstTime = true;
 
@@ -60,9 +61,16 @@ public class ProceduralMesh : MonoBehaviour
     public UnityEngine.UI.Button m_nextButton, m_prevButton;
     public int state = 0;
     public int cust_button_state;
+    private bool paramChange = true;
+
+    float R1_L;
+    float T3_L;
+    float T2_H;
+    float givenLength;
 
     void Start()
     {
+        Debug.Log("Started");
         Vector3 vert_0 = new Vector3(x_0, y_0, z_0);
         Vector3 vert_1 = new Vector3(x_0, y_0, z_0 + 1.0f / 3.0f * length);
         Vector3 vert_2 = new Vector3(x_0, y_0, z_0 + 2.0f / 3.0f * length);
@@ -84,7 +92,14 @@ public class ProceduralMesh : MonoBehaviour
         Vector3 vert_12 = new Vector3(x_0 - width / 2, y_0, z_0 + 2.0f / 3.0f * length);
         Vector3 vert_13 = new Vector3(x_0 - width / 2, y_0, z_0 + length);
 
+
         vertices = new Vector3[] { vert_0, vert_1, vert_2, vert_3, vert_4, vert_5, vert_6, vert_7, vert_8, vert_9, vert_10, vert_11, vert_12, vert_13 };
+
+
+        R1_L = Mathf.Sqrt(Mathf.Pow(width / 2, 2) + Mathf.Pow(height, 2));
+        givenLength = vertices[1].z - vertices[0].z;
+        T3_L = Mathf.Sqrt(Mathf.Pow(R1_L, 2) + Mathf.Pow(givenLength, 2));
+        T2_H = Mathf.Sqrt(Mathf.Pow(T3_L, 2) - Mathf.Pow(width / 2, 2));
 
         mesh = GetComponent<MeshFilter>().mesh;
         
@@ -130,7 +145,6 @@ public class ProceduralMesh : MonoBehaviour
 
         mesh.Clear();
 
-        float R1 = Mathf.Sqrt(Mathf.Pow(width / 2, 2) + Mathf.Pow(height, 2));
 
         Vector3 vert_0 = new Vector3(x_0, y_0, z_0);
         Vector3 vert_1 = new Vector3(x_0, y_0, z_0 + 1.0f / 3.0f * length);
@@ -159,6 +173,12 @@ public class ProceduralMesh : MonoBehaviour
         Vector3 ln_offset = new Vector3(0, 0, -0.05f);
         Label_inside_1_h = new Vector3[] { vert_4 + ln_offset, vert_11 + ln_offset };
         Label_inside_1_w = new Vector3[] { vert_1 + ln_offset, vert_11 + ln_offset };
+
+        // Specific measurement 
+        R1_L = Mathf.Sqrt(Mathf.Pow(width / 2, 2) + Mathf.Pow(height, 2));
+        givenLength = vertices[1].z - vertices[0].z;
+        T3_L = Mathf.Sqrt(Mathf.Pow(R1_L, 2) + Mathf.Pow(givenLength, 2));
+        T2_H = Mathf.Sqrt(Mathf.Pow(T3_L, 2) - Mathf.Pow(width/2, 2));
 
         int[] tri_1 = new int[]
         {
@@ -519,6 +539,7 @@ public class ProceduralMesh : MonoBehaviour
             homeScreen.transform.position = away;
             tutorialScreen.transform.position = away;
             Cust_UI.transform.position = away;
+            questionScreen.transform.position = away;
         }
 
         if (target == tutorialScreen)
@@ -526,6 +547,8 @@ public class ProceduralMesh : MonoBehaviour
             formula_UI.transform.position = away;
             homeScreen.transform.position = away;
             Cust_UI.transform.position = away;
+            questionScreen.transform.position = away;
+
 
         }
 
@@ -534,6 +557,7 @@ public class ProceduralMesh : MonoBehaviour
             formula_UI.transform.position = away;
             tutorialScreen.transform.position = away;
             Cust_UI.transform.position = away;
+            questionScreen.transform.position = away;
 
         }
 
@@ -542,6 +566,16 @@ public class ProceduralMesh : MonoBehaviour
             homeScreen.transform.position = away;
             formula_UI.transform.position = away;
             tutorialScreen.transform.position = away;
+            questionScreen.transform.position = away;
+
+        }
+
+        if (target == questionScreen)
+        {
+            homeScreen.transform.position = away;
+            formula_UI.transform.position = away;
+            tutorialScreen.transform.position = away;
+            Cust_UI.transform.position = away;
         }
     }
 
@@ -573,6 +607,8 @@ public class ProceduralMesh : MonoBehaviour
         Cust_UI.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = length.ToString();
         Cust_UI.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = width.ToString();
         Cust_UI.transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = height.ToString();
+
+        paramChange = true;
 
         if (width-1 > 0 && length-1 > 0 && height-1 > 0)
         {
@@ -635,13 +671,43 @@ public class ProceduralMesh : MonoBehaviour
                 q = "What is the size of <b> sloping length <i>" + param + "</i></b> when" + "<b> given base is " + (length/3).ToString() + " (1/3 of length)</b> and " + "<b> sloping length R1 is " + R1.ToString() + "</b>";
             }
 
-            if (param == "T3")
+            if (param == "T2")
             {
-                q = "What is the size of <b> sloping height <i>" + param + "</i></b> when" + "<b> sloping length of T3 is " + T3.ToString() + "</b> and " + "<b> width / 2 is " + (width / 2).ToString() + "</b>";
+                q = "What is the size of <b> sloping height <i>" + param + "</i></b> when" + "<b> sloping length of T3 is " + T3_L.ToString() + "</b> and " + "<b> width / 2 is " + (width / 2).ToString() + "</b>";
 
             }
 
             return q;
+        }
+
+        void showQuestion()
+        {
+            targetScreen(questionScreen);
+            _player.transform.position = Vector3.zero;
+
+            int qType = UnityEngine.Random.Range(0, 2);
+
+
+            if (paramChange)
+            {
+                if (qType == 0)
+                {
+                    questionScreen.transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>().text = generateQuestion("R1");
+                }
+
+                if (qType == 1)
+                {
+                    questionScreen.transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>().text = generateQuestion("T3");
+                }
+
+                if (qType == 2)
+                {
+                    questionScreen.transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>().text = generateQuestion("T2");
+                }
+
+                paramChange = false;
+
+            }
         }
     }
 }
