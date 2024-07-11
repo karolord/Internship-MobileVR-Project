@@ -70,7 +70,6 @@ public class ProceduralMesh : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Started");
         Vector3 vert_0 = new Vector3(x_0, y_0, z_0);
         Vector3 vert_1 = new Vector3(x_0, y_0, z_0 + 1.0f / 3.0f * length);
         Vector3 vert_2 = new Vector3(x_0, y_0, z_0 + 2.0f / 3.0f * length);
