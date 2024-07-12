@@ -3,12 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Json;
 using TMPro;
+using Unity.Android.Types;
+using Unity.VisualScripting;
 using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
-using VSCodeEditor;
 
 [RequireComponent(typeof(MeshFilter))]
 
@@ -51,6 +52,8 @@ public class ProceduralMesh : MonoBehaviour
     public GameObject formula_UI;
     public GameObject homeScreen;
     public GameObject tutorialScreen;
+
+    public GameObject practiceScreen; 
     public GameObject Cust_UI;
     public GameObject questionScreen;
 
@@ -61,12 +64,15 @@ public class ProceduralMesh : MonoBehaviour
     public UnityEngine.UI.Button m_nextButton, m_prevButton;
     public int state = 0;
     public int cust_button_state;
-    private bool paramChange = true;
+    public bool paramChange = true;
 
     float R1_L;
     float T3_L;
     float T2_H;
     float givenLength;
+
+    float[] ans;
+    int idxAns;
 
     void Start()
     {
@@ -110,31 +116,6 @@ public class ProceduralMesh : MonoBehaviour
 
         showTutorialScreen();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //MakeMeshData();
-        //RoofGenerate();
-
-        // State, full model = 0; inside model = 1
-        //if (changeState)
-        //{
-            
-        //    RoofGenerate(1);
-        //}
-        //else
-        //{
-        //    showTriangle_R1 = false;
-        //    RoofGenerate(0);
-        //}
-        //StartCoroutine(Switchingbetween_FullAndPartial_Mesh());
-
-        //m_prevButton.onClick.AddListener(delegate { showInsideTriangle(0); });
-        //m_nextButton.onClick.AddListener(delegate { showInsideTriangle(1); });
-
-    }
-
 
     public void showCalculation(int buttonType)
     {
@@ -244,7 +225,7 @@ public class ProceduralMesh : MonoBehaviour
                 clearlabel();
 
                 triangles = tri_3;
-                H = showT3(R1, vertices);
+                H = showT3(R1_L, vertices);
 
                 formula_UI.transform.position = new Vector3(-6.4f, 6, 3);
                 formula_UI.transform.rotation = new Quaternion(0, 1, 0, -1);
@@ -347,7 +328,6 @@ public class ProceduralMesh : MonoBehaviour
     }
     private void MakeMeshData()
     {
-        //mesh.Clear();
         mesh.vertices = vertices;   
         mesh.triangles = triangles;
         mesh.RecalculateNormals();
@@ -508,7 +488,6 @@ public class ProceduralMesh : MonoBehaviour
         }
     }
 
-
     public void showSelectMode()
     {
         firstTime = true;
@@ -539,6 +518,7 @@ public class ProceduralMesh : MonoBehaviour
             tutorialScreen.transform.position = away;
             Cust_UI.transform.position = away;
             questionScreen.transform.position = away;
+            practiceScreen.transform.position = away;
         }
 
         if (target == tutorialScreen)
@@ -547,7 +527,7 @@ public class ProceduralMesh : MonoBehaviour
             homeScreen.transform.position = away;
             Cust_UI.transform.position = away;
             questionScreen.transform.position = away;
-
+            practiceScreen.transform.position = away;
 
         }
 
@@ -557,7 +537,7 @@ public class ProceduralMesh : MonoBehaviour
             tutorialScreen.transform.position = away;
             Cust_UI.transform.position = away;
             questionScreen.transform.position = away;
-
+            practiceScreen.transform.position = away;
         }
 
         if (target == Cust_UI)
@@ -566,7 +546,7 @@ public class ProceduralMesh : MonoBehaviour
             formula_UI.transform.position = away;
             tutorialScreen.transform.position = away;
             questionScreen.transform.position = away;
-
+            practiceScreen.transform.position = away;
         }
 
         if (target == questionScreen)
@@ -575,6 +555,17 @@ public class ProceduralMesh : MonoBehaviour
             formula_UI.transform.position = away;
             tutorialScreen.transform.position = away;
             Cust_UI.transform.position = away;
+            practiceScreen.transform.position = away;
+
+        }
+
+        if (target == practiceScreen) 
+        {
+            homeScreen.transform.position = away;
+            formula_UI.transform.position = away;
+            tutorialScreen.transform.position = away;
+            Cust_UI.transform.position = away;
+            questionScreen.transform.position = away;
         }
     }
 
@@ -586,8 +577,6 @@ public class ProceduralMesh : MonoBehaviour
         Cust_UI.transform.position = new Vector3(0, 0, 4);
     }
 
-    /// 
-   
     public void selectButton(int button)
     {
         cust_button_state = button;
@@ -609,7 +598,7 @@ public class ProceduralMesh : MonoBehaviour
 
         paramChange = true;
 
-        if (width-1 > 0 && length-1 > 0 && height-1 > 0)
+        if (width - 1 > 0 && length - 1 > 0 && height - 1 > 0)
         {
             if (cust_button_state == 0)
             {
@@ -652,61 +641,157 @@ public class ProceduralMesh : MonoBehaviour
 
             }
         }
+    }
 
-        string generateQuestion(string param)
+    public void showPracticeScreen()
+    {
+        targetScreen(practiceScreen);
+        _player.transform.position = Vector3.zero;
+        practiceScreen.transform.position = new Vector3(0, 0, 4);
+
+    }
+    string generateQuestion(string param)
+    {
+        string q = "What is the size of <b> " + param + "</b> when";
+
+        ////TODO: fix measurement so it doesn't have to be cycled through before the number appear
+        //float T3 = 0f;
+
+        if (param == "R1")
         {
-            string q = "What is the size of <b> " + param + "</b> when";
-
-            //TODO: fix measurement so it doesn't have to be cycled through before the number appear
-            float T3 = 0f;
-
-            if (param == "R1")
-            {
-                q = "What is the size of <b> sloping length <i>" + param + "</i></b> when" + "<b> width / 2 is " + (width / 2).ToString() + "</b> and " + "<b> height is " + height.ToString() + "</b>";
-            }
-
-            if (param == "T3")
-            {
-                q = "What is the size of <b> sloping length <i>" + param + "</i></b> when" + "<b> given base is " + (length/3).ToString() + " (1/3 of length)</b> and " + "<b> sloping length R1 is " + R1.ToString() + "</b>";
-            }
-
-            if (param == "T2")
-            {
-                q = "What is the size of <b> sloping height <i>" + param + "</i></b> when" + "<b> sloping length of T3 is " + T3_L.ToString() + "</b> and " + "<b> width / 2 is " + (width / 2).ToString() + "</b>";
-
-            }
-
-            return q;
+            q = "What is the size of <b> sloping length <i>" + param + "</i></b> when" + "<b> width / 2 is " + (width / 2).ToString() + "</b> and " + "<b> height is " + height.ToString() + "</b>";
         }
 
-        void showQuestion()
+        if (param == "T3")
         {
-            targetScreen(questionScreen);
-            _player.transform.position = Vector3.zero;
+            q = "What is the size of <b> sloping length <i>" + param + "</i></b> when" + "<b> given base is " + (length/3).ToString() + " (1/3 of length)</b> and " + "<b> sloping length R1 is " + R1.ToString() + "</b>";
+        }
 
-            int qType = UnityEngine.Random.Range(0, 2);
+        if (param == "T2")
+        {
+            q = "What is the size of <b> sloping height <i>" + param + "</i></b> when" + "<b> sloping length of T3 is " + T3_L.ToString() + "</b> and " + "<b> width / 2 is " + (width / 2).ToString() + "</b>";
 
+        }
 
-            if (paramChange)
+        return q;
+    }
+
+    string generateAnsPrompt(string selectionType, float selectionValue)
+    {
+        string ansPrompt = selectionType + " = " + selectionValue.ToString();
+        return ansPrompt;
+    }
+
+    void generateAns(string selectType, float correctAns)
+    {
+        ans = new float[4];
+        ans[0] = width / 2;
+        ans[1] = R1_L;
+        ans[2] = T3_L;
+        ans[3] = T2_H;
+
+        //int idxAns = 0;
+
+        int randOrd;
+        float temp;
+
+        // Random shuffle method
+        for (int i = ans.Length-1; i > 0; i--)
+        {
+                randOrd = UnityEngine.Random.Range(0, i);
+                temp = ans[i];
+                ans[i] = ans[randOrd];
+                ans[randOrd] = temp;
+
+        }
+
+        for (int i = 0; i < ans.Length; i++)
+        {
+            questionScreen.transform.GetChild(0).GetChild(i + 1).GetChild(1).GetComponent<TextMeshProUGUI>().text = generateAnsPrompt(selectType, ans[i]);
+
+            //if (ans[i] == R1)
+            //{
+            //    questionScreen.transform.GetChild(0).GetChild(i).GetComponent<TextMeshPro>().text = generateQuestion("R1");
+            //}
+            //if (ans[i] == T3_L)
+            //{
+            //    questionScreen.transform.GetChild(0).GetChild(i).GetComponent<TextMeshPro>().text = generateQuestion("R1");
+            //}
+            //if (ans[i] == T2_H)
+            //{
+            //    questionScreen.transform.GetChild(0).GetChild(i).GetComponent<TextMeshPro>().text = generateQuestion("R1");
+        }
+
+        for (int i = 0; i < ans.Length; i++)
+        {
+            if (ans[i] == correctAns)
             {
-                if (qType == 0)
-                {
-                    questionScreen.transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>().text = generateQuestion("R1");
-                }
+                idxAns = i;
+            }
+        }
+    }
 
-                if (qType == 1)
-                {
-                    questionScreen.transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>().text = generateQuestion("T3");
-                }
+    public void showQuestion()
+    {
+        targetScreen(questionScreen);
+        _player.transform.position = Vector3.zero;
+        _player.transform.rotation = Quaternion.Euler(-90,0,0);
+        questionScreen.transform.position = new Vector3(0, 0, 4);
 
-                if (qType == 2)
-                {
-                    questionScreen.transform.GetChild(0).GetChild(0).GetComponent<TextMeshPro>().text = generateQuestion("T2");
-                }
+        
+
+        //int qType = UnityEngine.Random.Range(0, 2);
+        int qType = 0;
+        //float[] ans; 
+        //int idxAns;
+
+        if (paramChange)
+        {
+            if (qType == 0)
+            {
+                questionScreen.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = generateQuestion("R1");
+                generateAns("sloping length of R1: ", R1_L);
 
                 paramChange = false;
-
             }
+
+            if (qType == 1)
+            {
+                questionScreen.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = generateQuestion("T3");
+                generateAns("Sloping length of T3: ", T3_L);
+
+                paramChange = false;
+            }
+
+            if (qType == 2)
+            {
+                questionScreen.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = generateQuestion("T2");
+                generateAns("Sloping height of T2: ", T2_H);
+
+                paramChange = false;
+            }
+
+        }
+
+        Debug.Log(idxAns);
+    }
+
+    public void selectAns(int userAns)
+    {
+        bool IsCorrect = false;
+        if (userAns-1 == idxAns)
+        {
+            questionScreen.transform.GetChild(0).GetChild(userAns).GetComponent<UnityEngine.UI.Image>().color = Color.green;
+            IsCorrect = true;
+        }
+        else
+        {
+            questionScreen.transform.GetChild(0).GetChild(userAns).GetComponent<UnityEngine.UI.Image>().color = Color.red;
+        }
+
+        if (!IsCorrect)
+        {
+            questionScreen.transform.GetChild(0).GetChild(idxAns).GetComponent<UnityEngine.UI.Image>().color = Color.green;
         }
     }
 }

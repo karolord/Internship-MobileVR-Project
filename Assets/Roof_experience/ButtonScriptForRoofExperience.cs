@@ -21,7 +21,7 @@ public class ButtonScriptForRoofExperience : MonoBehaviour
         if (_Gazing)
         {
             _timer += Time.deltaTime;
-            Debug.Log(_timer);
+            //Debug.Log(_timer);
 
             if (_button != null)
                 _button.GetComponent<Image>().fillAmount = _timer;
@@ -36,7 +36,7 @@ public class ButtonScriptForRoofExperience : MonoBehaviour
         
         if (!_Gazing) 
         {
-            Debug.Log("Stopped Glazing");
+            //Debug.Log("Stopped Glazing");
             _timer = 0f;
         }
 
