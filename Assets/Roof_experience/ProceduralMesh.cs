@@ -633,7 +633,7 @@ public class ProceduralMesh : MonoBehaviour
     {
         for (int i = 0; i < amount; i++)
         {
-            labels.Add(Instantiate(labelObject));
+            labels.Add(Instantiate(labelObject, new Vector3(100,100, 100), Quaternion.identity));
         }
     }
 
@@ -802,7 +802,7 @@ public class ProceduralMesh : MonoBehaviour
     {
         targetScreen(tutorialScreen);
 
-        _player.transform.position = Vector3.zero;
+        _player.transform.position = new Vector3(0, 0, 1);
         tutorialScreen.transform.position = new Vector3(0, 0, 4); 
     }
 

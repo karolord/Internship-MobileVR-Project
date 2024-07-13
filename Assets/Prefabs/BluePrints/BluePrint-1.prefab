@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &6960751887534749518
@@ -366,7 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &4165539685245608997
@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: TopPlate \n Length: 4 Meter'
+  _name: 'Name: TopPlate Length: 4 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &4138317121177330913
@@ -642,7 +642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &8639258059908632850
@@ -907,7 +907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: TopPlate \n Length: 4 Meter'
+  _name: 'Name: TopPlate Length: 4 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &2526256231696532105
@@ -1172,7 +1172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &981144308977105860
@@ -1310,7 +1310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &1445497162027553687
@@ -1448,7 +1448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &8909807344186172785
@@ -1822,7 +1822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: TopPlate \n Length: 5 Meter'
+  _name: 'Name: TopPlate Length: 5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &2716071458754140598
@@ -1960,7 +1960,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &8837226724697381185
@@ -2098,7 +2098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Noggins \n Length: 4 Meters'
+  _name: 'Name: Noggins  Length: 4 Meters'
   _timer: 0
   Measurement: 0
 --- !u!111 &4221852854332049396
@@ -2236,7 +2236,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &4748776259962761399
@@ -2610,7 +2610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: BottomPlate \n Length: 4 Meter'
+  _name: 'Name: BottomPlate Length: 4 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &3275625029009450029
@@ -2748,7 +2748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &3734287660462355875
@@ -2995,7 +2995,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &6297697353004612429
@@ -3133,7 +3133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &5441040779036151581
@@ -3271,7 +3271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &104203924408812606
@@ -3518,7 +3518,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: BottomPlate \n Length: 5 Meter'
+  _name: 'Name: BottomPlate Length: 5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &5651009183485230250
@@ -3656,7 +3656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &7372085811119705556
@@ -3921,7 +3921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &204802495404124402
@@ -4168,7 +4168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: TopPlate \n Length: 5 Meter'
+  _name: 'Name: TopPlate Length: 5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &4072350401474775862
@@ -4306,7 +4306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &3304260231073854638
@@ -4444,7 +4444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &1902671944839305952
@@ -4582,7 +4582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &4895433745912044310
@@ -4720,7 +4720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Noggins \n Length: 5 Meters'
+  _name: 'Name: Noggins Length: 5 Meters'
   _timer: 0
   Measurement: 0
 --- !u!111 &2740408863189349105
@@ -4858,7 +4858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &1681610530452734616
@@ -4996,7 +4996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &7663519540494809512
@@ -5134,7 +5134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: BottomPlate \n Length: 4 Meter'
+  _name: 'Name: BottomPlate Length: 4 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &6346863454194789250
@@ -5399,7 +5399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Stud \nLength: 2.5 Meter'
+  _name: 'Name: Stud Length: 2.5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &2658526959004291458
@@ -5728,7 +5728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Noggins \n Length: 4 Meters'
+  _name: 'Name: Noggins  Length: 4 Meters'
   _timer: 0
   Measurement: 0
 --- !u!111 &2441917945965974197
@@ -5866,7 +5866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: BottomPlate \n Length: 5 Meter'
+  _name: 'Name: BottomPlate Length: 5 Meter'
   _timer: 0
   Measurement: 0
 --- !u!111 &381125904259640208
@@ -6064,7 +6064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa0fe86e0c74d94db5230f0c231dd2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 'Name: Noggins \n Length: 5 Meters'
+  _name: 'Name: Noggins Length: 5 Meters'
   _timer: 0
   Measurement: 0
 --- !u!111 &4531763803808763789

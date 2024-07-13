@@ -16,6 +16,10 @@ public class Teleporter : MonoBehaviour
     {
         _meshRenderer = GetComponent<Renderer>();
         _meshRenderer.material.color = _inactiveColor;
+        if (Player == null)
+        {
+            Player = GameObject.Find("Player");
+        }
 
     }
     void Update()

@@ -31,4 +31,11 @@ public class BuildingSpawner : MonoBehaviour
         Building.transform.SetParent(transform);
 
     }
+    public void clearBuilding()
+    {
+        if (transform.childCount > 0)
+        {
+            Destroy(transform.GetChild(0).gameObject);
+        }
+    }
 }

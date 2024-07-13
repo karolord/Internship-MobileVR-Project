@@ -30,6 +30,7 @@ public class Highlight : MonoBehaviour
         {
             if(Measurement == 0){
                 Measurement = MathF.Max(MathF.Max(gameObject.transform.localScale.x, gameObject.transform.localScale.y), gameObject.transform.localScale.z);
+                if(!_name.Contains("Length"))
                 _name = "Name:  "+_name + "\n  Length: " + Measurement.ToString() + " Meters";
             }
 
