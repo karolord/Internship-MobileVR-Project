@@ -65,7 +65,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Return to Main Screen
+  m_text: 'Return to Select Practice
+
 
 '
   m_isRightToLeft: 0
@@ -1328,7 +1329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919045413107387481, guid: d5529d27d4086444fab5019ff6aceec4, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 5
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 919045413107387481, guid: d5529d27d4086444fab5019ff6aceec4, type: 3}
       propertyPath: m_SizeDelta.y

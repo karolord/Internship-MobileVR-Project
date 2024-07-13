@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18029079, g: 0.22573407, b: 0.30694622, a: 1}
+  m_IndirectSpecularColor: {r: 0.18026216, g: 0.22568938, b: 0.30691475, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1806,7 +1806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1392372519363218333, guid: 4a2791bfe6d83d944babaa9c80bc40de, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: showSelectMode
+      value: showPracticeScreen
       objectReference: {fileID: 0}
     - target: {fileID: 1392372519363218333, guid: 4a2791bfe6d83d944babaa9c80bc40de, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1815,6 +1815,14 @@ PrefabInstance:
     - target: {fileID: 1392372519363218333, guid: 4a2791bfe6d83d944babaa9c80bc40de, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997652454893904383, guid: 4a2791bfe6d83d944babaa9c80bc40de, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997652454893904383, guid: 4a2791bfe6d83d944babaa9c80bc40de, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4623652601972185384, guid: 4a2791bfe6d83d944babaa9c80bc40de, type: 3}
       propertyPath: m_Name

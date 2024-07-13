@@ -115,6 +115,7 @@ public class ProceduralMesh : MonoBehaviour
         z_0 = _player.transform.position.z+5;
 
         showTutorialScreen();
+        ans = new float[4];
     }
 
     public void showCalculation(int buttonType)
@@ -230,7 +231,7 @@ public class ProceduralMesh : MonoBehaviour
                 formula_UI.transform.position = new Vector3(-6.4f, 6, 3);
                 formula_UI.transform.rotation = new Quaternion(0, 1, 0, -1);
 
-                string formula_text = "H<sup>2</sup> = R1<sup>2</sup> + Width<sup>2</sup>";
+                string formula_text = "H<sup>2</sup> (sloping length of T3) = R1<sup>2</sup> + Width<sup>2</sup>";
                 string title_text = "Calculating T3";
                 showUI(formula_text, title_text, formula_illus[1]);
 
@@ -244,12 +245,12 @@ public class ProceduralMesh : MonoBehaviour
 
                 triangles = tri_4;
 
-                showT2(H);
+                showT2(T3_L);
 
                 formula_UI.transform.position = new Vector3(-5, 8.9f, 7.2f);
                 formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
 
-                string T2_formula = "h<sup>2</sup> = H<sup>2</sup> - (width/2)<sup>2</sup>";
+                string T2_formula = "h <sup>2</sup> (sloping height of T2) = H<sup>2</sup> (sloping length of T3)  - (Width/2)<sup>2</sup>";
                 string T2_title = "Calculating T2";
                 showUI(T2_formula, T2_title, formula_illus[2]);
 
@@ -377,7 +378,7 @@ public class ProceduralMesh : MonoBehaviour
 
             string T3_leng_text = "width = " + T3_leng.ToString(); 
             string R1_leng_text = "R1 = " + R1_leng.ToString();
-            string T3_H_leng_text = "H = " + T3_leng.ToString();
+            string T3_H_leng_text = "H = " + T3_H.ToString();
 
             makeLabel(labels[0], T3_height_verts, R1_leng_text);
             makeLabel(labels[1], T3_length_verts, T3_leng_text);
@@ -461,7 +462,7 @@ public class ProceduralMesh : MonoBehaviour
         formula_UI.transform.position = new Vector3(-5f, 8.9f, 12.7f);
         formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
 
-        string R1_formula = "R1<sup>2</sup> = height<sup>2</sup> + (width/2)<sup>2</sup>";
+        string R1_formula = "R1<sup>2</sup> (sloping length of R1) = Height<sup>2</sup> + (Width/2)<sup>2</sup>";
         string R1_title = "Calculating R1";
         showUI(R1_formula, R1_title, formula_illus[0]);
 
@@ -664,7 +665,7 @@ public class ProceduralMesh : MonoBehaviour
 
         if (param == "T3")
         {
-            q = "What is the size of <b> sloping length <i>" + param + "</i></b> when" + "<b> given base is " + (length/3).ToString() + " (1/3 of length)</b> and " + "<b> sloping length R1 is " + R1.ToString() + "</b>";
+            q = "What is the size of <b> sloping length <i>" + param + "</i></b> when" + "<b> given base is " + (length/3).ToString() + " (1/3 of length)</b> and " + "<b> sloping length R1 is " + R1_L.ToString() + "</b>";
         }
 
         if (param == "T2")
@@ -684,7 +685,6 @@ public class ProceduralMesh : MonoBehaviour
 
     void generateAns(string selectType, float correctAns)
     {
-        ans = new float[4];
         ans[0] = width / 2;
         ans[1] = R1_L;
         ans[2] = T3_L;
@@ -738,10 +738,13 @@ public class ProceduralMesh : MonoBehaviour
         _player.transform.rotation = Quaternion.Euler(-90,0,0);
         questionScreen.transform.position = new Vector3(0, 0, 4);
 
-        
+        for (int i = 0; i < ans.Length; i++)
+        {
+            Debug.Log("Color Changed");
+            questionScreen.transform.GetChild(0).GetChild(i + 1).GetComponent<UnityEngine.UI.Image>().color = Color.white;
+        } 
 
-        //int qType = UnityEngine.Random.Range(0, 2);
-        int qType = 0;
+        int qType = UnityEngine.Random.Range(0, 2);
         //float[] ans; 
         //int idxAns;
 
@@ -783,6 +786,7 @@ public class ProceduralMesh : MonoBehaviour
         {
             questionScreen.transform.GetChild(0).GetChild(userAns).GetComponent<UnityEngine.UI.Image>().color = Color.green;
             IsCorrect = true;
+            paramChange = true;
         }
         else
         {
