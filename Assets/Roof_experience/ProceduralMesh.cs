@@ -7,6 +7,7 @@ using Unity.Android.Types;
 using Unity.VisualScripting;
 using UnityEditor.Search;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
@@ -735,7 +736,7 @@ public class ProceduralMesh : MonoBehaviour
     {
         targetScreen(questionScreen);
         _player.transform.position = Vector3.zero;
-        _player.transform.rotation = Quaternion.Euler(-90,0,0);
+        _player.transform.rotation = Quaternion.Euler(-10,0,0);
         questionScreen.transform.position = new Vector3(0, 0, 4);
 
         for (int i = 0; i < ans.Length; i++)
@@ -744,6 +745,7 @@ public class ProceduralMesh : MonoBehaviour
             questionScreen.transform.GetChild(0).GetChild(i + 1).GetComponent<UnityEngine.UI.Image>().color = Color.white;
         } 
 
+        // TODO: Use Abstract data type
         int qType = UnityEngine.Random.Range(0, 2);
         //float[] ans; 
         //int idxAns;
@@ -786,16 +788,26 @@ public class ProceduralMesh : MonoBehaviour
         {
             questionScreen.transform.GetChild(0).GetChild(userAns).GetComponent<UnityEngine.UI.Image>().color = Color.green;
             IsCorrect = true;
-            paramChange = true;
+            paramChange = true; 
+            // TODO: Make Analytics for different parameter
+            AnalyticsResult Result = Analytics.CustomEvent("RoofExperience_correctAnswer");
+
         }
         else
         {
             questionScreen.transform.GetChild(0).GetChild(userAns).GetComponent<UnityEngine.UI.Image>().color = Color.red;
+            AnalyticsResult Result = Analytics.CustomEvent("RoofExperience_wrongAnswer");
         }
 
         if (!IsCorrect)
         {
             questionScreen.transform.GetChild(0).GetChild(idxAns).GetComponent<UnityEngine.UI.Image>().color = Color.green;
         }
+    }
+
+    public void showPresetCustomisation()
+    {
+        // TODO: Make Preset Cust Screen
+        // TODO: Implement Preset Screen logic 
     }
 }

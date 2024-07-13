@@ -1748,6 +1748,50 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8336149202011885282, guid: aa08a9915e9c13c4e80d4ec8c9f9c880, type: 3}
   m_PrefabInstance: {fileID: 1001254520}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1448858074
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1448858076}
+  - component: {fileID: 1448858075}
+  m_Layer: 0
+  m_Name: AnalyticController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1448858075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448858074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1569bc6f32ee1140b72d159661e4d04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1448858076
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448858074}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.1108055, y: -0.86079246, z: -9.250252}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1484646322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2305,10 +2349,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
@@ -2316,7 +2364,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1195408997}
     - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1448858074}
+    - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
@@ -2324,11 +2380,23 @@ PrefabInstance:
       value: showSelectMode
       objectReference: {fileID: 0}
     - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: showSelectMode
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ProceduralMesh, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: ProceduralMesh, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6373103779163057139, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
@@ -2508,3 +2576,4 @@ SceneRoots:
   - {fileID: 1001254520}
   - {fileID: 1484646322}
   - {fileID: 1336954381}
+  - {fileID: 1448858076}
