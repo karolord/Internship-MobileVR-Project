@@ -2349,7 +2349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -2357,7 +2357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2366,7 +2366,7 @@ PrefabInstance:
     - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1448858074}
+      objectReference: {fileID: 1448858075}
     - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -2381,7 +2381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: showSelectMode
+      value: LogEvent
       objectReference: {fileID: 0}
     - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -2389,7 +2389,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: ProceduralMesh, Assembly-CSharp
+      value: AnalyticsControllerForRoof, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6100749147979297507, guid: 85e4efdb2ece27240bd0f224350d64da, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
