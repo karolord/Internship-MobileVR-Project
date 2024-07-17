@@ -5,6 +5,7 @@ using System.Runtime.Serialization.Json;
 using TMPro;
 using Unity.Android.Types;
 using Unity.VisualScripting;
+using UnityEditor.Presets;
 using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.Analytics;
@@ -57,6 +58,7 @@ public class ProceduralMesh : MonoBehaviour
     public GameObject practiceScreen; 
     public GameObject Cust_UI;
     public GameObject questionScreen;
+    public GameObject presetScreen; 
 
     bool firstTime = true;
 
@@ -74,6 +76,8 @@ public class ProceduralMesh : MonoBehaviour
 
     float[] ans;
     int idxAns;
+
+    int selectPreset; 
 
     void Start()
     {
@@ -385,7 +389,6 @@ public class ProceduralMesh : MonoBehaviour
             makeLabel(labels[1], T3_length_verts, T3_leng_text);
             makeLabel(labels[2], T3_H_verts, T3_H_leng_text);
 
-            //TODO get label position of T3
             labels[0].transform.position = label_T3_h;
             labels[1].transform.position = label_T3_w;
             labels[2].transform.position = label_T3_H;
@@ -521,6 +524,7 @@ public class ProceduralMesh : MonoBehaviour
             Cust_UI.transform.position = away;
             questionScreen.transform.position = away;
             practiceScreen.transform.position = away;
+            presetScreen.transform.position = away;
         }
 
         if (target == tutorialScreen)
@@ -530,6 +534,7 @@ public class ProceduralMesh : MonoBehaviour
             Cust_UI.transform.position = away;
             questionScreen.transform.position = away;
             practiceScreen.transform.position = away;
+            presetScreen.transform.position = away;
 
         }
 
@@ -540,6 +545,8 @@ public class ProceduralMesh : MonoBehaviour
             Cust_UI.transform.position = away;
             questionScreen.transform.position = away;
             practiceScreen.transform.position = away;
+            presetScreen.transform.position = away;
+
         }
 
         if (target == Cust_UI)
@@ -549,6 +556,8 @@ public class ProceduralMesh : MonoBehaviour
             tutorialScreen.transform.position = away;
             questionScreen.transform.position = away;
             practiceScreen.transform.position = away;
+            presetScreen.transform.position = away;
+
         }
 
         if (target == questionScreen)
@@ -558,6 +567,8 @@ public class ProceduralMesh : MonoBehaviour
             tutorialScreen.transform.position = away;
             Cust_UI.transform.position = away;
             practiceScreen.transform.position = away;
+            presetScreen.transform.position = away;
+
 
         }
 
@@ -568,6 +579,17 @@ public class ProceduralMesh : MonoBehaviour
             tutorialScreen.transform.position = away;
             Cust_UI.transform.position = away;
             questionScreen.transform.position = away;
+            presetScreen.transform.position = away;
+
+        }
+        if (target == presetScreen)
+        {
+            homeScreen.transform.position = away;
+            formula_UI.transform.position = away;
+            tutorialScreen.transform.position = away;
+            Cust_UI.transform.position = away;
+            questionScreen.transform.position = away;
+            practiceScreen.transform.position = away;
         }
     }
 
@@ -805,9 +827,62 @@ public class ProceduralMesh : MonoBehaviour
         }
     }
 
-    public void showPresetCustomisation()
+    public void showPresetScreen()
+    {
+        targetScreen(presetScreen);
+        _player.transform.position = Vector3.zero;
+        _player.transform.rotation = Quaternion.Euler(-10, 0, 0);
+        presetScreen.transform.position = new Vector3(0, 0, 4);
+    }
+    public void showPresetCustomisation(int state)
     {
         // TODO: Make Preset Cust Screen
         // TODO: Implement Preset Screen logic 
+
+        
+
+        if (state == 1)
+        {
+            width = 5; 
+            height = 5;
+            length = 5;
+            selectPreset = 1;
+            presetScreen.transform.GetChild(0).GetChild(selectPreset).GetComponent<UnityEngine.UI.Image>().color = Color.green;
+
+        }
+        if (state == 2)
+        {
+            width = 10;
+            height = 5;
+            length = 8;
+            selectPreset = 2;
+            presetScreen.transform.GetChild(0).GetChild(selectPreset).GetComponent<UnityEngine.UI.Image>().color = Color.green;
+        }
+        if (state==3)
+        {
+            width= 10;
+            height = 5; 
+            length = 10;
+            selectPreset = 3;
+            presetScreen.transform.GetChild(0).GetChild(selectPreset).GetComponent<UnityEngine.UI.Image>().color = Color.green;
+
+        }
+        if (state == 4)
+        {
+            width = 12;
+            height = 5;
+            length = 10;
+            selectPreset = 4;
+            presetScreen.transform.GetChild(0).GetChild(selectPreset).GetComponent<UnityEngine.UI.Image>().color = Color.green;
+
+        }
+
+        for (int i = 1; i < 4; i++)
+        {
+            if (i != selectPreset)
+            {
+                presetScreen.transform.GetChild(0).GetChild(i).GetComponent<UnityEngine.UI.Image>().color = Color.white;
+            }
+        }
     }
 }
