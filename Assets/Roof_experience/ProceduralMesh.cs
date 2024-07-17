@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Json;
 using TMPro;
-using Unity.Android.Types;
+
 using Unity.VisualScripting;
-using UnityEditor.Search;
+
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.InputSystem.LowLevel;
@@ -72,6 +72,7 @@ public class ProceduralMesh : MonoBehaviour
     float T2_H;
     float givenLength;
 
+    public Vector3 playerLoc;
     float[] ans;
     int idxAns;
 
@@ -100,7 +101,7 @@ public class ProceduralMesh : MonoBehaviour
 
 
         vertices = new Vector3[] { vert_0, vert_1, vert_2, vert_3, vert_4, vert_5, vert_6, vert_7, vert_8, vert_9, vert_10, vert_11, vert_12, vert_13 };
-
+        playerLoc = new Vector3(0, 0, 5);
 
         R1_L = Mathf.Sqrt(Mathf.Pow(width / 2, 2) + Mathf.Pow(height, 2));
         givenLength = vertices[1].z - vertices[0].z;
@@ -498,17 +499,20 @@ public class ProceduralMesh : MonoBehaviour
 
         targetScreen(homeScreen);
 
-        _player.transform.position = Vector3.zero;  
+        //_player.transform.position = Vector3.zero;
+
+        _player.transform.position = playerLoc;  
         _player.transform.rotation = new Quaternion(0,0,0,0);
-        homeScreen.transform.position = new Vector3(0, 0, 4);   
+        homeScreen.transform.position = new Vector3(playerLoc.x, playerLoc.y, playerLoc.z + 4);   
     }
 
     void showTutorialScreen()
     {
         targetScreen(tutorialScreen);
 
-        _player.transform.position = Vector3.zero;
-        tutorialScreen.transform.position = new Vector3(0, 0, 4); 
+        _player.transform.position = playerLoc;
+        //tutorialScreen.transform.position = new Vector3(0, 0, 4); 
+        tutorialScreen.transform.position = new Vector3(playerLoc.x,playerLoc.y, playerLoc.z+4); 
     }
 
     void targetScreen(GameObject target)
@@ -575,8 +579,9 @@ public class ProceduralMesh : MonoBehaviour
     {
         targetScreen(Cust_UI);
 
-        _player.transform.position = Vector3.zero;
-        Cust_UI.transform.position = new Vector3(0, 0, 4);
+        //_player.transform.position = Vector3.zero;
+        _player.transform.position = playerLoc;
+        Cust_UI.transform.position = new Vector3(playerLoc.x, playerLoc.y, playerLoc.z+4);
     }
 
     public void selectButton(int button)
@@ -648,8 +653,9 @@ public class ProceduralMesh : MonoBehaviour
     public void showPracticeScreen()
     {
         targetScreen(practiceScreen);
-        _player.transform.position = Vector3.zero;
-        practiceScreen.transform.position = new Vector3(0, 0, 4);
+        //_player.transform.position = Vector3.zero;
+        _player.transform.position = playerLoc;
+        practiceScreen.transform.position = new Vector3(playerLoc.x, playerLoc.y, playerLoc.z + 4);
 
     }
     string generateQuestion(string param)
@@ -735,9 +741,10 @@ public class ProceduralMesh : MonoBehaviour
     public void showQuestion()
     {
         targetScreen(questionScreen);
-        _player.transform.position = Vector3.zero;
+        //_player.transform.position = Vector3.zero;
+        _player.transform.position = playerLoc;
         _player.transform.rotation = Quaternion.Euler(-10,0,0);
-        questionScreen.transform.position = new Vector3(0, 0, 4);
+        questionScreen.transform.position = new Vector3(playerLoc.x, playerLoc.y, playerLoc.z + 4);
 
         for (int i = 0; i < ans.Length; i++)
         {
@@ -786,6 +793,7 @@ public class ProceduralMesh : MonoBehaviour
         bool IsCorrect = false;
         if (userAns-1 == idxAns)
         {
+            // TODO: There's a mistake here
             questionScreen.transform.GetChild(0).GetChild(userAns).GetComponent<UnityEngine.UI.Image>().color = Color.green;
             IsCorrect = true;
             paramChange = true; 
