@@ -1513,7 +1513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8336149202011885282, guid: d5529d27d4086444fab5019ff6aceec4, type: 3}
       propertyPath: m_Name
-      value: 'Question Screen '
+      value: Question Screen
       objectReference: {fileID: 0}
     - target: {fileID: 8848655872926391926, guid: d5529d27d4086444fab5019ff6aceec4, type: 3}
       propertyPath: m_PresetInfoIsWorld
