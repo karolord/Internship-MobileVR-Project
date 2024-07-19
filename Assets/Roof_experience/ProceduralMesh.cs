@@ -7,6 +7,7 @@ using TMPro;
 using Unity.VisualScripting;
 
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Analytics;
 using UnityEngine.InputSystem.LowLevel;
 using UnityEngine.UI;
@@ -76,6 +77,7 @@ public class ProceduralMesh : MonoBehaviour
     public Vector3 playerLoc;
     float[] ans;
     int idxAns;
+    int qType;
 
     int selectPreset;
 
@@ -743,6 +745,8 @@ public class ProceduralMesh : MonoBehaviour
                 idxAns = i;
             }
         }
+
+        Debug.Log(idxAns);
     }
 
     public void showQuestion()
@@ -754,11 +758,10 @@ public class ProceduralMesh : MonoBehaviour
 
         for (int i = 0; i < ans.Length; i++)
         {
-            Debug.Log("Color Changed");
             questionScreen.transform.GetChild(0).GetChild(i + 1).GetComponent<UnityEngine.UI.Image>().color = Color.white;
         }
 
-        int qType = UnityEngine.Random.Range(0, 2);
+        qType = UnityEngine.Random.Range(0, 2);
 
         if (paramChange)
         {
@@ -787,14 +790,50 @@ public class ProceduralMesh : MonoBehaviour
             }
 
         }
-
-        Debug.Log(idxAns);
     }
 
-    //TODO: Make New Button to rotate go to the next question
+    public void showAnotherQuestion(int state)
+    {
+        qType += state;
+
+        for (int i = 1; i < 5; i++)
+        {
+            questionScreen.transform.GetChild(0).GetChild(i).GetComponent<UnityEngine.UI.Image>().color = Color.white;
+
+        }
+
+        if (qType > 2)
+        {
+            qType = 0;
+        }
+
+        if (qType == 0)
+        {
+            questionScreen.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = generateQuestion("R1");
+            generateAns("sloping length of R1: ", R1_L);
+        }
+
+        if (qType == 1)
+        {
+            questionScreen.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = generateQuestion("T3");
+            generateAns("Sloping length of T3: ", T3_L);
+        }
+
+        if (qType == 2)
+        {
+            questionScreen.transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = generateQuestion("T2");
+            generateAns("Sloping height of T2: ", T2_H);
+        }
+
+    }
 
     public void selectAns(int userAns)
     {
+        string[] RoofParameter = new string[3];
+        RoofParameter[0] = "R1";
+        RoofParameter[1] = "T3";
+        RoofParameter[2] = "T2";
+
         bool IsCorrect = false;
         if (userAns - 1 == idxAns)
         {
@@ -802,19 +841,21 @@ public class ProceduralMesh : MonoBehaviour
             questionScreen.transform.GetChild(0).GetChild(userAns).GetComponent<UnityEngine.UI.Image>().color = Color.green;
             IsCorrect = true;
             paramChange = true;
-            // TODO: Make Analytics for different parameter
-            AnalyticsResult Result = Analytics.CustomEvent("RoofExperience_correctAnswer");
+            // TODO: Make Analytics for different 
+            string analyticForCorrectAnswer = "RoofExperience_correctAnswer_" + RoofParameter[idxAns];
+            AnalyticsResult Result = Analytics.CustomEvent(analyticForCorrectAnswer);
 
         }
         else
         {
             questionScreen.transform.GetChild(0).GetChild(userAns).GetComponent<UnityEngine.UI.Image>().color = Color.red;
-            AnalyticsResult Result = Analytics.CustomEvent("RoofExperience_wrongAnswer");
+            string analyticForWrongAnswer = "RoofExperience_WrongAnswer_" + RoofParameter[idxAns];
+            AnalyticsResult Result = Analytics.CustomEvent(analyticForWrongAnswer);
         }
 
         if (!IsCorrect)
         {
-            questionScreen.transform.GetChild(0).GetChild(idxAns).GetComponent<UnityEngine.UI.Image>().color = Color.green;
+            questionScreen.transform.GetChild(0).GetChild(idxAns+1).GetComponent<UnityEngine.UI.Image>().color = Color.green;
         }
     }
 
@@ -868,7 +909,7 @@ public class ProceduralMesh : MonoBehaviour
 
         }
 
-        for (int i = 1; i < 4; i++)
+        for (int i = 1; i < 5; i++)
         {
             if (i != selectPreset)
             {
@@ -876,4 +917,6 @@ public class ProceduralMesh : MonoBehaviour
             }
         }
     }
+
+
 }
