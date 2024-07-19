@@ -3,10 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Json;
 using TMPro;
-using Unity.Android.Types;
+
 using Unity.VisualScripting;
-using UnityEditor.Presets;
-using UnityEditor.Search;
+
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.InputSystem.LowLevel;
@@ -20,16 +19,16 @@ public class ProceduralMesh : MonoBehaviour
     // Start is called before the first frame update
     Mesh mesh;
 
-    LineRenderer ln; 
+    LineRenderer ln;
 
     int[] triangles;
     public float length;
-    public float width; 
+    public float width;
     public float height;
 
     private float h;
     private float H;
-    private float R1; 
+    private float R1;
 
     float x_0 = 0;
     float y_0 = 0;
@@ -39,7 +38,7 @@ public class ProceduralMesh : MonoBehaviour
 
     public bool showTriangle_R1;
     public bool showTriangle_T3;
-    public bool showTriangle_T2; 
+    public bool showTriangle_T2;
 
     Vector3[] vertices;
     Vector3[] Label_inside_1_h;
@@ -55,10 +54,10 @@ public class ProceduralMesh : MonoBehaviour
     public GameObject homeScreen;
     public GameObject tutorialScreen;
 
-    public GameObject practiceScreen; 
+    public GameObject practiceScreen;
     public GameObject Cust_UI;
     public GameObject questionScreen;
-    public GameObject presetScreen; 
+    public GameObject presetScreen;
 
     bool firstTime = true;
 
@@ -74,10 +73,11 @@ public class ProceduralMesh : MonoBehaviour
     float T2_H;
     float givenLength;
 
+    public Vector3 playerLoc;
     float[] ans;
     int idxAns;
 
-    int selectPreset; 
+    int selectPreset;
 
     void Start()
     {
@@ -104,7 +104,7 @@ public class ProceduralMesh : MonoBehaviour
 
 
         vertices = new Vector3[] { vert_0, vert_1, vert_2, vert_3, vert_4, vert_5, vert_6, vert_7, vert_8, vert_9, vert_10, vert_11, vert_12, vert_13 };
-
+        playerLoc = new Vector3(0, 0, 5);
 
         R1_L = Mathf.Sqrt(Mathf.Pow(width / 2, 2) + Mathf.Pow(height, 2));
         givenLength = vertices[1].z - vertices[0].z;
@@ -112,12 +112,12 @@ public class ProceduralMesh : MonoBehaviour
         T2_H = Mathf.Sqrt(Mathf.Pow(T3_L, 2) - Mathf.Pow(width / 2, 2));
 
         mesh = GetComponent<MeshFilter>().mesh;
-        
+
         settingUpLabelsChildren(9);
 
         x_0 = _player.transform.position.x;
         y_0 = _player.transform.position.y;
-        z_0 = _player.transform.position.z+5;
+        z_0 = _player.transform.position.z + 5;
 
         showTutorialScreen();
         ans = new float[4];
@@ -164,7 +164,7 @@ public class ProceduralMesh : MonoBehaviour
         R1_L = Mathf.Sqrt(Mathf.Pow(width / 2, 2) + Mathf.Pow(height, 2));
         givenLength = vertices[1].z - vertices[0].z;
         T3_L = Mathf.Sqrt(Mathf.Pow(R1_L, 2) + Mathf.Pow(givenLength, 2));
-        T2_H = Mathf.Sqrt(Mathf.Pow(T3_L, 2) - Mathf.Pow(width/2, 2));
+        T2_H = Mathf.Sqrt(Mathf.Pow(T3_L, 2) - Mathf.Pow(width / 2, 2));
 
         int[] tri_1 = new int[]
         {
@@ -201,14 +201,14 @@ public class ProceduralMesh : MonoBehaviour
         {
             state -= 1;
         }
-        
+
         if (state > 2)
         {
             state = 0;
         }
         if (state < 0)
         {
-            state = 2; 
+            state = 2;
         }
 
         if (firstTime == true)
@@ -278,7 +278,7 @@ public class ProceduralMesh : MonoBehaviour
         _player.transform.rotation = new Quaternion(0, 0, 0, 0);
 
         homeScreen.transform.position = new Vector3(_player.transform.position.x, _player.transform.position.y, _player.transform.position.z + 5);
-        
+
 
         triangles = new int[] {
             // bot
@@ -300,14 +300,14 @@ public class ProceduralMesh : MonoBehaviour
             9, 3, 5,
             };
 
-        Vector3[] leng_top = new Vector3[] {vertices[0], vertices[3]};
-        Vector3[] leng_bot = new Vector3[] {vertices[6], vertices[9]};
-        Vector3[] wid_left = new Vector3[] {vertices[0], vertices[6]};
-        Vector3[] wid_right = new Vector3[] {vertices[3], vertices[9]};
-        Vector3[] dia_leftTop = new Vector3[] {vertices[4], vertices[6]};
-        Vector3[] dia_leftBot = new Vector3[] {vertices[0], vertices[4]};
-        Vector3[] dia_rightTop = new Vector3[] {vertices[5], vertices[9]};
-        Vector3[] dia_rightBot = new Vector3[] {vertices[5], vertices[3]};
+        Vector3[] leng_top = new Vector3[] { vertices[0], vertices[3] };
+        Vector3[] leng_bot = new Vector3[] { vertices[6], vertices[9] };
+        Vector3[] wid_left = new Vector3[] { vertices[0], vertices[6] };
+        Vector3[] wid_right = new Vector3[] { vertices[3], vertices[9] };
+        Vector3[] dia_leftTop = new Vector3[] { vertices[4], vertices[6] };
+        Vector3[] dia_leftBot = new Vector3[] { vertices[0], vertices[4] };
+        Vector3[] dia_rightTop = new Vector3[] { vertices[5], vertices[9] };
+        Vector3[] dia_rightBot = new Vector3[] { vertices[5], vertices[3] };
         Vector3[] middle = new Vector3[] { vertices[4], vertices[5] };
 
 
@@ -334,7 +334,7 @@ public class ProceduralMesh : MonoBehaviour
     }
     private void MakeMeshData()
     {
-        mesh.vertices = vertices;   
+        mesh.vertices = vertices;
         mesh.triangles = triangles;
         mesh.RecalculateNormals();
     }
@@ -360,13 +360,13 @@ public class ProceduralMesh : MonoBehaviour
 
     float showT3(float R1_leng, Vector3[] Complete_vertices)
     {
-        Vector3[] verts  = Complete_vertices;
+        Vector3[] verts = Complete_vertices;
         int[] T3_verts = new int[]
         {
             0, 4, 1
         };
 
-        float T3_H = 0; 
+        float T3_H = 0;
 
         if (verts[0] != null && verts[1] != null)
         {
@@ -381,7 +381,7 @@ public class ProceduralMesh : MonoBehaviour
             Vector3 label_T3_w = new Vector3(.25f, 0, (verts[0].z + verts[4].z) / 2 + 1.25f);
             Vector3 label_T3_H = new Vector3((verts[0].x + verts[4].x) / 2 + 1.25f, (verts[4].y) / 2, (verts[0].z + verts[4].z) / 2 - 1.25f);
 
-            string T3_leng_text = "width = " + T3_leng.ToString(); 
+            string T3_leng_text = "width = " + T3_leng.ToString();
             string R1_leng_text = "R1 = " + R1_leng.ToString();
             string T3_H_leng_text = "H = " + T3_H.ToString();
 
@@ -408,18 +408,18 @@ public class ProceduralMesh : MonoBehaviour
 
     void showT2(float T3_H)
     {
-        float T2_h_length = Mathf.Sqrt(Mathf.Pow(T3_H, 2) - Mathf.Pow(width/2, 2));
+        float T2_h_length = Mathf.Sqrt(Mathf.Pow(T3_H, 2) - Mathf.Pow(width / 2, 2));
 
         Vector3[] T2_H_verts = new Vector3[] { vertices[0], vertices[4] };
         Vector3[] T2_width_verts = new Vector3[] { vertices[0], vertices[10] };
         Vector3[] T3_height_verts = new Vector3[] { vertices[10], vertices[4] };
 
-        Vector3 label_T2_H = new Vector3((vertices[0].x + vertices[4].x) / 2 + 1.25f, (vertices[4].y) / 2 , vertices[0].z - 1.25f);
+        Vector3 label_T2_H = new Vector3((vertices[0].x + vertices[4].x) / 2 + 1.25f, (vertices[4].y) / 2, vertices[0].z - 1.25f);
         Vector3 label_T2_w = new Vector3((vertices[0].x + vertices[10].x) / 2 - 0.5f, vertices[0].y, vertices[0].z - 1.25f);
         Vector3 label_T2_h = new Vector3((vertices[0].x + vertices[10].x) / 2 - 4.25f, (vertices[4].y) / 2, vertices[0].z - 1.25f);
 
         string T2_H_leng_text = "H = " + T3_H.ToString();
-        string T2_width_text = "width = " + (width/2).ToString();
+        string T2_width_text = "width = " + (width / 2).ToString();
         string T2_h_text = "h = " + T2_h_length.ToString();
 
         makeLabel(labels[0], T2_H_verts, T2_H_leng_text);
@@ -476,7 +476,7 @@ public class ProceduralMesh : MonoBehaviour
 
     void showUI(string formula_text, string title_text, Sprite illus)
     {
-        TextMeshProUGUI formula = formula_UI.transform.GetChild(0).GetComponent<TextMeshProUGUI>(); 
+        TextMeshProUGUI formula = formula_UI.transform.GetChild(0).GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI title = formula_UI.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
         UnityEngine.UI.Image Illus = formula_UI.transform.GetChild(2).GetComponent<UnityEngine.UI.Image>();
 
@@ -501,17 +501,20 @@ public class ProceduralMesh : MonoBehaviour
 
         targetScreen(homeScreen);
 
-        _player.transform.position = Vector3.zero;  
-        _player.transform.rotation = new Quaternion(0,0,0,0);
-        homeScreen.transform.position = new Vector3(0, 0, 4);   
+        //_player.transform.position = Vector3.zero;
+
+        _player.transform.position = playerLoc;
+        _player.transform.rotation = new Quaternion(0, 0, 0, 0);
+        homeScreen.transform.position = new Vector3(playerLoc.x, playerLoc.y, playerLoc.z + 4);
     }
 
     void showTutorialScreen()
     {
         targetScreen(tutorialScreen);
 
-        _player.transform.position = Vector3.zero;
-        tutorialScreen.transform.position = new Vector3(0, 0, 4); 
+        _player.transform.position = playerLoc;
+        //tutorialScreen.transform.position = new Vector3(0, 0, 4); 
+        tutorialScreen.transform.position = new Vector3(playerLoc.x, playerLoc.y, playerLoc.z + 4);
     }
 
     void targetScreen(GameObject target)
@@ -572,7 +575,7 @@ public class ProceduralMesh : MonoBehaviour
 
         }
 
-        if (target == practiceScreen) 
+        if (target == practiceScreen)
         {
             homeScreen.transform.position = away;
             formula_UI.transform.position = away;
@@ -597,8 +600,9 @@ public class ProceduralMesh : MonoBehaviour
     {
         targetScreen(Cust_UI);
 
-        _player.transform.position = Vector3.zero;
-        Cust_UI.transform.position = new Vector3(0, 0, 4);
+        //_player.transform.position = Vector3.zero;
+        _player.transform.position = playerLoc;
+        Cust_UI.transform.position = new Vector3(playerLoc.x, playerLoc.y, playerLoc.z + 4);
     }
 
     public void selectButton(int button)
@@ -670,8 +674,9 @@ public class ProceduralMesh : MonoBehaviour
     public void showPracticeScreen()
     {
         targetScreen(practiceScreen);
-        _player.transform.position = Vector3.zero;
-        practiceScreen.transform.position = new Vector3(0, 0, 4);
+        //_player.transform.position = Vector3.zero;
+        _player.transform.position = playerLoc;
+        practiceScreen.transform.position = new Vector3(playerLoc.x, playerLoc.y, playerLoc.z + 4);
 
     }
     string generateQuestion(string param)
@@ -688,7 +693,7 @@ public class ProceduralMesh : MonoBehaviour
 
         if (param == "T3")
         {
-            q = "What is the size of <b> sloping length <i>" + param + "</i></b> when" + "<b> given base is " + (length/3).ToString() + " (1/3 of length)</b> and " + "<b> sloping length R1 is " + R1_L.ToString() + "</b>";
+            q = "What is the size of <b> sloping length <i>" + param + "</i></b> when" + "<b> given base is " + (length / 3).ToString() + " (1/3 of length)</b> and " + "<b> sloping length R1 is " + R1_L.ToString() + "</b>";
         }
 
         if (param == "T2")
@@ -713,36 +718,22 @@ public class ProceduralMesh : MonoBehaviour
         ans[2] = T3_L;
         ans[3] = T2_H;
 
-        //int idxAns = 0;
-
         int randOrd;
         float temp;
 
         // Random shuffle method
-        for (int i = ans.Length-1; i > 0; i--)
+        for (int i = ans.Length - 1; i > 0; i--)
         {
-                randOrd = UnityEngine.Random.Range(0, i);
-                temp = ans[i];
-                ans[i] = ans[randOrd];
-                ans[randOrd] = temp;
+            randOrd = UnityEngine.Random.Range(0, i);
+            temp = ans[i];
+            ans[i] = ans[randOrd];
+            ans[randOrd] = temp;
 
         }
 
         for (int i = 0; i < ans.Length; i++)
         {
             questionScreen.transform.GetChild(0).GetChild(i + 1).GetChild(1).GetComponent<TextMeshProUGUI>().text = generateAnsPrompt(selectType, ans[i]);
-
-            //if (ans[i] == R1)
-            //{
-            //    questionScreen.transform.GetChild(0).GetChild(i).GetComponent<TextMeshPro>().text = generateQuestion("R1");
-            //}
-            //if (ans[i] == T3_L)
-            //{
-            //    questionScreen.transform.GetChild(0).GetChild(i).GetComponent<TextMeshPro>().text = generateQuestion("R1");
-            //}
-            //if (ans[i] == T2_H)
-            //{
-            //    questionScreen.transform.GetChild(0).GetChild(i).GetComponent<TextMeshPro>().text = generateQuestion("R1");
         }
 
         for (int i = 0; i < ans.Length; i++)
@@ -757,20 +748,17 @@ public class ProceduralMesh : MonoBehaviour
     public void showQuestion()
     {
         targetScreen(questionScreen);
-        _player.transform.position = Vector3.zero;
-        _player.transform.rotation = Quaternion.Euler(-10,0,0);
-        questionScreen.transform.position = new Vector3(0, 0, 4);
+        _player.transform.position = playerLoc;
+        _player.transform.rotation = Quaternion.Euler(-10, 0, 0);
+        questionScreen.transform.position = new Vector3(playerLoc.x, playerLoc.y, playerLoc.z + 4);
 
         for (int i = 0; i < ans.Length; i++)
         {
             Debug.Log("Color Changed");
             questionScreen.transform.GetChild(0).GetChild(i + 1).GetComponent<UnityEngine.UI.Image>().color = Color.white;
-        } 
+        }
 
-        // TODO: Use Abstract data type
         int qType = UnityEngine.Random.Range(0, 2);
-        //float[] ans; 
-        //int idxAns;
 
         if (paramChange)
         {
@@ -803,14 +791,17 @@ public class ProceduralMesh : MonoBehaviour
         Debug.Log(idxAns);
     }
 
+    //TODO: Make New Button to rotate go to the next question
+
     public void selectAns(int userAns)
     {
         bool IsCorrect = false;
-        if (userAns-1 == idxAns)
+        if (userAns - 1 == idxAns)
         {
+            // TODO: There's a mistake here
             questionScreen.transform.GetChild(0).GetChild(userAns).GetComponent<UnityEngine.UI.Image>().color = Color.green;
             IsCorrect = true;
-            paramChange = true; 
+            paramChange = true;
             // TODO: Make Analytics for different parameter
             AnalyticsResult Result = Analytics.CustomEvent("RoofExperience_correctAnswer");
 
@@ -830,20 +821,20 @@ public class ProceduralMesh : MonoBehaviour
     public void showPresetScreen()
     {
         targetScreen(presetScreen);
-        _player.transform.position = Vector3.zero;
+        _player.transform.position = playerLoc;
         _player.transform.rotation = Quaternion.Euler(-10, 0, 0);
-        presetScreen.transform.position = new Vector3(0, 0, 4);
+        presetScreen.transform.position = new Vector3(playerLoc.x, playerLoc.y, playerLoc.z + 4);
     }
     public void showPresetCustomisation(int state)
     {
         // TODO: Make Preset Cust Screen
         // TODO: Implement Preset Screen logic 
 
-        
+
 
         if (state == 1)
         {
-            width = 5; 
+            width = 5;
             height = 5;
             length = 5;
             selectPreset = 1;
@@ -858,10 +849,10 @@ public class ProceduralMesh : MonoBehaviour
             selectPreset = 2;
             presetScreen.transform.GetChild(0).GetChild(selectPreset).GetComponent<UnityEngine.UI.Image>().color = Color.green;
         }
-        if (state==3)
+        if (state == 3)
         {
-            width= 10;
-            height = 5; 
+            width = 10;
+            height = 5;
             length = 10;
             selectPreset = 3;
             presetScreen.transform.GetChild(0).GetChild(selectPreset).GetComponent<UnityEngine.UI.Image>().color = Color.green;
