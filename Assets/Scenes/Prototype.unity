@@ -805,6 +805,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 560205063}
+        m_TargetAssemblyTypeName: AnalyticsController, Assembly-CSharp
+        m_MethodName: LogEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: HF-BluePrint_4_Tested
+          m_BoolArgument: 0
+        m_CallState: 2
   _button: {fileID: 517680845}
 --- !u!114 &149628932
 MonoBehaviour:
@@ -2302,6 +2314,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 560205063}
+        m_TargetAssemblyTypeName: AnalyticsController, Assembly-CSharp
+        m_MethodName: LogEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: HF-BluePrint_5_Tested
+          m_BoolArgument: 0
+        m_CallState: 2
   _button: {fileID: 955286815}
 --- !u!114 &343245260
 MonoBehaviour:
@@ -3640,6 +3664,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 560205063}
+        m_TargetAssemblyTypeName: AnalyticsController, Assembly-CSharp
+        m_MethodName: LogEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: HF-BluePrint_2_Tested
           m_BoolArgument: 0
         m_CallState: 2
   _button: {fileID: 1522274995}
@@ -5840,6 +5876,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 560205063}
+        m_TargetAssemblyTypeName: AnalyticsController, Assembly-CSharp
+        m_MethodName: LogEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: HF-BluePrint_6_Tested
+          m_BoolArgument: 0
+        m_CallState: 2
   _button: {fileID: 1283490154}
 --- !u!114 &987799085
 MonoBehaviour:
@@ -5978,6 +6026,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 560205063}
+        m_TargetAssemblyTypeName: AnalyticsController, Assembly-CSharp
+        m_MethodName: LogEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: HF-FreeModeStarted
           m_BoolArgument: 1
         m_CallState: 2
   _button: {fileID: 910898516}
@@ -10243,6 +10303,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 560205063}
+        m_TargetAssemblyTypeName: AnalyticsController, Assembly-CSharp
+        m_MethodName: LogEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: HF-BluePrint_1_Tested
+          m_BoolArgument: 0
+        m_CallState: 2
   _button: {fileID: 2111387046}
 --- !u!114 &1654613931
 MonoBehaviour:
@@ -10369,6 +10441,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 560205063}
+        m_TargetAssemblyTypeName: AnalyticsController, Assembly-CSharp
+        m_MethodName: LogEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: HF-BluePrint_3_Tested
           m_BoolArgument: 0
         m_CallState: 2
   _button: {fileID: 860092328}
@@ -10832,6 +10916,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 560205063}
+        m_TargetAssemblyTypeName: AnalyticsController, Assembly-CSharp
+        m_MethodName: LogEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: HF-Tutorial Started
           m_BoolArgument: 1
         m_CallState: 2
   _button: {fileID: 214694707}
@@ -12238,6 +12334,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 560205063}
+        m_TargetAssemblyTypeName: AnalyticsController, Assembly-CSharp
+        m_MethodName: LogEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: HF-Tutorial_Finished
+          m_BoolArgument: 0
+        m_CallState: 2
   _button: {fileID: 927487340}
 --- !u!114 &1928496471
 MonoBehaviour:
@@ -12765,6 +12873,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 560205063}
+        m_TargetAssemblyTypeName: AnalyticsController, Assembly-CSharp
+        m_MethodName: LogEvent
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: HF-BlueprintModeStarted
           m_BoolArgument: 1
         m_CallState: 2
   _button: {fileID: 454651272}
