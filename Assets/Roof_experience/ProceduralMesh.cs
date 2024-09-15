@@ -113,7 +113,7 @@ public class ProceduralMesh : MonoBehaviour
 
         mesh = GetComponent<MeshFilter>().mesh;
         
-        settingUpLabelsChildren(9);
+        settingUpLabelsChildren(12);
 
         x_0 = _player.transform.position.x;
         y_0 = _player.transform.position.y;
@@ -215,6 +215,11 @@ public class ProceduralMesh : MonoBehaviour
         {
             clearlabel();
             showR1(tri_1);
+            MakeMeshData();
+
+            showRoofOutline();
+
+
             firstTime = false;
             state = 0;
         }
@@ -224,6 +229,9 @@ public class ProceduralMesh : MonoBehaviour
             {
                 clearlabel();
                 showR1(tri_1);
+                MakeMeshData();
+
+                showRoofOutline();
             }
 
             if (state == 1)
@@ -232,16 +240,13 @@ public class ProceduralMesh : MonoBehaviour
 
                 triangles = tri_3;
                 H = showT3(R1_L, vertices);
+                MakeMeshData();
 
-                formula_UI.transform.position = new Vector3(-6.4f, 6, 3);
-                formula_UI.transform.rotation = new Quaternion(0, 1, 0, -1);
+                showRoofOutline();
 
                 string formula_text = "H<sup>2</sup> (sloping length of T3) = R1<sup>2</sup> + Width<sup>2</sup>";
                 string title_text = "Calculating T3";
                 showUI(formula_text, title_text, formula_illus[1]);
-
-                _player.transform.position = new Vector3(7.5f, 3.5f, 3);
-                _player.transform.rotation = new Quaternion(0, 1, 0, -1);
             }
 
             if (state == 2)
@@ -251,20 +256,22 @@ public class ProceduralMesh : MonoBehaviour
                 triangles = tri_4;
 
                 showT2(T3_L);
+                MakeMeshData();
 
-                formula_UI.transform.position = new Vector3(-5, 8.9f, 7.2f);
-                formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
+                showRoofOutline();
+
+
+                //formula_UI.transform.position = new Vector3(-5f, 11, 17.5f);
+                //formula_UI.transform.eulerAngles = new Vector3(0, -20, 0);
 
                 string T2_formula = "h <sup>2</sup> (sloping height of T2) = H<sup>2</sup> (sloping length of T3)  - (Width/2)<sup>2</sup>";
                 string T2_title = "Calculating T2";
                 showUI(T2_formula, T2_title, formula_illus[2]);
 
-                _player.transform.position = new Vector3(-5, 2.8f, -8);
-                _player.transform.rotation = new Quaternion(0, 0, 0, 0);
+                //_player.transform.position = new Vector3(-5, 2.8f, -8);
             }
 
         }
-        MakeMeshData();
     }
 
     public void showEntireRoof()
@@ -330,7 +337,51 @@ public class ProceduralMesh : MonoBehaviour
 
         Quaternion rotation = Quaternion.Euler(0, -180, 0);
         labels[3].transform.rotation = rotation;
-        MakeMeshData();
+        //MakeMeshData();
+    }
+
+    public void showRoofOutline()
+    {
+        triangles = new int[] {
+            // bot
+            0, 4, 1,
+            1, 4, 2,
+            2, 4, 5,
+            5, 3, 2, 
+
+            // left
+            0, 6, 4, 
+
+            // top 
+            6, 7, 4,
+            4, 7, 5,
+            5, 7, 8,
+            8, 9, 5, 
+
+            // right
+            9, 3, 5,
+            };
+
+        Vector3[] leng_top = new Vector3[] { vertices[0], vertices[3] };
+        Vector3[] leng_bot = new Vector3[] { vertices[6], vertices[9] };
+        Vector3[] wid_left = new Vector3[] { vertices[0], vertices[6] };
+        Vector3[] wid_right = new Vector3[] { vertices[3], vertices[9] };
+        Vector3[] dia_leftTop = new Vector3[] { vertices[4], vertices[6] };
+        Vector3[] dia_leftBot = new Vector3[] { vertices[0], vertices[4] };
+        Vector3[] dia_rightTop = new Vector3[] { vertices[5], vertices[9] };
+        Vector3[] dia_rightBot = new Vector3[] { vertices[5], vertices[3] };
+        Vector3[] middle = new Vector3[] { vertices[4], vertices[5] };
+
+
+        makeLabel(labels[3], leng_top, length.ToString());
+        makeLabel(labels[4], leng_bot, length.ToString());
+        makeLabel(labels[5], wid_left, width.ToString());
+        makeLabel(labels[6], wid_right, width.ToString());
+        makeLabel(labels[7], dia_leftTop, "");
+        makeLabel(labels[8], dia_leftBot, "");
+        makeLabel(labels[9], dia_rightTop, "");
+        makeLabel(labels[10], dia_rightBot, "");
+        makeLabel(labels[11], middle, "");
     }
     private void MakeMeshData()
     {
@@ -397,6 +448,14 @@ public class ProceduralMesh : MonoBehaviour
             labels[1].transform.rotation = new Quaternion(0, 1, 0, -1);
             labels[2].transform.rotation = new Quaternion(0, 1, 0, -1);
 
+            //formula_UI.transform.position = new Vector3(-8.2f, 11, 5.1f);
+            //formula_UI.transform.eulerAngles = new Vector3(0, 270, 0.2f);
+            formula_UI.transform.position = new Vector3(vertices[0].x - 10, vertices[0].y + height / 2 + 10, (vertices[0].z + vertices[1].z) / 2);
+            formula_UI.transform.eulerAngles = new Vector3(0, 270, 0.2f);
+
+            _player.transform.position = new Vector3(vertices[0].x + 10, vertices[0].y + 5, (vertices[0].z + vertices[1].z)/2);
+            _player.transform.eulerAngles = new Vector3(0, 270, 0);
+
         }
         else
         {
@@ -433,6 +492,13 @@ public class ProceduralMesh : MonoBehaviour
         labels[0].transform.rotation = new Quaternion(0, 0, 0, 0);
         labels[1].transform.rotation = new Quaternion(0, 0, 0, 0);
         labels[2].transform.rotation = new Quaternion(0, 0, 0, 0);
+
+        formula_UI.transform.position = new Vector3(vertices[4].x, vertices[4].y + height + 5f, vertices[4].z + 5.5f);
+        formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
+
+        _player.transform.position = new Vector3(vertices[10].x, vertices[10].y + 7, vertices[10].z - 10f);
+        _player.transform.rotation = new Quaternion(0, 0, 0, 0);
+
     }
 
     void showR1(int[] tri_1)
@@ -463,15 +529,19 @@ public class ProceduralMesh : MonoBehaviour
         labels[2].transform.rotation = new Quaternion(0, 0, 0, 0);
 
 
-        formula_UI.transform.position = new Vector3(-5f, 8.9f, 12.7f);
-        formula_UI.transform.rotation = new Quaternion(0, 0, 0, 0);
+        formula_UI.transform.position = new Vector3(vertices[4].x - 5f, vertices[4].y + height + 5f, vertices[4].z + 10f);
+        formula_UI.transform.eulerAngles = new Vector3(0, -20, 0);
 
-        string R1_formula = "R1<sup>2</sup> (sloping length of R1) = Height<sup>2</sup> + (Width/2)<sup>2</sup>";
+        
+        float angle_a = Mathf.Asin((float)height / (float)R1) * (180/Mathf.PI);
+        Debug.Log(angle_a);
+
+        string R1_formula = "R1<sup>2</sup> (sloping length of R1) = Height<sup>2</sup> + (Width/2)<sup>2</sup> \n\nOr\na = " + angle_a.ToString() + "\nR1 = Height / sin(a)";
         string R1_title = "Calculating R1";
         showUI(R1_formula, R1_title, formula_illus[0]);
 
-        _player.transform.position = new Vector3(-5, 3.5f, -3);
-        _player.transform.rotation = new Quaternion(0, 0, 0, 0);
+        _player.transform.position = new Vector3(vertices[1].x + 5f, vertices[1].y + 5f, vertices[1].z - 10f);
+        _player.transform.eulerAngles = new Vector3(0, -20, 0);
     }
 
     void showUI(string formula_text, string title_text, Sprite illus)
@@ -513,7 +583,6 @@ public class ProceduralMesh : MonoBehaviour
         targetScreen(tutorialScreen);
 
         _player.transform.position = playerLoc;
-        //tutorialScreen.transform.position = new Vector3(0, 0, 4); 
         tutorialScreen.transform.position = new Vector3(playerLoc.x,playerLoc.y, playerLoc.z+4); 
     }
 
@@ -788,7 +857,7 @@ public class ProceduralMesh : MonoBehaviour
 
         }
 
-        Debug.Log(idxAns);
+        Debug.Log(idxAns+1);
     }
 
     //TODO: Make New Button to rotate go to the next question
@@ -814,7 +883,7 @@ public class ProceduralMesh : MonoBehaviour
 
         if (!IsCorrect)
         {
-            questionScreen.transform.GetChild(0).GetChild(idxAns).GetComponent<UnityEngine.UI.Image>().color = Color.green;
+            questionScreen.transform.GetChild(0).GetChild(idxAns+1).GetComponent<UnityEngine.UI.Image>().color = Color.green;
         }
     }
 
