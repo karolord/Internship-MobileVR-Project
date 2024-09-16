@@ -19,5 +19,6 @@ public class AnalyticsController : MonoBehaviour
     public void LogEvent(string eventName)
     {
       AnalyticsResult Result =  Analytics.CustomEvent(eventName);
+      Debug.Log("Event: "+eventName);
     }
 }
